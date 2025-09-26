@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { GoDotFill } from 'react-icons/go';
 import HelpCenterSearchForm from '@/components/forms/HelpCenterSearchForm';
 import { HelpCenterData, helpCenterData } from '@/data/HelpCenterData';
-import React, { JSX, useCallback, useMemo, useState } from 'react';
+import React, { JSX, useCallback, useState } from 'react';
 import WebDevelopmentView from '@/components/partials/help-article-views/_WebDevelopmentView';
 import SEOView from '@/components/partials/help-article-views/_SeoView';
 import WebDesignView from '@/components/partials/help-article-views/_WebDesignView';
@@ -23,7 +23,7 @@ interface ArticleViewProps {
 
 const HelpArticleDetailsView = ({ title }: HelpArticleDetailsViewProps): JSX.Element => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [query, setQuery] = useState<string>('');
+    const [, setQuery] = useState<string>('');
 
     const handleQueryChange = useCallback((newQuery: string) => {
         setQuery(newQuery);
