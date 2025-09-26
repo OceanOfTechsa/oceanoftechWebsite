@@ -25,18 +25,6 @@ const HelpArticleDetailsView = ({ title }: HelpArticleDetailsViewProps): JSX.Ele
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [query, setQuery] = useState<string>('');
 
-    const filteredHelps = useMemo(() => {
-        if (query.trim() === '') {
-            return helpCenterData;
-        }
-        const searchTerm = query.toLowerCase();
-        return helpCenterData.filter(
-            (help) =>
-                help.title.toLowerCase().includes(searchTerm) ||
-                help.info.some((infoItem) => infoItem.title.toLowerCase().includes(searchTerm))
-        );
-    }, [query]);
-
     const handleQueryChange = useCallback((newQuery: string) => {
         setQuery(newQuery);
     }, []);

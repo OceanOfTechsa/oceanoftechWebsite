@@ -20,13 +20,13 @@ export const getUserGeoData = async (): Promise<GeoLocationData> => {
         const response = await fetch('http://ip-api.com/json/?fields=status,message,query,city,country,countryCode,regionName,lat,lon,timezone,isp,org,as');
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            console.log(`HTTP error! status: ${response.status}`);
         }
 
         const data: GeoLocationData = await response.json();
 
         if (data.status === 'fail') {
-            throw new Error(data.message || 'Failed to fetch location data');
+            console.log(data.message || 'Failed to fetch location data');
         }
 
         return data;

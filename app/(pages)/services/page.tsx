@@ -94,7 +94,7 @@ const ServicesPage = () => {
 
                         {/* Right Image/Illustration */}
                         <div className="xl:col-span-5 relative">
-                            <Image src="/service.svg" alt="Services" width={512} height={433} quality={75}className="rounded-md relative z-10" priority={true}/>
+                            <Image src="/service.svg" alt="Services" width={512} height={433} quality={75} className="rounded-md relative z-10" priority={true}/>
                         </div>
                     </div>
                 </div>
