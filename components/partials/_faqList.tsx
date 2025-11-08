@@ -28,8 +28,7 @@ const FaqList: React.FC<FaqListProps> = ({ filteredFaqs}: FaqListProps) => {
                 <Accordion type="single" collapsible defaultValue="item-1">
                     {filteredFaqs.map((faq) => (
                         <AccordionItem key={faq.id} value={faq.id} className="border-none">
-                            <AccordionTrigger className="border h-16 flex items-center py-[4rem] px-[1.25rem] p-3 rounded-sm cursor-pointer font-[600] focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black text-lg"
-                            >
+                            <AccordionTrigger className="border h-16 flex items-center py-[4rem] px-[1.25rem] p-3 rounded-sm cursor-pointer font-[600] focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black text-lg">
                                 {faq.question}
                             </AccordionTrigger>
                             <AccordionContent className="my-[0.5rem] py-[0.2rem] px-[1rem] text-[#606261] dark:text-[#c4c5c7] font-normal text-lg mb-3">{faq.answer}</AccordionContent>

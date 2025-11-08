@@ -5,8 +5,7 @@ export const servicesData = [
         id: 1,
         title: "Web Development",
         slug: "web-development",
-        description:
-            "We build fast, secure, and scalable websites tailored to your business needs.",
+        description: "Fast, secure, and scalable websites, web apps, and digital systems for your business.",
         icon: CodeXml,
         href: "/services/web-development",
     },
@@ -14,8 +13,7 @@ export const servicesData = [
         id: 2,
         title: "Hosting",
         slug: "hosting",
-        description:
-            "Reliable and secure hosting solutions to keep your website running smoothly.",
+        description: "Reliable hosting to keep your websites, web apps, and systems running smoothly.",
         icon: Server,
         href: "/services/hosting",
     },
@@ -23,8 +21,7 @@ export const servicesData = [
         id: 3,
         title: "Web Design",
         slug: "web-design",
-        description:
-            "Modern and creative web designs that make your brand stand out online.",
+        description: "Modern and intuitive designs for websites, web apps, and digital platforms that engage users.",
         icon: Component,
         href: "/services/web-design",
     },
@@ -32,8 +29,7 @@ export const servicesData = [
         id: 4,
         title: "UI/UX Design",
         slug: "ui-ux-design",
-        description:
-            "User-centered design that enhances usability and creates delightful experiences.",
+        description: "User-focused interfaces that enhance usability across websites, web apps, and systems.",
         icon: Component,
         href: "/services/ui-ux-design",
     },
@@ -41,8 +37,7 @@ export const servicesData = [
         id: 5,
         title: "Business Emails",
         slug: "business-emails",
-        description:
-            "Professional business email solutions that strengthen your brand identity.",
+        description: "Professional email solutions that boost credibility and streamline communication.",
         icon: Mail,
         href: "/services/business-emails",
     },
@@ -50,17 +45,15 @@ export const servicesData = [
         id: 6,
         title: "Search Engine Optimization",
         slug: "seo-optimization",
-        description:
-            "Boost your visibility on search engines with proven SEO strategies.",
+        description: "Increase visibility and drive traffic to your websites, web apps, and systems with proven SEO.",
         icon: Search,
         href: "/services/seo-optimization",
-    },    
+    },
     {
         id: 7,
         title: "Maintenance and Support",
         slug: "maintenance-support",
-        description:
-            "Keep your website updated, secure, and performing at its best with ongoing support.",
+        description: "Ongoing support to keep your websites, web apps, and systems secure, updated, and performing optimally.",
         icon: Settings,
         href: "/services/maintenance-support",
     },
@@ -68,8 +61,7 @@ export const servicesData = [
         id: 8,
         title: "Automation",
         slug: "automation",
-        description:
-            "Automate workflows and processes to save time and improve efficiency.",
+        description: "Automate workflows and processes across your digital platforms to save time and increase efficiency.",
         icon: Workflow,
         href: "/services/automation",
     },
@@ -77,8 +69,7 @@ export const servicesData = [
         id: 9,
         title: "Mentorship",
         slug: "mentorship",
-        description:
-            "Guidance and mentorship programs to help individuals and businesses grow in tech.",
+        description: "Guidance and mentorship programs to help individuals and businesses grow in tech.",
         icon: GraduationCap,
         href: "/services/mentorship",
     },

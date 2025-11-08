@@ -103,15 +103,15 @@ const PricingSection = (): JSX.Element => {
                         </motion.figure>
 
                         <motion.div className="py-[0.35em] px-[0.65em] text-[0.75em] text-white bg-[#202124] dark:bg-white dark:text-black rounded-md font-bold mt-4" variants={itemVariants} transition={{ delay: 0.5 }}>
-                            Boss Mode
+                            Growth Mode
                         </motion.div>
 
                         <motion.h6 className="mb-3 font-black text-[#202124] dark:text-white/90 mt-4" variants={itemVariants} transition={{ delay: 0.6 }}>
-                            <span className="text-[4.6rem] font-black align-bottom leading-none">R1800</span>
-                            <span className="ml-2 text-2xl font-semibold align-bottom">/month</span>
+                            <span className="text-[4.6rem] font-black align-bottom leading-none">R3,500</span>
+                            <span className="ml-2 text-xl font-semibold align-bottom">/month</span>
                         </motion.h6>
 
-                        <motion.p className="text-[#606261]" variants={itemVariants} transition={{ delay: 0.7 }}>
+                        <motion.p className="" variants={itemVariants} transition={{ delay: 0.7 }}>
                             The all-in-one solution for businesses that want to succeed online.
                         </motion.p>
                     </motion.div>
@@ -122,50 +122,57 @@ const PricingSection = (): JSX.Element => {
                             className="text-xl font-bold mb-3"
                             variants={itemVariants}
                         >
-                            Features list of your need
+                            Growth Plan Features
                         </motion.h5>
 
-                        <motion.span 
-                            className="flex items-center mt-6"
-                            variants={itemVariants}
-                            transition={{ delay: 0.4 }}
-                        >
-                            <Check size={15} className="text-[#09b850] mr-1"/> Up to 05 users monthly
-                        </motion.span>
-                        <motion.span 
+                        <motion.span
                             className="flex items-center mt-4"
                             variants={itemVariants}
                             transition={{ delay: 0.45 }}
                         >
-                            <Check size={15} className="text-[#09b850] mr-1"/> Free 5 host & domain
+                            <Check size={15} className="text-[#09b850] mr-1"/> Web Design & Development
                         </motion.span>
-                        <motion.span 
-                            className="flex items-center mt-4"
+                        <motion.span
+                            className="flex items-center mt-2"
                             variants={itemVariants}
-                            transition={{ delay: 0.5 }}
+                            transition={{ delay: 0.4 }}
                         >
-                            <Check size={15} className="text-[#09b850] mr-1"/> Google Docs style editors
+                            <Check size={15} className="text-[#09b850] mr-1"/> Hosting
                         </motion.span>
-                        <motion.span 
+                        <motion.span
+                            className="flex items-center mt-2"
+                            variants={itemVariants}
+                            transition={{ delay: 0.4 }}
+                        >
+                            <Check size={15} className="text-[#09b850] mr-1"/> Backups
+                        </motion.span>
+                        <motion.span
                             className="flex items-center mt-4"
                             variants={itemVariants}
                             transition={{ delay: 0.55 }}
                         >
-                            <Check size={15} className="text-[#09b850] mr-1"/> Support for 30+ languages
+                            <Check size={15} className="text-[#09b850] mr-1"/>  Business Email
+                        </motion.span>
+                        <motion.span
+                            className="flex items-center mt-4"
+                            variants={itemVariants}
+                            transition={{ delay: 0.5 }}
+                        >
+                            <Check size={15} className="text-[#09b850] mr-1"/> Traffic Analytics & Uptime Monitoring
                         </motion.span>
                         <motion.span 
                             className="flex items-center mt-4"
                             variants={itemVariants}
                             transition={{ delay: 0.6 }}
                         >
-                            <Check size={15} className="text-[#09b850] mr-1"/> Landing pages & Web widgets
+                            <Check size={15} className="text-[#09b850] mr-1"/> Ongoing Support & Maintenance
                         </motion.span>
                         <motion.span 
                             className="flex items-center mt-4"
                             variants={itemVariants}
                             transition={{ delay: 0.65 }}
                         >
-                            <Check size={15} className="text-[#09b850] mr-1"/> 24/7 Dedicated Support
+                            <Check size={15} className="text-[#09b850] mr-1"/> +Many more
                         </motion.span>
 
                         <motion.div
@@ -175,7 +182,7 @@ const PricingSection = (): JSX.Element => {
                             <Link href="/about" className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] mt-6 rounded-sm inline-block transition-all duration-500 ease-in-out">Get in contact today</Link>
                         </motion.div>
                         <motion.p 
-                            className="text-[#606261] mt-1"
+                            className="mt-1"
                             variants={itemVariants}
                             transition={{ delay: 0.75 }}
                         >

@@ -15,7 +15,7 @@ const BecomeAPartnerPage = () => {
         <div className="w-full flex flex-col">
             <section className="w-full mx-auto pt-6 px-4 md:px-0 rounded-sm overflow-hidden">
                 <div className="max-w-[70rem] mx-auto">
-                    <div className="relative h-[300px] md:h-[400px] xl:h-[500px] bg-center bg-cover rounded-md overflow-hidden bg-fixed"  style={{ backgroundImage: "url('/04.jpg')" }} />
+                    <div className="relative h-[300px] md:h-[400px] xl:h-[500px] bg-center bg-cover rounded-sm overflow-hidden bg-fixed"  style={{ backgroundImage: "url('/04.jpg')" }} />
                 </div>
             </section>
 

@@ -23,14 +23,14 @@ const NavMegaMenu = (): JSX.Element => {
                                 <div className="flex flex-col">
                                     <div className="space-y-0.5">
                                         <span className="ms-2.5 font-semibold text-xs uppercase">About us</span>
-                                        <Link className="mt-2 p-2 flex gap-x-3  focus:outline-none  rounded-md hover:bg-[#09b850]/10 hover:text-[#09b850] focus:bg-[#09b850]" href="/company-background">
+                                        <Link className="mt-2 p-2 flex gap-x-3  focus:outline-none  rounded-md hover:bg-[#09b850]/10 hover:text-[#09b850] focus:bg-[#09b850]" href="/customer-stories">
                                             <svg className="shrink-0 size-4 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                                             </svg>
                                             <div className="grow">
                                                 <p className="text-sm mb-0">
-                                                    Our Background
+                                                   Customer stories
                                                 </p>
                                             </div>
                                         </Link>

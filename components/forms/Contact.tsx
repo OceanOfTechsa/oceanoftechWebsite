@@ -23,8 +23,7 @@ let results:
 | { success: boolean; errors: z.ZodIssue[]; error?: undefined; email?: undefined }
 | { success: boolean; error: string; email?: undefined; errors?: undefined };
 type FormValues = z.infer<typeof ContactSchema>;
-
-export default function ContactForm(): JSX.Element {
+const ContactForm = (): JSX.Element => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -212,14 +211,10 @@ export default function ContactForm(): JSX.Element {
                                         }
                                     }}
                                     data-state={isSelected ? "selected" : "default"}
-                                    className={`cursor-pointer justify-start h-auto py-3 px-4 
-                                            bg-white dark:bg-[#292a2d] 
-                                            hover:bg-green-50 dark:hover:bg-green-900/20 
+                                    className={`cursor-pointer justify-start h-auto py-3 px-4bg-white dark:bg-[#292a2d] hover:bg-green-50 dark:hover:bg-green-900/20 
                                             hover:text-green-700 dark:hover:text-green-400 
                                             hover:border-green-200 dark:hover:border-green-800 
-                                            ${
-                                        isSelected
-                                            ? "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 border-green-400 font-semibold shadow-sm"
+                                            ${isSelected ? "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 border-green-400 font-semibold shadow-sm"
                                             : "text-gray-700 dark:text-gray-300"
                                     }`}
                                 >
@@ -273,9 +268,11 @@ export default function ContactForm(): JSX.Element {
                 </Button>
 
                 <p className="text-center text-sm text-gray-500 -mt-5">
-                    Our team will respond within 48 Hours.
+                    Our team will respond within 24 Hours.
                 </p>
             </form>
         </div>
     );
 }
+
+export default ContactForm;

@@ -18,7 +18,7 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLxBlYID8-FZbqqiGKrePx2Oi_fU5nJaLktGddhWrQMpNoZsQ=s50-c-mo",
         "date": "16 Aug 2024",
         "title": "Ms",
-        "categories": ["web-development"]
+        "categories": ["web-development", "web-design", "hosting"]
     },
     {
         "name": "Nompumelelo",
@@ -28,7 +28,7 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUxSU0kCYzZuH4uaXGsJrI3JeQ1vwEfTSQgT5xWMHVuU_JhxAE=s50-c-mo",
         "date": "17 Aug 2024",
         "title": "Ms",
-        "categories": ["web-development", "seo-optimization"]
+        "categories": ["web-development", "seo-optimization", "web-design", "ui-ux-design"]
     },
     {
         "name": "Sithembiso",
@@ -38,7 +38,7 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVUjZnOR1Or66ariGnNLMrIpjsmk-eBcfz5u0-2rGU5DSIuSSR3Nw=s50-c-mo",
         "date": "18 Aug 2024",
         "title": "Mr",
-        "categories": ["web-development"]
+        "categories": ["web-development", "automation", "mentorship"]
     },
     {
         "name": "Thamsanqa",
@@ -48,7 +48,7 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVCqxt_vozw8VwdcHGBOiBcArzojWohiANQpY1mpMbMdmzQtyavMw=s50-c-mo",
         "date": "20 Aug 2024",
         "title": "Mr",
-        "categories": ["web-development"]
+        "categories": ["web-development", "web-design", "ui-ux-design", "maintenance-support"]
     },
     {
         "name": "Sanele",
@@ -58,7 +58,7 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVtx35H5O75YWKrsP0LyZJQ5m6XOz7Pbj6SNph5OIaV1VijoqM=s36-c-rp-mo-br100",
         "date": "05 Sept 2024",
         "title": "Mr",
-        "categories": ["seo-optimization", "web-development"]
+        "categories": ["seo-optimization", "web-development", "web-design", "hosting"]
     },
     {
         "name": "Sithembelenkosini",
@@ -68,7 +68,7 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXKK8Qzos6B5NY_YoYFERXMUNB0d5OugV0FnwCQZs3fBIbI9t0a=s36-c-rp-mo-br100",
         "date": "14 Nov 2024",
         "title": "Ms",
-        "categories": ["seo-optimization", "web-development"]
+        "categories": ["seo-optimization", "web-development", "maintenance-support"]
     },
     {
         "name": "Nonjabulo",
@@ -78,21 +78,17 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIJ7CDnQ46BFO2xEtb0_0_NejAonyX2a5OjGWgRgfoMR4OxUQ=s36-c-rp-mo-br100",
         "date": "15 Jan 2025",
         "title": "Ms",
-        "categories": ["seo-optimization", "web-development"]
+        "categories": ["seo-optimization", "web-development", "web-design", "ui-ux-design"]
     },
     {
         "name": "Kamala",
         "surname": "Pillay",
-        "details": "Ocean of Tech ᶻᵃ has been an absolute game-changer for my business! Their web development and maintenance services are top-notch. From the start, they took the time to understand my vision and brought it to life with a sleek, responsive, and user-friendly website.\n" +
-            "\n" +
-            "Their team is incredibly professional, responsive, and detail-oriented. I never have to worry about updates or security because they handle everything seamlessly. The website runs smoothly, loads quickly, and has boosted my online presence significantly.\n" +
-            "\n" +
-            "I highly recommend Ocean of Tech ᶻᵃ to anyone looking for reliable and innovative web solutions. They truly go above and beyond!",
+        "details": "Ocean of Tech ᶻᵃ has been an absolute game-changer for my business! Their web development and maintenance services are top-notch. From the start, they took the time to understand my vision and brought it to life with a sleek, responsive, and user-friendly website.\n\nTheir team is incredibly professional, responsive, and detail-oriented. I never have to worry about updates or security because they handle everything seamlessly. The website runs smoothly, loads quickly, and has boosted my online presence significantly.\n\nI highly recommend Ocean of Tech ᶻᵃ to anyone looking for reliable and innovative web solutions. They truly go above and beyond!",
         "rating": 5,
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWTcrlUuyMSvSIp3GwFrHrVttRyLqmWCQHO2GIKn3fMNCEeXAOp=s36-c-rp-mo-br100",
         "date": "15 Jan 2025",
         "title": "Ms",
-        "categories": ["seo-optimization", "web-development"]
+        "categories": ["seo-optimization", "web-development", "maintenance-support", "hosting"]
     },
     {
         "name": "Nokujabula",
@@ -102,9 +98,10 @@ export const reviews: IReview[] = [
         "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUJnnjPoaLaw9g6iZuV3kDD751qew-T_WAx2Djyrifc94GDQe8=s33-c-rp-mo-br100",
         "date": "3 months ago",
         "title": "Ms",
-        "categories": ["seo-optimization", "web-development"]
+        "categories": ["seo-optimization", "web-development", "maintenance-support", "web-design", "ui-ux-design"]
     }
 ];
+
 
 export const COMPANY_NAME: string = "Ocean of Tech"
 export const companySocials = [

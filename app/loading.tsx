@@ -23,9 +23,10 @@ const Loading = () => {
                     "Mounting Components…",
                     "Hydrating State…",
                     "Compiling Assets…",
-                    "This is taking longer… 🤔",                ]}
+                    "This is taking longer… 🤔"
+                ]}
                 typeSpeed={30}
-                backSpeed={40}  className="text-center font-semibold"
+                backSpeed={40}  className="text-center"
             />
         </main>
     )

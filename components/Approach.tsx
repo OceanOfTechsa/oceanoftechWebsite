@@ -7,41 +7,47 @@ import { FaRegEnvelope, FaRegEnvelopeOpen } from "react-icons/fa6";
 import { motion, useAnimation, type LegacyAnimationControls } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { JSX } from "react";
-import {Rocket, Search, Shell} from "lucide-react";
+import {Rocket} from "lucide-react";
 import {TfiHeadphoneAlt} from "react-icons/tfi";
+import {FaCode} from "react-icons/fa";
+import {RiMindMap} from "react-icons/ri";
 
 const steps = [
-  {
-    id: 1,
-    title: "Discovery and Consultation:",
-    desc: "We begin by getting to know your unique requirements, goals, and challenges.",
-  },
-  {
-    id: 2,
-    title: "Planning and Strategy:",
-    desc: "We define project milestones and deliverables to keep the process on track.",
-  },
-  {
-    id: 3,
-    title: "Deployment and Launch:",
-    desc: "We ensure a smooth transition to the live, providing support every step of the way.",
-  },
-  {
-    id: 4,
-    title: "Support and Maintenance:",
-    desc: "We offer ongoing support and maintenance services to keep your software running.",
-  },
+    {
+        id: 1,
+        title: "Planning & Strategy",
+        desc: "We craft a clear roadmap with milestones and deliverables to ensure success.",
+    },
+    {
+        id: 2,
+        title: "Development",
+        desc: "Our team builds your solution efficiently, following best practices and high-quality standards.",
+    },
+    {
+        id: 3,
+        title: "Deployment & Launch",
+        desc: "We handle a smooth launch, ensuring everything works perfectly in the live environment.",
+    },
+    {
+        id: 4,
+        title: "Ongoing Support",
+        desc: "We provide continuous support and maintenance to keep your software performing at its best.",
+    },
 ];
+
+const iconsMap: Record<number, JSX.Element> = {
+    1: <RiMindMap size={18} />,
+    2: <FaCode size={18} />,
+    3: <Rocket size={18} />,
+    4: <TfiHeadphoneAlt size={18} />,
+};
 
 const Step = ({ id, title, desc }: { id: number; title: string; desc: string }) => {
   return (
     <div className="flex gap-x-5 ms-1 relative">
       <div className="relative flex flex-col items-center z-10">
         <span className="flex shrink-0 justify-center items-center size-8 border border-gray-500 border-opacity-30 text-[#0B9944] dark:text-[#09b850] font-semibold text-xs uppercase rounded-full bg-white dark:bg-[#202124]">
-         { id === 1 && <Search size={18}/>}
-         { id === 2 && <Shell  size={18}/>}
-         { id === 3 &&<Rocket  size={18}/>}
-         { id === 4 &&<TfiHeadphoneAlt   size={18}/>}
+          {iconsMap[id]}
         </span>
       </div>
 
@@ -83,10 +89,10 @@ const Approach = (): JSX.Element => {
 
           <div className="max-w-2xl lg:full relative">
             <span className="mb-4 inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2 z-50">
-              <AnimatedIcon icon="🚶" /> Steps that bring your idea to life
+              <AnimatedIcon icon="😊" /> Your Ideas, Our Execution
             </span>
 
-            <div className="mb-4">
+            <div className="mb-4 mt-2">
               <h3 className="text-md font-semibold text-sm uppercase">Steps</h3>
             </div>
 
