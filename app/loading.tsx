@@ -18,12 +18,12 @@ const Loading = () => {
             />
 
             <TypedText
-                strings={[
-                    "Bootstrapping…",
-                    "Mounting Components…",
-                    "Hydrating State…",
-                    "Compiling Assets…",
-                    "This is taking longer… 🤔"
+                 strings={[
+                "Loading your experience…",
+                "Preparing amazing content…",
+                "Almost there…",
+                "Getting everything ready…",
+                "Thanks for your patience!"
                 ]}
                 typeSpeed={30}
                 backSpeed={40}  className="text-center"
