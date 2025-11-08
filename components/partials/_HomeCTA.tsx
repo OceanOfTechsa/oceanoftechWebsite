@@ -34,22 +34,21 @@ const _CTAHome = () => (
         </figure>
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
             <div className="w-full flex flex-col justify-center items-start text-start gap-6">
-                <h6 className="text-3xl md:text-4xl font-bold leading-tight md:hidden flex items-center">
+                <h6 className="text-3xl text-white md:text-4xl font-bold leading-tight md:hidden flex items-center">
                     Let&apos;s talk about your{" "}
                     <br/>
-                    <span className="text-primary block md:inline-block">
+                    {/* <span className="text-primary block md:inline-block">
                         <TypedText strings={["Business", "Agency", "Startup", "Enterprise", "Brand"]} typeSpeed={90} className="text-center text-white font-black"/>
-                    </span>
+                    </span> */}
                     {" "}
                     goals
                 </h6>
 
-                <h6 className="text-3xl md:text-4xl font-bold leading-tight hidden sm:block">
+                <h6 className="text-3xl md:text-4xl font-bold leading-tight hidden sm:block text-white">
                     Let&apos;s talk about your
                     <br/>
                     <span className="text-primary block md:inline-block">
-                        <TypedText strings={["Business", "Agency", "Startup", "Enterprise", "Brand"]} typeSpeed={90}
-                                   className="text-center text-white font-black"/>
+                        <TypedText strings={["Business", "Agency", "Startup", "Enterprise", "Brand"]} typeSpeed={90} className="text-center text-white font-black"/>
                     </span>
                     {" "}goals
                 </h6>

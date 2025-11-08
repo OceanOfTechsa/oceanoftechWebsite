@@ -18,7 +18,7 @@ const Footer = (): JSX.Element => {
                             <Image src="/Logo.svg" width={42} height={42} alt="Brand Logo" priority loading="eager" quality={100} />
                         </Link>
                         <p className="mt-4 mb-2 text-gray-300 text-sm leading-relaxed">
-                            A Tailwind theme that&apos;s both stylish and functional, perfect for any type of technology or corporate website.
+                            Ocean of Tech – Innovate. Scale. Succeed.
                         </p>
                     </div>
 

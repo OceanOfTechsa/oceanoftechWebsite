@@ -164,7 +164,7 @@ export default function PartnerForm(): JSX.Element {
                 </Button>
 
                 <p className="text-center text-sm text-gray-500 -mt-5">
-                    Our team will respond within 48 Hours.
+                    Our team will respond within 24 Hours.
                 </p>
             </form>
         </div>

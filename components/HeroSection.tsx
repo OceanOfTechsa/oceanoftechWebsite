@@ -15,7 +15,7 @@ const HeroSection = () => {
                 <Image src="/decoration-pattern.svg" width={250} height={250} quality={100} loading="eager"  alt="Decoration" />
             </div>
 
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-4">
                 <div className="grid xl:grid-cols-12 gap-12 items-center">
 
                     {/* Left Content */}
@@ -64,8 +64,7 @@ const HeroSection = () => {
                                     </svg>
                                 </div>
                                 <div className="mt-2">
-                                    <h6 className="font-semibold group-hover:text-[#0B9944] dark:group-hover:text-[#09b850] transition-colors ease-in-out duration-500">10+
-                                        Google reviews</h6>
+                                    <h6 className="font-semibold group-hover:text-[#0B9944] dark:group-hover:text-[#09b850] transition-colors ease-in-out duration-500">10+ Google reviews</h6>
                                     <div className="flex items-center gap-2">
                                         <span className="text-xs mb-3">
                                             5/5
@@ -121,4 +120,4 @@ const HeroSection = () => {
         </section>
     )
 }
-export default HeroSection
+export default HeroSection;

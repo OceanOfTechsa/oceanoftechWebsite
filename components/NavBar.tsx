@@ -29,25 +29,22 @@ const NavBar = (): React.JSX.Element => {
                 window.requestAnimationFrame((): void => {
                     const currentScrollY: number = window.scrollY;
 
-                    // Reset the flag + remove border if user scrolls back above 80px
                     if (currentScrollY < 80) {
                         effectTriggered.current = false;
                         setNavOffset(0);
-                        setScrolled(false); // ✅ remove border
-                        
-                        // clear any pending slide-up reversal
+                        setScrolled(false);
+
                         if (animationTimeoutRef.current) {
                             clearTimeout(animationTimeoutRef.current);
                             animationTimeoutRef.current = null;
                         }
                     }
 
-                    // Trigger slide-up effect + add border
                     if (!effectTriggered.current && currentScrollY > 80) {
                         effectTriggered.current = true;
-                        setScrolled(true); // ✅ add border
+                        setScrolled(true);
 
-                        setNavOffset(-300); // hide briefly
+                        setNavOffset(-300);
                         animationTimeoutRef.current = setTimeout(() => {
                             setNavOffset(0);
                             animationTimeoutRef.current = null;
@@ -64,7 +61,6 @@ const NavBar = (): React.JSX.Element => {
         window.addEventListener("scroll", handleScroll);
         return (): void => {
             window.removeEventListener("scroll", handleScroll);
-            // Ensure we don't leave any timers running after unmount
             if (animationTimeoutRef.current) {
                 clearTimeout(animationTimeoutRef.current);
             }
@@ -77,7 +73,7 @@ const NavBar = (): React.JSX.Element => {
                 transition:"transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.35s ease",
                 opacity: navOffset === 0 ? 1 : 0.95,
             }}
-            className={`w-full dark:text-white backdrop-blur-md fixed top-0 left-0 z-50 will-change-transform transition-all ease-in-out duration-500
+            className={`w-full bg-transparent dark:text-white backdrop-blur-md fixed top-0 left-0 z-50 will-change-transform transition-all ease-in-out duration-500
         ${!scrolled ? "py-3 bg-transparent" : "py-0 border-b bg-white/80 dark:bg-[#161618] "}`}
         >
 

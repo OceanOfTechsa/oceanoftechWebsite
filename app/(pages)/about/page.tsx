@@ -31,26 +31,26 @@ const AboutPage = (): JSX.Element => {
                     </nav>
 
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                      Creative agency specialized in Business solutions
+                            Driven by Innovation, Defined by Excellence
                     </h1>
 
                     <p className=" dark:text-[#c4c5c7] text-lg">
-                        Supposing so be resolving breakfast am or perfectly. It drew a hill from me. Valley by oh twenty direct me so. Departure defective arranging rapturous did believe him all had supported.
+                        Through innovation, precision, and technology, Ocean of Tech builds reliable, scalable software that drives the digital evolution of modern enterprises.
                     </p> 
                 </div>
                 <div className="w-full flex md:justify-end items-start mb-10">
                     <ul className="flex flex-col gap-2 mt-5">                
-                        <li className="inline-flex items-center text-lg font-semibold dark:text-[#c4c5c7]">
-                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Create 50+ unique sections
+                        <li className="inline-flex items-center text-lg dark:text-[#c4c5c7]">
+                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Drive Your Business Forward
                         </li>
-                         <li className="inline-flex items-center text-lg font-semibold dark:text-[#c4c5c7]">
-                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Very easy customization
+                         <li className="inline-flex items-center text-lg dark:text-[#c4c5c7]">
+                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Unlock Your Potential with Technology
                         </li> 
-                         <li className="inline-flex items-center text-lg font-semibold dark:text-[#c4c5c7]">
-                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Super fast loading speed
+                         <li className="inline-flex items-center text-lg dark:text-[#c4c5c7]">
+                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Create Seamless Digital Experiences
                         </li> 
-                         <li className="inline-flex items-center text-lg font-semibold dark:text-[#c4c5c7]">
-                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Fully responsive on any devices
+                         <li className="inline-flex items-center text-lg dark:text-[#c4c5c7]">
+                            <LuBadgeCheck className="mr-2 text-[#0B9944]" size={19} /> Support That Always Has Your Back
                         </li>                            
                     </ul>
                 </div>
@@ -69,7 +69,7 @@ const AboutPage = (): JSX.Element => {
 
                                     <hr className="w-1/2 border-1 border-white opacity-90 my-5 rounded-full" />
 
-                                    <h5 className="text-white font-normal mb-5 text-2xl mt-10 italic">
+                                    <h5 className="text-white  mb-5 text-2xl mt-10 italic">
                                         &quot;We believe that it takes great people to deliver a great product&quot;
                                     </h5>
                                     <div className="text-white mt-3 flex items-center gap-2 text-lg">
@@ -91,27 +91,9 @@ const AboutPage = (): JSX.Element => {
                                         style={{ width: "100%", height: "100%", objectFit: "cover" }}   
                                     />
                                 </div>
-                                <div className="bg-white p-2 rounded-sm text-black font-semibold absolute top-0 right-0 transform rotate-12 mt-10 -mr-4">10+ Years of experience</div>
+                                <div className="bg-white p-2 rounded-sm text-black font-semibold absolute top-0 right-0 transform rotate-12 mt-10 -mr-4">5+ Years of experience</div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section className="hidden flex-col md:flex-row gap-3 items-center justify-center max-w-7xl mx-auto px-6 md:px-0 ">
-                    <div className="p-5 py-9 flex flex-col items-center justify-center rounded-sm border border-gray-300/30 w-full bg-[#161618]">
-                        <h4 className="flex items-center gap-0 text-3xl font-black text-white"><CountUp end={600} /> <span className="text-green-500 text-2xl">+</span></h4>
-                        <p className="text-white font-semibold font-lg">Happy Customers</p>
-                    </div>
-                    <div className="p-5 py-9 flex flex-col items-center justify-center rounded-sm border border-gray-300/30 w-full bg-[#161618]">
-                        <h4 className="flex items-center gap-0 text-3xl font-black text-white"><CountUp  end={200} /> <span className="text-green-500 text-2xl">+</span></h4>
-                        <p className="text-white font-semibold font-lg">Acquired Users</p>
-                    </div>
-                    <div className="p-5 py-9 flex flex-col items-center justify-center rounded-sm border border-gray-300/30 w-full bg-[#161618]">
-                        <h4 className="flex items-center gap-0 text-3xl font-black text-white"><CountUp  end={10} /> <span className="text-green-500 text-2xl">K+</span></h4>
-                        <p className="text-white font-semibold font-lg">Positive User Reviews</p>
-                    </div>
-                    <div className="p-5 py-9 flex flex-col items-center justify-center rounded-sm border border-gray-300/30 w-full bg-[#161618]">
-                        <h4 className="flex items-center gap-0 text-3xl font-black text-white"><CountUp  end={25} /> <span className="text-green-500 text-2xl">+</span></h4>
-                        <p className="text-white font-semibold font-lg">Completed Projects</p>
                     </div>
                 </section>
             </div>
@@ -151,17 +133,14 @@ const AboutPage = (): JSX.Element => {
 
                         <div className="lg:pl-12">
                             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-                                Boost your business efficiency with Mizzle.
+                                Boost Your Business Efficiency with us
                             </h2>
                             <p className="mb-0 dark:text-[#c4c5c7]">
-                                Elevate your online presence and embark on a journey to digital
-                                excellence with our meticulously designed digital agency theme.
+                            At Ocean of Tech, we create innovative software solutions that streamline your operations, save time, and enhance productivity. From automation and intelligent tools to seamless digital experiences, we help your business work smarter, not harder.
                             </p>
                             <hr className="my-4 dark:border-gray-300/30 border-gray-300" />
                             <p className="dark:text-[#c4c5c7]">
-                                At the heart of our theme is a commitment to providing a robust and
-                                versatile platform that accommodates the diverse needs of digital
-                                agencies.
+                            At the heart of our approach is a commitment to delivering a robust, versatile platform designed to meet the diverse needs of digital agencies. Every feature is crafted to streamline workflows, engage audiences, and drive results.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
@@ -212,7 +191,7 @@ const AboutPage = (): JSX.Element => {
                             </figure>
                             <h6 className="font-bold">Innovation-driven</h6>
                             <p className="mb-0 dark:text-[#c4c5c7]">
-                                Elevate your digital presence with our innovation-driven approach
+                                Elevate your digital presence with our forward-thinking, innovation-led solutions.
                             </p>
                         </div>
 
@@ -226,7 +205,7 @@ const AboutPage = (): JSX.Element => {
                             </figure>
                             <h6 className="font-bold">Transparent approach</h6>
                             <p className="mb-0 dark:text-[#c4c5c7]">
-                                At our digital agency, transparency isn&apos;t just a buzzword
+                                Transparency isn’t just a buzzword, we keep our processes clear, honest, and collaborative.
                             </p>
                         </div>
 
@@ -239,7 +218,7 @@ const AboutPage = (): JSX.Element => {
                             </figure>
                             <h6 className="font-bold">Accessible technology</h6>
                             <p className="mb-0 dark:text-[#c4c5c7]">
-                                Celebrate Inclusive with Accessible Technology.
+                                We celebrate inclusivity by delivering solutions that are accessible to everyone.
                             </p>
                         </div>
 
@@ -252,7 +231,7 @@ const AboutPage = (): JSX.Element => {
                             </figure>
                             <h6 className="font-bold">Collaborative teamwork</h6>
                             <p className="mb-0 dark:text-[#c4c5c7]">
-                                We believe that the best results are born from the synergy of diverse
+                                The best results come from the synergy of diverse minds working together.
                             </p>
                         </div>
                     </div>

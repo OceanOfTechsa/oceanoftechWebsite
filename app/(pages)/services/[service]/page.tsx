@@ -5,9 +5,11 @@ import { Metadata } from "next";
 import {type Service, services} from "@/data/services";
 import { unslugify } from "@/lib/Unslugify";
 import { LuBadgeCheck } from "react-icons/lu";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import AnimatedIcon from "@/components/animations/animatedIcon";
 import ServiceTestimonialCarousel from '@/components/ServiceTestimonialCarousel';
+import {BsFillCursorFill} from "react-icons/bs";
 
 export async function generateMetadata({ params }: { params: { service: string } }): Promise<Metadata> {
     const { service } = params;
@@ -128,7 +130,7 @@ const SingleServicePage = async ({ params }: { params: { service: string } }) =>
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-4 md:px-0 mt-20 py-24 text-center flex flex-col items-center justify-center relative overflow-hidden">
+            <section className="max-w-7xl w-full mx-auto px-4 md:px-0 mt-20 py-24 text-center flex flex-col items-center justify-center relative overflow-hidden">
                 <div className="flex flex-col md:flex-row justify-center gap-x-20 gap-y-10 w-full items-start">
                     <div className="bg-[#292a2d] p-6 rounded-sm w-full flex flex-col justify-start text-start items-start text-white">
                         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">Pricing plan for {unslugify(serviceData.slug)}</h1>
@@ -152,18 +154,47 @@ const SingleServicePage = async ({ params }: { params: { service: string } }) =>
             </section>
 
             {/* Banner CTA */}
-            <section className="bg-[#202124] min-w-full mt-10 py-24 text-center text-white flex flex-col items-center justify-center relative border-b border-gray-300/30">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                    Ready to grow with {serviceData.title}?
-                </h2>
-                <p className="mb-6 text-gray-300 max-w-2xl">
-                    Let`s take your business to the next level with our professional{" "}
-                    {serviceData.title.toLowerCase()} services.
-                </p>
-                <Link href="/contact" className="bg-[#09b850] hover:bg-[#0B9944] text-white px-6 py-3 rounded-md transition-all">
-                    Get Started
-                </Link>
+            <section className="pt-0 px-4 mb-10 max-w-7xl w-full">
+                <div className="container mx-auto">
+                    <div className="bg-[#202124] rounded-lg relative overflow-hidden p-4 sm:p-7 h-[300px]">
+
+                        {/* Left SVG Decoration */}
+                        <div className="absolute top-0 left-0 -mt-10 -ml-10 hidden md:block">
+                            <Image src="/05.png" className="object-cover rotate-[33deg]" alt="decoration" width={194} height={200} />
+                        </div>
+
+                        {/* Right SVG Decoration */}
+                        <div className="absolute right-0 bottom-0 hidden lg:block">
+                            <Image src="/cta-vector.svg" className="object-cover" width={244} height={300} alt="vector" />
+                        </div>
+
+                        <div className="grid gap-4 relative">
+                            {/* Title and Description */}
+                            <div className="col-span-1 lg:col-span-10 xl:col-span-7 mx-auto text-center space-y-4 h-full my-10 pb-6">
+                                <h3 className="text-white text-3xl md:text-4xl font-bold mb-3">
+                                    Ready to grow with {serviceData.title}?
+                                </h3>
+                                <p className="text-[#c4c5c7] opacity-80 mt-4 text-lg max-w-2xl mx-auto">
+                                    Let&apos;s take your business to the next level with our professional {serviceData.title.toLowerCase()} services.
+                                </p>
+
+                                {/* Button */}
+                                <Button className="bg-[#09b850] hover:bg-[#0B9944] text-white rounded-sm inline-block transition-all duration-500 ease-in-out mt-3 mb-6">
+                                    <Link href="/contact" className="px-[0.7rem] py-[0.7rem]">
+                                        Get Started
+                                    </Link>
+                                </Button>
+
+                                {/* Optional small text */}
+                                <p className="text-[#c4c5c7] opacity-80 mt-10 text-lg text-center hidden">
+                                    Used by the world&apos;s best companies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
         </div>
     );
 };

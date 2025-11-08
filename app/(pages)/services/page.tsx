@@ -9,6 +9,7 @@ import Link from "next/link";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { GoArrowRight, GoDotFill } from "react-icons/go";
+import {BsFillCursorFill} from "react-icons/bs";
 
 export const metadata: Metadata = {
     title: "Services"
@@ -18,7 +19,7 @@ const ServicesPage = () => {
     return (
         <div className="flex flex-col">
             {/*Services Hero Section*/}
-            <section className="relative xl:pt-20 pb-0 mt-10 sm:mt-0 max-w-7xl mx-auto">
+            <section className="relative xl:pt-20 pb-0 mt-10 sm:mt-0 max-w-7xl mx-auto px-4 md:px-0"> 
                 {/* Left Decorative Pattern */}
                 <div className="absolute top-0 left-0 -mt-16 -ml-80 z-50 hidden xl:block">
                     <Image src="/decoration-pattern.svg" width={250} height={250} quality={100} loading="eager" alt="Decoration"/>
@@ -54,7 +55,7 @@ const ServicesPage = () => {
                                 We offer
                             </h1>
 
-                            <p className="dark:text-[#c4c5c7] max-w-2xl">
+                            <p className="dark:text-[#c4c5c7] max-w-2xl mt-0">
                                 Our experienced team is dedicated to helping you achieve your goals through <br className="hidden md:block"/>innovative technology.
                             </p>
 
@@ -76,16 +77,16 @@ const ServicesPage = () => {
                                     <li className="w-17 h-17 rounded-full overflow-hidden -ml-2">
                                         <div
                                             className="rounded-full bg-[#09b850] flex items-center justify-center text-white h-17 w-17 font-bold">
-                                            10K+
+                                            3K+
                                         </div>
                                     </li>
                                 </ul>
                                 <div className="flex flex-col items-start justify-center text-start">
-                                    <h6 className="font-bold text-black dark:text-white">More than 10k active users! 🤩</h6>
+                                    <h6 className="font-bold text-black dark:text-white">Join 3K+ Thriving Businesses! 🤩</h6>
                                     <Link href="/contact"
                                           className="hover:text-[#09b850] inline-flex items-center gap-2 font-semibold text-sm  dark:text-[#c4c5c7] group"
                                           target="_blank">
-                                        Join them now <GoArrowRight
+                                        Get Started <GoArrowRight
                                         className="group-hover:translate-x-1 transition-all duration-300 ease-in-out"/>
                                     </Link>
                                 </div>
@@ -100,7 +101,7 @@ const ServicesPage = () => {
                 </div>
             </section>
 
-            <section className="xl:pt-20 pb-0 mt-10 sm:mt-0 max-w-7xl mx-auto mb-10">
+            <section className="xl:pt-20 pb-0 mt-10 sm:mt-0 w-full max-w-7xl mx-auto mb-10">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         {servicesData.map((service) => (
@@ -132,7 +133,7 @@ const ServicesPage = () => {
 
             <section className="pt-0 px-4 mb-10">
                 <div className="container mx-auto">
-                    <div className="bg-[#202124] rounded-lg relative overflow-hidden p-4 sm:p-7 h-[436]">
+                    <div className="bg-[#202124] rounded-lg relative overflow-hidden p-4 sm:p-7 h-[300]">
 
                         {/* Left SVG Decoration */}
                         <div className="absolute top-0 left-0 -mt-10 -ml-10 hidden md:block">
@@ -144,23 +145,29 @@ const ServicesPage = () => {
                             <Image src="/cta-vector.svg" className="object-cover" width={244} height={300} alt="vector" />
                         </div>
 
+                        {/* Badge + cursor */}
+                        <div className="absolute right-0 -mr-20 -mt-6 top-full translate-x-6 translate-y-4 hidden lg:block">
+                            <div className="relative">
+                                <small className="bg-[#292a2d] dark:bg-white dark:text-black text-white rounded-full px-3 py-1 text-xs mt-6 font-semibold">
+                                    Software Developer
+                                </small>
+                                <span className="text-lg absolute left-0 top-0 transform -translate-y-4 -translate-x-4 -rotate-90">
+                                        <BsFillCursorFill className="text-[#0B9944] dark:text-green-500" size={25} />
+                                    </span>
+                            </div>
+                        </div>
+
                         <div className="grid gap-4 relative">
                             {/* Title and Inputs */}
                             <div className="col-span-1 lg:col-span-10 xl:col-span-7 mx-auto text-center space-y-4 h-full my-10 pb-6">
                                 <h3 className="text-white text-3xl md:text-4xl font-bold mb-3">Ready to elevate your business?</h3>
-                                <p className="text-[#c4c5c7] opacity-80 mt-4 text-lg">
-                                    Join the {COMPANY_NAME} revolution today and be part of the millions who&apos;ve already <br/> embraced a brighter future!
+                                <p className="text-[#c4c5c7] opacity-80 mt-4 text-lg max-w-2xl">
+                                    Join the {COMPANY_NAME} revolution today and be part of the thousands of businesses already embracing a smarter, brighter digital future!
                                 </p>
-
                                 <Button className="bg-[#09b850] hover:bg-[#0B9944] text-white rounded-sm inline-block transition-all duration-500 ease-in-out mt-3 mb-6">
-                                    <Link href="/contact" className="px-[0.5rem] py-[0.5rem]">Get started today</Link>
+                                    <Link href="/contact" className="px-[0.7rem] py-[0.7rem]">Get started today</Link>
                                 </Button>
-
                                 <p className="text-[#c4c5c7] opacity-80 mt-10 text-lg text-center hidden">Used by the world&apos;s best companies.</p>
-
-                                {/* Client Slider */}
-                                {/*<ClientCarousel />*/}
-                                {/* Client Slider END */}
                             </div>
                         </div>
                     </div>

@@ -138,7 +138,7 @@ const AboutSection = () : JSX.Element => {
                         </motion.h2>
                         <motion.p className="mb-4 dark:text-[#c4c5c7]" variants={itemVariants}>
                             Embrace a new era of digital success with {COMPANY_NAME}. Our team
-                            combines cutting-edge design with robust development to deliver websites that captivate and
+                            combines cutting-edge design with robust development to deliver solutions that captivate and
                             convert.
                         </motion.p>
 

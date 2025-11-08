@@ -163,8 +163,7 @@ const ServicesSection = () => {
                             <Link href="/services/business-emails">Business Emails</Link>
                         </h5>
                         <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            Professional and secure business email solutions that boost
-                            credibility.
+                            Secure business emails that boost credibility and keep your team connected.
                         </p>
                         <Link
                             href="/services/business-emails"
@@ -189,8 +188,7 @@ const ServicesSection = () => {
                             <Link href="/services/seo">Search Engine Optimization</Link>
                         </h5>
                         <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            Boost your visibility with targeted SEO strategies, driving traffic
-                            and maximizing reach.
+                            Boost your visibility with targeted SEO to drive traffic and maximize reach.
                         </p>
                         <Link
                             href="/services/seo"
@@ -215,7 +213,7 @@ const ServicesSection = () => {
                             <Link href="/services/maintenance-and-support">Maintenance and Support</Link>
                         </h5>
                         <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            Building strong brand identities that connect with your audience. our audience.our audience.
+                            Ongoing support and maintenance to ensure your business stays online and efficient.
                         </p>
                         <Link
                             href="/services/maintenance-and-support"
