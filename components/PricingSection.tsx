@@ -107,8 +107,9 @@ const PricingSection = (): JSX.Element => {
                         </motion.div>
 
                         <motion.h6 className="mb-3 font-black text-[#202124] dark:text-white/90 mt-4" variants={itemVariants} transition={{ delay: 0.6 }}>
-                            <span className="text-[4.6rem] font-black align-bottom leading-none">R3,500</span>
-                            <span className="ml-2 text-xl font-semibold align-bottom">/month</span>
+                            {/* <span className="text-[4.6rem] font-black align-bottom leading-none">R3,500</span> */}
+                            {/* <span className="ml-2 text-xl font-semibold align-bottom">Flexible Monthly Plan</span> */}
+                            <span className="text-xl font-semibold align-bottom">Flexible Monthly Plan</span>
                         </motion.h6>
 
                         <motion.p className="" variants={itemVariants} transition={{ delay: 0.7 }}>
