@@ -1,9 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ocean of tech Website - Next.js
 
-## Getting Started
+This repository contains the **official website of Ocean of tech**, built with **[Next.js](https://nextjs.org)** and deployed on **Vercel**.  
+It showcases the company’s services, portfolio, and contact information.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+### Prerequisites
+* **Node.js 18+** installed on your machine
+* npm, yarn, pnpm, or bun package manage
+* Run the development server locally:
+
+### Local Development
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-org/your-company-website.git
+cd your-company-website
+```
+2. **Install dependencies:**
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+3. **Run the development server:**
 ```bash
 npm run dev
 # or
@@ -13,24 +38,39 @@ pnpm dev
 # or
 bun dev
 ```
+Open http://localhost:3000 in your browser to view the website.
+Edit pages in the app/ directory; changes update automatically.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
+### 🏗 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+your-company-website/
+├── app/                 # Pages and layouts (App Router)
+│   ├── globals.css     # Global styles
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Homepage
+│   ├── services/       # Services page
+│   ├── portfolio/      # Portfolio page
+│   └── contact/        # Contact page
+├── components/         # Reusable UI components
+│   ├── ui/            # Basic components (buttons, cards)
+│   ├── layout/        # Layout components (navbar, footer)
+│   └── sections/      # Page sections
+├── public/            # Static assets
+│   ├── images/        # Images and graphics
+│   └── icons/         # Icons and logos
+├── lib/               # Utilities and helpers
+├── styles/            # Additional styles
+└── types/             # TypeScript type definitions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
+### 🛠 Technologies Used
+Next.js – React framework for server-side rendering and static site generation
 
-## Learn More
+TypeScript – Strongly typed JavaScript development
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS / Custom CSS – Styling and responsive layouts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel – Hosting and deployment platform
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Semantic Release – Automatic versioning and changelog generation

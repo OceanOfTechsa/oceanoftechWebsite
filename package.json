@@ -54,6 +54,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@react-email/preview-server": "^4.2.8",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -63,6 +66,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
     "react-email": "4.2.8",
+    "semantic-release": "^25.0.2",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.7",
     "typescript": "^5"

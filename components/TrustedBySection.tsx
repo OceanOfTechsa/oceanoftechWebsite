@@ -54,10 +54,9 @@ const TrustedBySection = () => {
                 {/* Heading on top for mobile, side-by-side for desktop */}
                 <h2 className="text-xl md:text-2xl font-bold md:pr-5 md:border-r border-[#0B9944]/70 text-center md:text-left leading-snug">
                     Join over 3+
-
                     {" "}companies{" "} <br className="hidden md:block" />
-
-                    <span className="text-[#0B9944] dark:text-[#09b850] font-bold animate-pulse inline">
+                    <br className="md:hidden" />
+                    <span className="text-[#0B9944] dark:text-[#09b850] font-bold inline">
                        <TypedText strings={["Growing", "Building", "Innovating", "Scaling"]} typeSpeed={90} className="text-center font-black"/>
                     </span>{" "}
                     with us
