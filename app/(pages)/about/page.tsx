@@ -1,7 +1,6 @@
 import AboutDecoSvg from "@/components/ui/file";
 import Link from "next/link";
 import {JSX} from "react";
-import CountUp from "@/components/count-up";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";

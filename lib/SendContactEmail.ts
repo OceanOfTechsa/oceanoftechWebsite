@@ -9,7 +9,8 @@ if (!process.env.RESEND_API_KEY) {
     throw new Error("RESEND_API_KEY environment variable is not configured");
 }
 
- const resend = new Resend(process.env.RESEND_API_KEY);export type FormValues = z.infer<typeof ContactSchema>;
+ const resend = new Resend(process.env.RESEND_API_KEY);
+ export type FormValues = z.infer<typeof ContactSchema>;
 
 export async function SendContactEmail(data: FormValues) {
     try {

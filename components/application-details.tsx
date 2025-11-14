@@ -88,7 +88,7 @@ const mockApplications: Record<string, Application> = {
         jobTitle: "Senior Frontend Developer",
         company: "TechCorp Solutions",
         appliedDate: "2024-01-15",
-        status: ApplicationStatus.INTERVIEW_SCHEDULED,
+        status: ApplicationStatus.OFFER_EXTENDED,
         location: { city: "Cape Town", country: "South Africa" },
         salary: { amount: 850000, currency: "ZAR", period: "year" },
         type: "Hybrid",

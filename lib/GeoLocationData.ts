@@ -1,5 +1,5 @@
 interface GeoLocationData {
-    query: string;       // IP address
+    query: string; // IP address
     city: string;
     country: string;
     countryCode: string;

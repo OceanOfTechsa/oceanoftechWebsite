@@ -3,6 +3,13 @@ import JobApplicationForm from "@/components/forms/JobApplicationForm";
 import NewsLetterSubForm from "@/components/forms/newsLetter";
 import Image from "next/image"
 
+export async function generateMetadata({ params }: ApplyPageProps) {
+  const { slug } = params;
+  return {
+    title: `Apply for ${slug.replace(/-/g, ' ')}`,
+  };
+}
+
 interface ApplyPageProps {
   params: {
     slug: string;
@@ -100,11 +107,4 @@ export default function ApplyPage({ params }: ApplyPageProps) {
       </section>
     </div>
   );
-}
-
-export async function generateMetadata({ params }: ApplyPageProps) {
-  const { slug } = params;
-  return {
-    title: `Apply for ${slug.replace(/-/g, ' ')}`,
-  };
 }

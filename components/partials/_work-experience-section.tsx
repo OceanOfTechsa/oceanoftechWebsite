@@ -43,11 +43,6 @@ interface WorkExperienceSectionProps {
     isEditingAllowed: boolean
 }
 
-interface Work {
-    work_start_date: string;
-    work_end_date: string;
-}
-
 export function WorkExperienceSection({ workExperiences, isEditingAllowed }: WorkExperienceSectionProps) {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [workItems, setWorkItems] = useState<WorkExperience[]>(workExperiences);
