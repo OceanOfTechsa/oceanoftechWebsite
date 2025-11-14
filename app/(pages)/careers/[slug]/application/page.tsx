@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import { type Career, careers } from "@/components/conts";
 import JobApplicationForm from "@/components/forms/JobApplicationForm";
 import NewsLetterSubForm from "@/components/forms/newsLetter";
 import Image from "next/image"
 
-export async function generateMetadata({ params }: ApplyPageProps) {
+export async function generateMetadata({ params }: ApplyPageProps): Promise<Metadata>{
   const { slug } = params;
   return {
     title: `Apply for ${slug.replace(/-/g, ' ')}`,

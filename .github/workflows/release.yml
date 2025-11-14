@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master  # Update if your default branch is different
+
+permissions:
+  contents: write  # Required to push tags/changelog
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout full history (needed for Semantic Release to push tags)
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Setup Node.js (24 is compatible with Semantic Release)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 24
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Optional: Run tests (remove if not needed)
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
+
+      # Run Semantic Release
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # default token is fine
+        run: npx semantic-release
