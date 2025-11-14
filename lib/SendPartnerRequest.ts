@@ -13,14 +13,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);export type FormValues = z
 
 export async function SendPartnerRequestEmail(data: FormValues) {
     try {
-        const validatedData = PartnerFormSchema.parse(data);
-
         const { data: email, error } = await resend.emails.send({
             from: "Oceanoftech <accounts@oceanoftechsa.com>",
             to: "okasithuli@outlook.com",
             subject: "New Contact Form Submission – Ocean of Tech",
-            react: PartnerRequestEmail(validatedData),
-            replyTo: validatedData.email,
+            react: PartnerRequestEmail(PartnerFormSchema.parse(data)),
+            replyTo: PartnerFormSchema.parse(data).email,
         });
 
         if (error) {

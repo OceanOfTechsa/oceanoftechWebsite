@@ -1,5 +1,4 @@
 import React from "react";
-
 export interface AccordionItemProps {
     question: string
     answer: React.ReactNode

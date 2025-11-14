@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import AnimatedIcon from "@/components/animations/animatedIcon";
 import ServiceTestimonialCarousel from '@/components/ServiceTestimonialCarousel';
-import {BsFillCursorFill} from "react-icons/bs";
-
 export async function generateMetadata({ params }: { params: { service: string } }): Promise<Metadata> {
     const { service } = params;
     const serviceData: Service | undefined = services.find((s: Service): boolean => s.slug === service);
