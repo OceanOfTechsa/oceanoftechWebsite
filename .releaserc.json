@@ -1,5 +1,8 @@
 {
-    "branches": ["master"],
+    "branches": [
+      "master",
+      { "name": "uat", "prerelease": "uat" }
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
