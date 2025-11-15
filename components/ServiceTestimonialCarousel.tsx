@@ -6,18 +6,16 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { GoStarFill } from "react-icons/go";
-import { reviews } from "@/AppSettings";
 import Image from "next/image";
 import {IReview} from "@/Shared/IReview";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 
 interface ServiceTestimonialCarouselProps {
     serviceSlug?: string; // The slug of the current service page
 }
 
-export default function ServiceTestimonialCarousel({
-                                                       serviceSlug
-                                                   }: ServiceTestimonialCarouselProps) {
+export default function ServiceTestimonialCarousel({serviceSlug}: ServiceTestimonialCarouselProps) {
     const [page, setPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(2);
     const [filteredReviews, setFilteredReviews] = useState<IReview[]>([]);
@@ -25,13 +23,13 @@ export default function ServiceTestimonialCarousel({
     // Filter reviews based on service slug
     useEffect(() => {
         if (serviceSlug) {
-            const filtered = reviews.filter((review: IReview) =>
+            const filtered = AppSettings.Reviews.filter((review: IReview) =>
                 review.categories.includes(serviceSlug)
             );
             setFilteredReviews(filtered);
         } else {
             // If no service slug provided, show all reviews
-            setFilteredReviews(reviews);
+            setFilteredReviews(AppSettings.Reviews);
         }
         setPage(0); // Reset to first page when filter changes
     }, [serviceSlug]);

@@ -7,7 +7,7 @@ import { FaArrowRight, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-ico
 import { GoDotFill } from "react-icons/go";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import type { CaseStudy } from "@/data/caseStudies";
-import { ITEMS_PER_PAGE } from "@/AppSettings";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 interface CaseStudiesListProps {
   items: CaseStudy[];
@@ -15,7 +15,7 @@ interface CaseStudiesListProps {
   onPageChange?: () => void;
 }
 
-const  CaseStudiesList = ({items,itemsPerPage = ITEMS_PER_PAGE, onPageChange,}: CaseStudiesListProps): JSX.Element => {
+const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPageChange,}: CaseStudiesListProps): JSX.Element => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
 

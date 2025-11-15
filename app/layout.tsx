@@ -6,11 +6,11 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import React from "react";
 import ScrollToTop from "@/components/ScrollToTop";
-import { COMPANY_NAME } from "@/AppSettings";
 import { JSX } from "react";
 import { SearchProvider } from "@/contexts/SearchContext";
 import SearchForm from "@/components/forms/searchForm";
 import { Toaster } from "@/components/ui/sonner"
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         default: "Web Design, Development, Hosting & SEO Services in South Africa",
         template: "%s • Web Design, Development, Hosting & SEO Services in South Africa",
     },
-    description:`${COMPANY_NAME} is a leading software company in South Africa, offering website design, development, hosting, UI/UX design, SEO, and business email solutions. We create innovative, custom software and web solutions to help businesses in Durban and across South Africa succeed online.`,
+    description:`${AppSettings.COMPANY_NAME} is a leading software company in South Africa, offering website design, development, hosting, UI/UX design, SEO, and business email solutions. We create innovative, custom software and web solutions to help businesses in Durban and across South Africa succeed online.`,
     keywords: [
         // 🔑 Primary
         "software company South Africa",

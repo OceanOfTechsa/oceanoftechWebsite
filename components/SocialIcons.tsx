@@ -1,17 +1,19 @@
+import AppSettings  from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaGithub } from "react-icons/fa";
 
 const SocialIcons = () => {
     const socials = [
-        { icon: <FaFacebookF />, url: "#" },
-        { icon: <FaInstagram />, url: "#" },
-        { icon: <FaTwitter />, url: "#" },
-        { icon: <FaLinkedinIn />, url: "#" },
-        { icon: <FaYoutube />, url: "#" },
+        { icon: <FaFacebookF />, url: AppSettings.CompanySocials.Facebook },
+        { icon: <FaLinkedinIn />, url: AppSettings.CompanySocials.LinkedIn },
+        { icon: <FaTwitter />, url: AppSettings.CompanySocials.Twitter },
+        {icon: <FaGithub />, url: AppSettings.CompanySocials.Github },
+        { icon: <FaInstagram />, url: AppSettings.CompanySocials.Instagram },
+        { icon: <FaYoutube />, url: AppSettings.CompanySocials.Youtube },
     ];
 
     return (
-        <ul className="flex space-x-3 mt-3">
+        <ul className="flex space-x-3 -mt-2">
             {socials.map((social, i) => (
                 <li key={i}>
                     <Link href={social.url} className="p-2 bg-[#292a2d] rounded-sm active:bg-[#c6c6c6] focus:bg-white focus:text-black hover:bg-[#d3d3d3]/20 transition-colors flex items-center justify-center">
@@ -22,5 +24,4 @@ const SocialIcons = () => {
         </ul>
     );
 };
-
 export default SocialIcons;
