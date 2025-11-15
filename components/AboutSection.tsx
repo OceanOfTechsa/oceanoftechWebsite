@@ -1,6 +1,5 @@
 "use client"
 
-import { COMPANY_NAME } from "@/AppSettings";
 import AnimatedIcon from "@/components/animations/animatedIcon";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +7,7 @@ import { BsFillPatchCheckFill } from "react-icons/bs";
 import { motion, type Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { JSX } from "react";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 const AboutSection = () : JSX.Element => {
     const containerVariants = {
@@ -137,7 +137,7 @@ const AboutSection = () : JSX.Element => {
                             Defining the future of online experiences!
                         </motion.h2>
                         <motion.p className="mb-4 dark:text-[#c4c5c7]" variants={itemVariants}>
-                            Embrace a new era of digital success with {COMPANY_NAME}. Our team
+                            Embrace a new era of digital success with {AppSettings.COMPANY_NAME}. Our team
                             combines cutting-edge design with robust development to deliver solutions that captivate and
                             convert.
                         </motion.p>

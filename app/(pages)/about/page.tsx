@@ -8,8 +8,8 @@ import { LuBadgeCheck } from "react-icons/lu";
 import { HiCheckBadge } from "react-icons/hi2";
 import { FiChevronRight } from "react-icons/fi";
 import { GoDash } from "react-icons/go";
-import { HIRING } from "@/AppSettings";
 import { Metadata } from "next";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 export const metadata: Metadata = {
     title: "About Us"
@@ -366,7 +366,7 @@ const AboutPage = (): JSX.Element => {
             </section>
 
             {
-                HIRING && 
+                AppSettings.HIRING && 
                 (
                     <section className="py-20">
                         <div className="container mx-auto px-4">

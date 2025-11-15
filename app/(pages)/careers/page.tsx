@@ -107,9 +107,9 @@ const CareersPage = (): JSX.Element => {
 
           {/* Suggestions */}
           <ul className="flex flex-wrap justify-center gap-3 mt-5 text-sm">
-            <li className=" text-[#606261] dark:text-[#c4c5c7]">Suggestions:</li>
+            {careers.length > 0 && <li className=" text-[#606261] dark:text-[#c4c5c7]">Suggestions:</li>}
             {
-              careers.slice(0, 5).map((sug: Career, i: number): JSX.Element => (
+              careers?.slice(0, 5).map((sug: Career, i: number): JSX.Element => (
                  <li key={i}>
                     <Link href={`/careers/${sug.slug}`} className="hover:text-[#0B9944] hover:dark:text-green-500">
                       {sug.title},

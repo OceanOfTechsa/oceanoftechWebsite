@@ -18,7 +18,7 @@ interface ApplyPageProps {
 }
 
 export default function ApplyPage({ params }: ApplyPageProps) {
-  const job: Career | undefined = careers.find((c: Career) => c.slug === params.slug) as Career;
+  const job: Career | undefined = careers?.find((c: Career) => c.slug === params.slug) as Career;
 
   return (
     <div className="w-full">

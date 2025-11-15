@@ -1,4 +1,3 @@
-import { COMPANY_NAME } from "@/AppSettings";
 import TypedText from "@/components/animations/TypedText";
 import { Button } from "@/components/ui/button";
 import { servicesData } from "@/lib/ServicesData";
@@ -10,6 +9,7 @@ import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { GoArrowRight, GoDotFill } from "react-icons/go";
 import {BsFillCursorFill} from "react-icons/bs";
+import  AppSettings  from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 export const metadata: Metadata = {
     title: "Services"
@@ -162,7 +162,7 @@ const ServicesPage = () => {
                             <div className="col-span-1 lg:col-span-10 xl:col-span-7 mx-auto text-center space-y-4 h-full my-10 pb-6">
                                 <h3 className="text-white text-3xl md:text-4xl font-bold mb-3">Ready to elevate your business?</h3>
                                 <p className="text-[#c4c5c7] opacity-80 mt-4 text-lg max-w-2xl">
-                                    Join the {COMPANY_NAME} revolution today and be part of the thousands of businesses already embracing a smarter, brighter digital future!
+                                    Join the {AppSettings.COMPANY_NAME} revolution today and be part of the thousands of businesses already embracing a smarter, brighter digital future!
                                 </p>
                                 <Button className="bg-[#09b850] hover:bg-[#0B9944] text-white rounded-sm inline-block transition-all duration-500 ease-in-out mt-3 mb-6">
                                     <Link href="/contact" className="px-[0.7rem] py-[0.7rem]">Get started today</Link>
