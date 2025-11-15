@@ -216,14 +216,14 @@ The changelog is **automatically maintained** by Semantic Release. **Do not edit
 
 ### ✅ Do's
 - Always use Conventional Commits for proper version bumping
-- Test changes locally before pushing to `main`
+- Test changes locally before pushing to `master`
 - Keep components modular and reusable
 - Follow TypeScript best practices
 - Ensure responsive design across all devices
 
 ### ❌ Don'ts
 - Do not manually edit `CHANGELOG.md`
-- Avoid pushing directly to `main` - use Pull Requests
+- Avoid pushing directly to `master` - use Pull Requests
 
 ## 🆘 Troubleshooting
 
@@ -245,4 +245,4 @@ For additional support, please open an issue in the repository.
 
 ---
 
-Made with ❤️ by [Your Company Name]
+Made with ❤️ by Ocean of tech

@@ -14,10 +14,9 @@ const TABS: string[] = ["all", "development", "hr", "marketing", "design"];
 const OpenPositions = () : JSX.Element => {
   const [activeTab, setActiveTab] = useState("all");
 
-  // Filter based on tab
   const filteredCareers: Career[] = activeTab === "all"
     ? careers
-    : careers.filter((job: Career): boolean => job.category.toLowerCase() === activeTab);
+    : careers?.filter((job: Career): boolean => job.category.toLowerCase() === activeTab);
 
   return (
     <section className="pt-0 w-full max-w-7xl mx-auto px-6 md:px-0 py-20 my-20">

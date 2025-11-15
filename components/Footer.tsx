@@ -3,10 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import SocialIcons from "@/components/SocialIcons";
-import {COMPANY_NAME} from "@/AppSettings";
 import { JSX } from "react";
 import {careers } from "@/components/conts";
-
+import  AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 const Footer = (): JSX.Element => {
     return (
@@ -34,7 +33,7 @@ const Footer = (): JSX.Element => {
                             <li>
                                 <Link className="text-gray-300 hover:text-green-400 transition-colors flex items-center group" href="/careers">
                                     Career{" "}
-                                    <span className="ml-2 bg-[#D8293E] group-hover:text-white font-semibold text-xs px-2 py-0.5 rounded-sm flex items-center justify-center"> {careers?.length} New </span>
+                                    {AppSettings.HIRING && <span className="ml-2 bg-[#D8293E] group-hover:text-white font-semibold text-xs px-2 py-0.5 rounded-sm flex items-center justify-center"> {careers?.length} New </span>}
                                 </Link>
                             </li>
                             <li>
@@ -76,7 +75,7 @@ const Footer = (): JSX.Element => {
                 </div>
                 <div className="border-t border-gray-300/30 py-6 mt-6 text-center">
                     <p className="text-sm text-[#c4c5c7]">
-                        © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
+                        © {new Date().getFullYear()} {AppSettings.COMPANY_NAME}. All rights reserved.
                     </p>
                 </div>
             </div>

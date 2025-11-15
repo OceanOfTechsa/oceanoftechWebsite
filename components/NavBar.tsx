@@ -1,6 +1,5 @@
 "use client"
 
-import { navLinks } from "@/AppSettings";
 import ModeToggle from "@/components/ModeToggle";
 import NavMegaMenu from "@/components/NavMegaMenu";
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,7 @@ import { usePathname } from "next/navigation";
 import * as React from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import LinkPreview from "@/components/ui/link-preview";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 const NavBar = (): React.JSX.Element => {
     const pathname: string = usePathname();
@@ -94,7 +94,7 @@ const NavBar = (): React.JSX.Element => {
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-6">
-                        {navLinks.map((link: { label: string, href: string }): React.JSX.Element => (
+                        {AppSettings.NavLinks.map((link: { label: string, href: string }): React.JSX.Element => (
                             <Link
                                 key={link.href}
                                 href={link.href}
@@ -145,7 +145,7 @@ const NavBar = (): React.JSX.Element => {
                                       <SheetTitle>Navigation</SheetTitle>
                                 </SheetHeader>
                                 <nav className="flex flex-col gap-4">
-                                    {navLinks.map((link: { label: string, href: string }): React.JSX.Element => (
+                                    {AppSettings.NavLinks.map((link: { label: string, href: string }): React.JSX.Element => (
                                         <Link
                                             key={link.href}
                                             href={link.href}

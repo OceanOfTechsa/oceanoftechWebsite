@@ -58,7 +58,7 @@ const SearchForm = () => {
             if (trimmed === "all") {
                 setResults(careers);
             } else {
-                const matched = careers.filter((career) =>
+                const matched = careers?.filter((career) =>
                     career.title.toLowerCase().includes(trimmed) ||
                     career.category.toLowerCase().includes(trimmed) ||
                     career.location.city.toLowerCase().includes(trimmed) ||

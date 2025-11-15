@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { GoStarFill } from "react-icons/go";
-import { reviews } from "@/AppSettings";
 import Image from "next/image";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 export default function TestimonialCarousel() {
     const [page, setPage] = useState(0);
@@ -27,7 +27,7 @@ export default function TestimonialCarousel() {
         return () => window.removeEventListener("resize", updateItemsPerPage);
     }, []);
 
-    const totalPages = Math.ceil(reviews.length / itemsPerPage);
+    const totalPages = Math.ceil(AppSettings.Reviews.length / itemsPerPage);
 
     const [paused, setPaused] = useState(false);
 
@@ -40,7 +40,7 @@ export default function TestimonialCarousel() {
         return () => clearInterval(interval);
     }, [paused, totalPages]);
 
-    const currentItems = reviews.slice(
+    const currentItems = AppSettings.Reviews.slice(
         page * itemsPerPage,
         page * itemsPerPage + itemsPerPage
     );

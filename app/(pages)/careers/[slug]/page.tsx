@@ -9,7 +9,7 @@ import Image from "next/image";
 import { FiUsers } from "react-icons/fi";
 import type { Metadata } from "next";
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const job = careers.find((c) => c.slug === params.slug);
+  const job = careers?.find((c) => c.slug === params.slug);
 
   if (!job) {
     return {
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default function CareerApplyPage({ params }: { params: { slug: string } }) {
-  const job: Career | undefined = careers.find((c: Career) => c.slug === params.slug);
+  const job: Career | undefined = careers?.find((c: Career) => c.slug === params.slug);
 
   if (!job) {
     return <div className="text-center py-20">Job not found.</div>;
