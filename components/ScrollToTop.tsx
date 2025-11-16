@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpFromDot, MessageSquareMore } from "lucide-react";
+import { ArrowUpFromDot } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const ScrollToTop = () => {

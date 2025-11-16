@@ -124,7 +124,7 @@ export default function ServicesSearchSection() {
           {filteredServices.length === 0 ? (
             <div className="col-span-full text-center py-16">
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                No services found for "<span className="font-semibold text-[#09b850]">{query}</span>"
+                No services found for &quot;<span className="font-semibold text-[#09b850]">{query}</span>&quot;
               </p>
               <button
                 onClick={() => setQuery("")}

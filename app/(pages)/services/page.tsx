@@ -1,20 +1,13 @@
 import TypedText from "@/components/animations/TypedText";
 import { Button } from "@/components/ui/button";
-import { servicesData } from "@/lib/ServicesData";
-import { MoveRight, Search } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { GoArrowRight, GoDotFill } from "react-icons/go";
-import {BsFillCursorFill} from "react-icons/bs";
 import  AppSettings  from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
-import { Form } from "react-hook-form";
-import { FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import ServicesSearchSection from "@/components/forms/ServicesSearchAndResultsForm";
-
 export const metadata: Metadata = {
     title: "Services"
 }

@@ -7,13 +7,15 @@ import { JSX } from "react";
 import {careers } from "@/components/conts";
 import  AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import { Button } from "@/components/ui/button";
-import { MessageSquareMore, MessagesSquare } from "lucide-react";
+import { MessagesSquare } from "lucide-react";
 
 const Footer = (): JSX.Element => {
     return (
         <footer className="bg-[#202124] text-white pt-20 relative overflow-hidden">
             <div className="pointer-events-none absolute top-0 right-0">
-                <img
+                <Image
+                    width={270}
+                    height={257}
                     src="/decoration-pattern-2.svg"
                     alt=""
                     className="w-full max-w-none opacity-5 hidden md:block"

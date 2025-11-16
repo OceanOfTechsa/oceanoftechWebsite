@@ -2,7 +2,6 @@ import AnimatedIcon from "@/components/animations/animatedIcon";
 import TypedText from "@/components/animations/TypedText";
 import CountUp from "@/components/count-up";
 import EmailOnlyContactForm from "@/components/forms/emailOnlyContactForm";
-import { Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
