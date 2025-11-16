@@ -1,30 +1,42 @@
 'use client';
 
-import { JSX, useEffect } from 'react';
+import { useEffect } from 'react';
 
-const Tawk = (): JSX.Element | null => {
+// Proper TypeScript declaration merging – no 'any' needed
+declare global {
+  interface Window {
+    Tawk_API?: {
+      onLoad?: () => void;
+      hideWidget?: () => void;
+      showWidget?: () => void;
+      setAttributes?: (attributes: Record<string, string>, callback: () => void) => void;
+      loaded?: boolean;
+    };
+    Tawk_LoadStart?: Date;
+  }
+}
+
+const Tawk = (): null => {
   useEffect(() => {
-    if ((window as any).Tawk_API?.loaded) return;
+    if (window.Tawk_API?.loaded) return;
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_LoadStart = new Date();
 
-    const Tawk_API: any = {};
-    (window as any).Tawk_API = Tawk_API;
+    const script = document.createElement('script');
+    const firstScript = document.getElementsByTagName('script')[0];
 
-    const Tawk_LoadStart = new Date();
-    (window as any).Tawk_LoadStart = Tawk_LoadStart;
-
-    const s1 = document.createElement('script');
-    const s0 = document.getElementsByTagName('script')[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/691915f4191341195c312bc0/1ja4vrgv1';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode?.insertBefore(s1, s0);
-
-    return () => {
-      // Optional: cleanup if you want
+    script.async = true;
+    script.src = 'https://embed.tawk.to/691915f4191341195c312bc0/1ja4vrgv1';
+    script.charset = 'UTF-8';
+    script.setAttribute('crossorigin', '*');
+    firstScript.parentNode?.insertBefore(script, firstScript);
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_API.onLoad = () => {
+      const branding = document.querySelector('.tawk-branding');
+      if (branding) branding.remove();
     };
   }, []);
 
   return null;
-}
+};
 export default Tawk;

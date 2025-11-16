@@ -18,10 +18,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { type Service, servicesData } from "@/lib/ServicesData";
 
+// Proper SVG icon component type – replaces React.ComponentType<any>
+type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
+
 export default function ServicesSearchSection() {
   const [query, setQuery] = useState("");
 
-  // Live filter: match title or description
   const filteredServices = useMemo(() => {
     if (!query.trim()) return servicesData;
 
@@ -39,7 +41,8 @@ export default function ServicesSearchSection() {
     servicesData[6],
   ];
 
-  const iconMap: Record<Service["iconName"], React.ComponentType<any>> = {
+  // Only change: replaced React.ComponentType<any> with proper type
+  const iconMap: Record<Service["iconName"], IconComponent> = {
     "code-xml": CodeXml,
     "scale-3d": Scale3d,
     server: Server,
@@ -64,10 +67,8 @@ export default function ServicesSearchSection() {
               onChange={(e) => setQuery(e.target.value)}
               className="border-none focus-visible:ring-0 focus-visible:outline-none shadow-none outline-none ring-0 bg-transparent dark:bg-[#161618]"
             />
-          
            
-            {
-            query ? 
+            {query ? 
               <button
                 type="button"
                 onClick={() => setQuery("")}
@@ -75,7 +76,6 @@ export default function ServicesSearchSection() {
               >
                 Clear
               </button>
-            
             :
             <Button type="button" className="text-white rounded-[0.2rem] px-4 py-2 transition cursor-pointer bg-[#202124] hover:bg-[#414245]">
                 <Search />
@@ -130,7 +130,7 @@ export default function ServicesSearchSection() {
                 onClick={() => setQuery("")}
                 className="mt-4 text-[#09b850] hover:underline font-medium cursor-pointer"
               >
-                ← Show all services
+                Show all services
               </button>
             </div>
           ) : (
