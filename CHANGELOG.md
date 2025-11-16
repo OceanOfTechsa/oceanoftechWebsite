@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.0.1...v1.0.2) (2025-11-16)
+
+
+### Bug Fixes
+
+* website updates ([e9b0e0f](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/e9b0e0f9aca54b537b74a37ca6208386f09a5073))
+
 ## [1.0.2-uat.1](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.0.1...v1.0.2-uat.1) (2025-11-16)
 
 
