@@ -86,28 +86,60 @@ const HeroSection = () => {
                     <div className="xl:col-span-5 relative">
                         <Image src="/Hero.jpg" alt="Hero" width={506} height={609} quality={75} className="rounded-md shadow-lg relative z-10" priority={true}/>
                         <div className="inline-block bg-[#191b1d] rounded-md absolute bottom-0 start-0 mb-4 p-3 z-10 ml-3 md:-ml-20 ">
-                            <div className="flex items-center justify-normal">
-                                <h6 className="text-white mb-0 mr-10 font-bold text-2xl"><CountUp end={5} duration={1}/>K+
-                                </h6>
-                                <ul className="flex items-center mb-0">
-                                    <li className="w-7 h-7 rounded-full overflow-hidden">
-                                        <Image src="/06.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
+                            <div className="flex items-center justify-between">
+                                <h6 className="text-white mb-0 mr-10 font-bold text-2xl"><CountUp end={10} duration={1}/>+</h6>
+                                <ul className="flex items-center -space-x-4">
+                                    {/* Next.js */}
+                                    <li className="relative w-8 h-8 rounded-full ring-2 ring-[#191b1d] bg-white shadow-md hover:z-10 hover:scale-110 transition-all duration-500 ease-n-out">
+                                        <Image
+                                            src="/tech/nextjs.jpg"
+                                            alt="Next.js"
+                                            width={44}
+                                            height={44} 
+                                            className="w-full h-full rounded-full object-contain"
+                                        />
                                     </li>
-                                    <li className="w-7 h-7 rounded-full overflow-hidden -ml-2">
-                                        <Image src="/05.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
+
+                                    {/* TypeScript */}
+                                    <li className="relative w-8 h-8 rounded-full ring-2 ring-[#191b1d] bg-white shadow-md hover:z-10 hover:scale-110 transition-all duration-500 ease-n-out">
+                                        <Image
+                                        src="/tech/typescript.svg"
+                                        alt="TypeScript"
+                                        width={44}
+                                        height={44}
+                                        className="w-full h-full rounded-full object-contain"
+                                        />
                                     </li>
-                                    <li className="w-7 h-7 rounded-full overflow-hidden -ml-2">
-                                        <Image src="/02.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
+
+                                    {/* Tailwind CSS */}
+                                    <li className="relative w-8 h-8 rounded-full ring-2 ring-[#191b1d] bg-white shadow-md hover:z-10 hover:scale-110 transition-all duration-500 ease-n-out">
+                                        <Image
+                                        src="/tech/tailwindcss.svg"
+                                        alt="Tailwind CSS"
+                                        width={44}
+                                        height={44}
+                                        className="w-full h-full rounded-full object-contain"
+                                        />
                                     </li>
-                                    <li className="w-7 h-7 rounded-full overflow-hidden -ml-2">
-                                        <Image src="/03.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
+
+                                    {/* PostgreSQL */}
+                                    <li className="relative w-8 h-8 rounded-full ring-2 ring-[#191b1d] bg-white shadow-md hover:z-10 hover:scale-110 transition-all duration-500 ease-n-out">
+                                        <Image
+                                        src="/tech/postgresql.svg"
+                                        alt="PostgreSQL"
+                                        width={44}
+                                        height={44}
+                                        className="w-full h-full rounded-full object-contain"
+                                        />
                                     </li>
-                                    <li className="w-7 h-7 rounded-full overflow-hidden -ml-2">
-                                        <Image src="/04.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
+
+                                    {/* +X badge */}
+                                    <li className="relative w-8 h-8 rounded-full ring-2 ring-[#191b1d] bg-gradient-to-br from-cyan-500 to-purple-600 shadow-md flex items-center justify-center">
+                                        <span className="text-white text-sm font-semibold drop-shadow-md">+10</span>
                                     </li>
                                 </ul>
                             </div>
-                            <p className="text-white mt-2 mb-0">Total visitors per month</p>
+                            <p className="text-white mt-2 mb-0">Modern Technologies We Use</p>
                         </div>
                         <div className="absolute top-0 right-0 -translate-x-2/2 -translate-y-2/2 mt-2 -mr-10 z-10">
                             <div className="w-full animate-wiggle">

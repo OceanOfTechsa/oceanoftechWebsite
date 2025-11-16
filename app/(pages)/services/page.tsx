@@ -1,16 +1,13 @@
 import TypedText from "@/components/animations/TypedText";
 import { Button } from "@/components/ui/button";
-import { servicesData } from "@/lib/ServicesData";
-import { MoveRight } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { GoArrowRight, GoDotFill } from "react-icons/go";
-import {BsFillCursorFill} from "react-icons/bs";
 import  AppSettings  from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
-
+import ServicesSearchSection from "@/components/forms/ServicesSearchAndResultsForm";
 export const metadata: Metadata = {
     title: "Services"
 }
@@ -48,41 +45,36 @@ const ServicesPage = () => {
                             </h1>
 
                             <h1 className="text-4xl md:text-5xl font-bold leading-tight block sm:hidden">
-                                Discover the {" "}<TypedText
-                                strings={["Solutions", "Specialties", "Advantages", "Advantages"]} typeSpeed={90}
-                                className="text-center text-[#0B9944] dark:text-[#09b850] font-black"/>
+                                Discover the {" "}
                                 <br/>
-                                We offer
+                                <TypedText strings={["Solutions", "Specialties", "Advantages", "Advantages"]} typeSpeed={90} className="text-center text-[#0B9944] dark:text-[#09b850] font-black"/>      
+                                {" "}We offer
                             </h1>
 
-                            <p className="dark:text-[#c4c5c7] max-w-2xl mt-0">
+                            <p className="dark:text-[#c4c5c7] max-w-2xl">
                                 Our experienced team is dedicated to helping you achieve your goals through <br className="hidden md:block"/>innovative technology.
                             </p>
 
-                            <Link href="tel:0698902422"
-                                  className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1.2rem] py-[0.8rem] rounded-sm inline-flex gap-2 transition-all duration-500 ease-in-out items-center">
+                            <Link href="tel:0698902422" className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1.2rem] py-[0.8rem] rounded-sm inline-flex gap-2 transition-all duration-500 ease-in-out items-center">
                                 <FiPhone size={19}/> Contact Us
                             </Link>
 
                             <div className="flex items-center justify-normal gap-3 text-start">
                                 <ul className="flex items-center mb-0">
                                     <li className="w-17 h-17 rounded-full overflow-hidden">
-                                        <Image src="/06.jpg" className="w-full h-full object-cover" width={200}
-                                               height={200} quality={100} loading="lazy" alt="avatar"/>
+                                        <Image src="/06.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
                                     </li>
                                     <li className="w-17 h-17 rounded-full overflow-hidden -ml-2">
-                                        <Image src="/05.jpg" className="w-full h-full object-cover" width={200}
-                                               height={200} quality={100} loading="lazy" alt="avatar"/>
+                                        <Image src="/05.jpg" className="w-full h-full object-cover" width={200} height={200} quality={100} loading="lazy" alt="avatar"/>
                                     </li>
                                     <li className="w-17 h-17 rounded-full overflow-hidden -ml-2">
-                                        <div
-                                            className="rounded-full bg-[#09b850] flex items-center justify-center text-white h-17 w-17 font-bold">
-                                            3K+
+                                        <div className="rounded-full bg-[#09b850] flex items-center justify-center text-white h-17 w-17 font-bold text-lg">
+                                            3+
                                         </div>
                                     </li>
                                 </ul>
                                 <div className="flex flex-col items-start justify-center text-start">
-                                    <h6 className="font-bold text-black dark:text-white">Join 3K+ Thriving Businesses! 🤩</h6>
+                                    <h6 className="font-bold text-black dark:text-white hidden sm:block">Join 3+ Thriving Businesses! 🤩</h6>
                                     <Link href="/contact"
                                           className="hover:text-[#09b850] inline-flex items-center gap-2 font-semibold text-sm  dark:text-[#c4c5c7] group"
                                           target="_blank">
@@ -101,35 +93,7 @@ const ServicesPage = () => {
                 </div>
             </section>
 
-            <section className="xl:pt-20 pb-0 mt-10 sm:mt-0 w-full max-w-7xl mx-auto mb-10">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        {servicesData.map((service) => (
-                            <Link
-                                key={service.id}
-                                href={service.href}
-                                className="flex flex-row h-full p-6 border rounded-lg shadow-sm hover:shadow-md relative group hover:border-[#09b850]/50 hover:bg-[#09b850]/5 transition-colors duration-500 ease-in-out"
-                            >
-                                <div className="bg-gray-100 dark:bg-[#202124] absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] group-hover:bg-[#09b850] dark:group-hover:bg-[#09b850] group-hover:text-white">
-                                    <service.icon />
-                                </div>
-
-                                <div className="flex flex-col mt-4">
-                                    <h5 className="mb-3 text-3xl font-bold group-hover:text-[#09b850]">
-                                        {service.title}
-                                    </h5>
-                                    <p className="mb-3 dark:text-[#c4c5c7]">{service.description}</p>
-                                    <p className="text-[#09b850] flex items-center gap-2 font-semibold group mr-6">
-                                        Read more
-                                        <MoveRight className="group-hover:translate-x-1 transition duration-150 ease-in-out" />
-                                    </p>
-                                </div>
-                            </Link>
-                        ))}
-
-                    </div>
-                </div>
-            </section>
+            <ServicesSearchSection />
 
             <section className="pt-0 px-4 mb-10">
                 <div className="container mx-auto">
@@ -143,18 +107,6 @@ const ServicesPage = () => {
                         {/* Right SVG Decoration */}
                         <div className="absolute right-0 bottom-0 hidden lg:block">
                             <Image src="/cta-vector.svg" className="object-cover" width={244} height={300} alt="vector" />
-                        </div>
-
-                        {/* Badge + cursor */}
-                        <div className="absolute right-0 -mr-20 -mt-6 top-full translate-x-6 translate-y-4 hidden lg:block">
-                            <div className="relative">
-                                <small className="bg-[#292a2d] dark:bg-white dark:text-black text-white rounded-full px-3 py-1 text-xs mt-6 font-semibold">
-                                    Software Developer
-                                </small>
-                                <span className="text-lg absolute left-0 top-0 transform -translate-y-4 -translate-x-4 -rotate-90">
-                                        <BsFillCursorFill className="text-[#0B9944] dark:text-green-500" size={25} />
-                                    </span>
-                            </div>
                         </div>
 
                         <div className="grid gap-4 relative">

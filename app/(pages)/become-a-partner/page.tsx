@@ -5,6 +5,7 @@ import PartnerForm from "@/components/PartnerForm";
 import {Mail, MapPin, Phone} from "lucide-react";
 import Image from "next/image";
 import {Metadata} from "next";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 
 export const metadata: Metadata = {
@@ -30,11 +31,11 @@ const BecomeAPartnerPage = () => {
                 </nav>
 
                 <div>
-                    <h1 className="text-[2.38rem] font-font leading-[1.25]">Let&apos;s level up your brand, <br
-                        className="hidden md:inline-flex"/> together</h1>
+                    <h1 className="text-[2.38rem] font-font leading-[1.25]">Let&apos;s level up your brand <br
+                        className="hidden md:inline-flex"/> together.</h1>
                     <p className="dark:text-[#c4c5c7] mb-10 text-lg">You can reach us anytime via: {" "}
-                        <Link className="text-[#0B9944] dark:text-[#09b850]" href="mailto:support@oceanoftechsa.com">
-                            support@oceanoftechsa.com
+                        <Link className="text-[#0B9944] dark:text-[#09b850]" href={`mailto:${AppSettings.CompanyContacts.Email}`}>
+                            {AppSettings.CompanyContacts.Email}
                         </Link>
                     </p>
 
@@ -53,7 +54,7 @@ const BecomeAPartnerPage = () => {
                                 <h6 className="mb-4">Office Address</h6>
                                 <div className="flex items-center mb-2">
                                     <div className="mr-2">
-                                        <Image className="rounded-full object-cover" width={24} height={24} src="/sa.png" alt="avatar"/>
+                                        <Image className="rounded-full object-cover h-full w-full" width={24} height={24} src="/sa.png" alt="avatar"/>
                                     </div>
                                     <span className="font-semibold mb-0">US office:</span>
                                 </div>

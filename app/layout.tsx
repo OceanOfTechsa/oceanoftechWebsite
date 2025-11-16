@@ -11,6 +11,7 @@ import { SearchProvider } from "@/contexts/SearchContext";
 import SearchForm from "@/components/forms/searchForm";
 import { Toaster } from "@/components/ui/sonner"
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
+import Twak from "@/components/Twak";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -103,6 +104,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                         <Toaster />
                     </SearchProvider>
                 </ThemeProvider>
+            <Twak />
             </body>
         </html>
     );
