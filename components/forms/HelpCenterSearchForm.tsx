@@ -59,8 +59,6 @@ const HelpCenterSearchForm: React.FC<FaqSearchFormProps> = ({
             await onSubmit(values);
             setShowSuccess(true);
             setShowError(false);
-            // Optional: reset form after submission
-            // form.reset();
         } catch (error) {
             console.error("Error submitting form:", error);
             setShowError(true);
@@ -107,7 +105,7 @@ const HelpCenterSearchForm: React.FC<FaqSearchFormProps> = ({
 
                 <Button
                     type="submit"
-                    className={`text-white rounded-sm px-4 py-2 transition cursor-pointer ${buttonBg}`}
+                    className={`text-white rounded-[0.2rem] px-4 py-2 transition cursor-pointer ${buttonBg}`}
                     disabled={isLoading}
                 >
                     <Search />

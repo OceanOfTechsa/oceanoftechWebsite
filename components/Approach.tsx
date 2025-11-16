@@ -111,7 +111,7 @@ const Approach = (): JSX.Element => {
 
               <div className="flex gap-2 ms-1 relative z-10">
                 <div className="flex flex-col items-center mr-5">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex gap-2 w-full">
                         <Link
                             className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] rounded-sm transition-all duration-500 ease-in-out flex items-center gap-2 group"
                             href="tel:+27726272521"
@@ -141,9 +141,8 @@ const Approach = (): JSX.Element => {
                             Give us a call
                         </Link>
 
-                        <Link
-                            className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] rounded-sm transition-all duration-500 ease-in-out flex items-center gap-2 group"
-                            href="mailto:info@oceanoftechsa.com?subject=Services Request?cc=sithuliso@oceanoftechsa.com"
+                        <Link className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] rounded-sm transition-all duration-500 ease-in-out flex items-center gap-2 group"
+                          href="mailto:info@oceanoftechsa.com?subject=Services Request?cc=sithuliso@oceanoftechsa.com"
                         >
                             <FaRegEnvelope className="group-hover:hidden group-hover:transition-all duration-900 ease-in" />
                             <FaRegEnvelopeOpen className="hidden group-hover:inline -mt-1 group-hover:transition-all duration-900 ease-in" />

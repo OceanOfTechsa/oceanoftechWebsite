@@ -30,7 +30,7 @@ const AboutPage = (): JSX.Element => {
                     </nav>
 
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                            Driven by Innovation, Defined by Excellence
+                            Driven by Innovation, Defined by Excellence.
                     </h1>
 
                     <p className=" dark:text-[#c4c5c7] text-lg">
@@ -81,16 +81,18 @@ const AboutPage = (): JSX.Element => {
                             <div className="lg:col-span-2 flex items-center justify-center p-0 h-full relative">
                                 <div className="top-0 left-0 md:mt-10 h-full">
                                    <video
-                                        src="https://ik.imagekit.io/oceanoftech/9365174-hd_1920_1080_25fps.mp4"
+                                        src="https://ik.imagekit.io/oceanoftech/about.mp4"
                                         className="rounded-sm"
                                         controls
+                                        loop
+                                        autoPlay
                                         controlsList="nodownload"
                                         preload="metadata"
-                                        poster="https://ik.imagekit.io/oceanoftech/9365174-hd_1920_1080_25fps.mp4/ik-thumbnail.jpg?tr=so-5"
+                                        poster="https://ik.imagekit.io/oceanoftech/about.mp4/ik-thumbnail.jpg?tr=so-5"
                                         style={{ width: "100%", height: "100%", objectFit: "cover" }}   
                                     />
                                 </div>
-                                <div className="bg-white p-2 rounded-sm text-black font-semibold absolute top-0 right-0 transform rotate-12 mt-10 -mr-4">5+ Years of experience</div>
+                                <div className="bg-white p-2 rounded-sm text-black font-semibold absolute top-0 right-0 transform rotate-12 mt-10 -mr-4">4+ Years of experience</div>
                             </div>
                         </div>
                     </div>

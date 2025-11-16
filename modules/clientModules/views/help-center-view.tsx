@@ -13,6 +13,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import ContentNotFound from "@/components/contentNotFound";
+import FaqPageHeroSvg from "@/components/svgs/FaqPageHeroSvg";
 
 const faqData = [
     {
@@ -112,7 +113,7 @@ const HelpCenterView = (): JSX.Element => {
                         </ul>
                     </div>
                     <div className="w-full md:w-[50%] flex justify-end">
-                        {/*<FaqPageHeroSvg />*/}
+                        <FaqPageHeroSvg />
                     </div>
                 </div>
             </section>
