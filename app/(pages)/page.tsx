@@ -19,7 +19,7 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto">
                 <HeroSection />
                 <ShowCaseSection />
-                <TrustedBySection />
+                {/* <TrustedBySection /> */}
                 <AboutSection />
             </div>
             <ServicesSection />

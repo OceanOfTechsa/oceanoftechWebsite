@@ -1,76 +1,92 @@
-import { CodeXml, Server, Component, Mail, Search, Settings, Workflow, GraduationCap } from "lucide-react";
-
-export const servicesData = [
+export type Service = {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    href: string;
+    iconName:
+      | "code-xml"
+      | "scale-3d"
+      | "server"
+      | "pen-tool"
+      | "mail"
+      | "search"
+      | "headset"
+      | "workflow"
+      | "HandHelping";
+  };
+  
+  export const servicesData: Service[] = [
     {
-        id: 1,
-        title: "Web Development",
-        slug: "web-development",
-        description: "Fast, secure, and scalable websites, web apps, and digital systems for your business.",
-        icon: CodeXml,
-        href: "/services/web-development",
+      id: 1,
+      title: "Websites & Web Applications",
+      slug: "web-development",
+      description: "We build and maintain modern, fast websites and powerful online systems that help your business run smoothly and grow.",
+      iconName: "code-xml",
+      href: "/services/web-development",
     },
     {
-        id: 2,
-        title: "Hosting",
-        slug: "hosting",
-        description: "Reliable hosting to keep your websites, web apps, and systems running smoothly.",
-        icon: Server,
-        href: "/services/hosting",
+      id: 2,
+      title: "Custom Software Development",
+      slug: "custom-software-Development",
+      description: "We develop tailored desktop programs, mobile apps, and business software that perfectly fit the way your company works",
+      iconName: "scale-3d",
+      href: "/services/custom-software-Development",
     },
     {
-        id: 3,
-        title: "Web Design",
-        slug: "web-design",
-        description: "Modern and intuitive designs for websites, web apps, and digital platforms that engage users.",
-        icon: Component,
-        href: "/services/web-design",
+      id: 3,
+      title: "Hosting & Domain Services",
+      slug: "hosting",
+      description: "We provide fast, secure, load-shedding-proof hosting and domain management so your business is always online and protected.",
+      iconName: "server",
+      href: "/services/hosting",
     },
     {
-        id: 4,
-        title: "UI/UX Design",
-        slug: "ui-ux-design",
-        description: "User-focused interfaces that enhance usability across websites, web apps, and systems.",
-        icon: Component,
-        href: "/services/ui-ux-design",
+      id: 4,
+      title: "Website & UI/UX Design",
+      slug: "design-services",
+      description: "We design beautiful, user-friendly websites and interfaces that look professional and make your customers love using them.",
+      iconName: "pen-tool",
+      href: "/services/design-services",
     },
     {
-        id: 5,
-        title: "Business Emails",
-        slug: "business-emails",
-        description: "Professional email solutions that boost credibility and streamline communication.",
-        icon: Mail,
-        href: "/services/business-emails",
+      id: 5,
+      title: "Business Email Solutions",
+      slug: "business-emails",
+      description: "We set up secure, professional @yourcompany.co.za emails that build trust and keep your team connected from anywhere.",
+      iconName: "mail",
+      href: "/services/business-emails",
     },
     {
-        id: 6,
-        title: "Search Engine Optimization",
-        slug: "seo-optimization",
-        description: "Increase visibility and drive traffic to your websites, web apps, and systems with proven SEO.",
-        icon: Search,
-        href: "/services/seo-optimization",
+      id: 6,
+      title: "Search Engine Optimization (SEO)",
+      slug: "seo-optimization",
+      description: "We optimize your website to rank higher on Google and bring you more customers and enquiries without paying for ads.",
+      iconName: "search",
+      href: "/services/seo-optimization",
     },
     {
-        id: 7,
-        title: "Maintenance and Support",
-        slug: "maintenance-support",
-        description: "Ongoing support to keep your websites, web apps, and systems secure, updated, and performing optimally.",
-        icon: Settings,
-        href: "/services/maintenance-support",
+      id: 7,
+      title: "Maintenance & Ongoing Support",
+      slug: "maintenance-support",
+      description: "We keep your website and systems updated, secure, backed up and running perfectly with fast local support when you need it.",
+      iconName: "headset",
+      href: "/services/maintenance-support",
     },
     {
-        id: 8,
-        title: "Automation",
-        slug: "automation",
-        description: "Automate workflows and processes across your digital platforms to save time and increase efficiency.",
-        icon: Workflow,
-        href: "/services/automation",
+      id: 8,
+      title: "Automation & Integrations",
+      slug: "automation",
+      description: "We connect your systems and automate repetitive tasks so you save time, reduce mistakes and cut costs",
+      iconName: "workflow",
+      href: "/services/automation",
     },
     {
-        id: 9,
-        title: "Mentorship",
-        slug: "mentorship",
-        description: "Guidance and mentorship programs to help individuals and businesses grow in tech.",
-        icon: GraduationCap,
-        href: "/services/mentorship",
+      id: 9,
+      title: "Training & Mentorship",
+      slug: "training",
+      description: "Training for your staff plus structured mentorship programmes for graduate and junior developers",
+      iconName: "HandHelping",
+      href: "/services/trainng",
     },
-];
+  ];

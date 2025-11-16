@@ -115,6 +115,7 @@ export default class AppSettings {
     public static CompanyContacts = {
         Email: "contact@oceanoftech.com",
         Phone: "+27 72 627 2521",
-        Address: "123 Ocean Drive, Tech City, TX 75001"
+        Address: "123 Ocean Drive, Tech City, TX 75001",
+        WorkingHours: "Time: 9am to 5pm (Sunday close)"
     }
 }

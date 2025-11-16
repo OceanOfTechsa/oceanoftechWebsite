@@ -103,13 +103,13 @@ const AboutSection = () : JSX.Element => {
                                 <motion.div className="flex gap-4 mb-4" variants={containerVariants}>
                                     <motion.div className="w-full" variants={statsVariants}>
                                         <div className="bg-[#202124] rounded-md text-white text-center p-3 w-full">
-                                            <span className="text-5xl font-bold">10+</span>
+                                            <span className="text-5xl font-bold">4+</span>
                                             <p className="mt-1 text-white">Years of <br/>experience</p>
                                         </div>
                                     </motion.div>
                                     <motion.div className="w-full" variants={statsVariants} transition={{ delay: 0.2 }}>
                                         <div className="bg-[#0B9944] rounded-md text-center p-3 w-full">
-                                            <span className="text-5xl font-bold text-white">1.2K</span>
+                                            <span className="text-5xl font-bold text-white">3+</span>
                                             <p className="mt-1 text-white">Happy <br/>customers</p>
                                         </div>
                                     </motion.div>

@@ -11,6 +11,7 @@ import Loader from "@/components/Loader";
 import {useState} from "react";
 import {SendEmailOnlyEmail} from "@/lib/SendEmailOnlyContactEmail";
 import { toast } from "sonner";
+import { FiSend } from "react-icons/fi";
 
 interface EMailOnlyContactFormProps {
     bg?: string;
@@ -22,8 +23,9 @@ const formSchema = z.object({
     email: z.string().email("Please enter a valid email"),
 });
 
-const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonBg = "bg-[#202124] hover:bg-[#414245]",}: EMailOnlyContactFormProps) => {
+const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonBg = "bg-[#202124] hover:bg-[#414245]"}: EMailOnlyContactFormProps) => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [emailError, setEmailError] = useState<boolean>(false);
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -31,6 +33,9 @@ const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonB
     });
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
+        if(values.email === ""){
+            setEmailError(true);
+        }
         setIsLoading(true);
         const toastId = toast.loading("Submitting, please wait...");
         const results = await SendEmailOnlyEmail(values);
@@ -44,7 +49,7 @@ const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonB
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className={`${bg} ${showBorder ? "border" : ""} rounded-sm flex items-center p-2 w-full gap-2`}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className={`${bg} ${showBorder ? "border" : ""} ${emailError && "border-rose-500"} rounded-sm flex items-center p-2 w-full gap-2`}>
                 <FormField
                     control={form.control}
                     name="email"
@@ -54,15 +59,15 @@ const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonB
                                 <Input
                                     type="email"
                                     placeholder="Enter your email address"
-                                    className="border-none focus-visible:ring-0 focus-visible:outline-none shadow-none outline-none ring-0 bg-transparent dark:bg-[#161618]"
+                                    className="border-none focus-visible:ring-0 focus-visible:outline-none focus-visible:bg-transparent rounded-[0.2rem] shadow-none outline-none ring-0 bg-transparent dark:bg-transparent"
                                     {...field}
                                 />
                             </FormControl>
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className={`text-white rounded-sm px-4 py-2 transition cursor-pointer ${buttonBg}`} disabled={isLoading}>
-                    {!isLoading ? "Submit" : <>Submitting <Loader /></>}
+                <Button type="submit" className={`text-white px-4 py-2 rounded-[0.2rem] transition cursor-pointer ${buttonBg}`} disabled={isLoading}>
+                    {!isLoading ? <>Send <FiSend /></> : <>Submitting <Loader /></>}
                 </Button>
             </form>
         </Form>

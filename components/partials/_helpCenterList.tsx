@@ -12,7 +12,7 @@ interface HelpListProps {
 
 const HelpCenterList = ({ helps, query }: HelpListProps): JSX.Element => {
     return (
-        <div className="max-w-7xl mx-auto xl:py-20 pb-0 sm:mt-0 px-4 md:px-0 w-full">
+        <div className="max-w-7xl mx-auto xl:py-20 pb-0 sm:mt-0 px-4 md:px-0 w-full -mt-10">
             {helps.length > 0 ? (
                 <div>
                     {query && (

@@ -122,7 +122,7 @@ export const services: Service[] = [
     },
     {
         slug: "web-design",
-        title: "Web Design",
+        title: "Software Development",
         shortDescription: "Creative, modern designs for websites, web apps, and systems.",
         fullDescription:
             "Our web design services focus on creating visually appealing, user-friendly, and responsive designs for websites, web apps, and digital systems. We blend aesthetics with functionality to deliver intuitive user experiences that strengthen your brand and drive engagement.",
