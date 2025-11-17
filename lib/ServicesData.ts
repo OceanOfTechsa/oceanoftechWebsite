@@ -60,10 +60,10 @@ export type Service = {
     {
       id: 6,
       title: "Search Engine Optimization (SEO)",
-      slug: "seo-optimization",
+      slug: "seo",
       description: "We optimize your website to rank higher on Google and bring you more customers and enquiries without paying for ads.",
       iconName: "search",
-      href: "/services/seo-optimization",
+      href: "/services/seo",
     },
     {
       id: 7,

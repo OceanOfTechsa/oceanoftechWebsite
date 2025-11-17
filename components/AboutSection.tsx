@@ -8,6 +8,7 @@ import { motion, type Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { JSX } from "react";
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
+import { BadgeCheck, MoveRight } from "lucide-react";
 
 const AboutSection = () : JSX.Element => {
     const containerVariants = {
@@ -64,7 +65,7 @@ const AboutSection = () : JSX.Element => {
 
     return (
         <section ref={ref}>
-            <div className="max-w-7xl mx-auto px-4 mt-5 py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-0">
                 <motion.div className="grid lg:grid-cols-12 gap-6 items-center" variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
                     <div className="lg:col-span-7">
                         <div className="flex items-start gap-6 pe-0 xl:pe-10">
@@ -129,7 +130,7 @@ const AboutSection = () : JSX.Element => {
                         </div>
                     </div>
 
-                    <motion.div className="lg:col-span-5" variants={containerVariants}>
+                    <motion.div className="lg:col-span-5 mt-5 sm:mt-0" variants={containerVariants}>
                         <motion.span className="inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2 z-50" variants={itemVariants}>
                              <AnimatedIcon icon="🤝" /> Your gateway to digital success
                         </motion.span>
@@ -141,24 +142,49 @@ const AboutSection = () : JSX.Element => {
                             combines cutting-edge design with robust development to deliver solutions that captivate and
                             convert.
                         </motion.p>
+                        <div className="flex flex-col sm:flex-row sm:items-center border-t pt-5 justify-start sm:gap-5 w-full">
+                            <motion.ul className="space-y-2 mb-2 sm:mb-4 w-full" variants={containerVariants}>
+                                <motion.li  className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                                    Tailored Solutions
+                                </motion.li>
+                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
+                                    Client-Centric Approach
+                                </motion.li>
+                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
+                                    Proven Track Record
+                                </motion.li>     
+                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
+                                    Scalability
+                                </motion.li>                            
+                            </motion.ul>
 
-                        <motion.ul className="space-y-2 mb-4" variants={containerVariants}>
-                            <motion.li  className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants}>
-                                <BsFillPatchCheckFill className="text-[#0B9944] mr-2" />
-                                Emphasis on ROI-driven solutions
-                            </motion.li>
-                            <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
-                                <BsFillPatchCheckFill className="text-[#0B9944] mr-2" />
-                                Expert team with diverse skills
-                            </motion.li>
-                            <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
-                                <BsFillPatchCheckFill className="text-[#0B9944] mr-2" />
-                                Proven track record of delivering results
-                            </motion.li>                            
-                        </motion.ul>
+                            <motion.ul className="space-y-2 mb-4 w-full" variants={containerVariants}>
+                                <motion.li  className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                                    Quality Assurance
+                                </motion.li>
+                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
+                                    Cost-Effectiveness
+                                </motion.li>
+                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
+                                    Long-Term Partnership
+                                </motion.li>  
+                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                    <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
+                                    24/7 tech & business support
+                                </motion.li>                            
+                            </motion.ul>
+                        </div>
                         <motion.div variants={itemVariants}>
-                            <Link href="/about" className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] rounded-sm inline-block transition-all duration-500 ease-in-out">
-                                Discover more
+                            <Link href="/about" className="group bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] rounded-[0.2rem] inline-flex items-center transition-all duration-500 ease-in-out">
+                                Learn more
+                                <MoveRight className="h-4 w-4 text-[#09b850] opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-1 transition-all" />
                             </Link>
                         </motion.div>
                     </motion.div>

@@ -8,8 +8,6 @@ import Link from "next/link";
 import { useRef } from "react";
 import { BsCircleSquare, BsVectorPen } from "react-icons/bs";
 
-
-// Animation variants
 const containerVariants: Variants = {
     hidden: {},
     show: {
@@ -32,7 +30,7 @@ const ServicesSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     return (
-        <section className="relative bg-[#202124] min-w-full mt-20 py-24 text-center text-white flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative bg-[#202124] min-w-full mt-20 py-16 text-center text-white flex flex-col items-center justify-center overflow-hidden">
             <span className="inline-block bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2">
                 <AnimatedIcon icon="🚀" /> Innovative solutions, Measurable results
             </span>
@@ -62,7 +60,7 @@ const ServicesSection = () => {
                     
                     <path d="M628.6,461.4c10.3,32.5,4.4,69.6-18,112.8c-93.9,182.2-122.9,308.3-94.5,408.8c26.1,92.5,101.7,167,252.8,249 l-0.8,1.1c-151.5-82.5-227.2-157.2-253.6-249.9c-28.5-100.7,0.5-227.1,94.5-409.9c24.3-47.3,29-87.1,14.3-121.5 c-32.7-76-155.1-112-284.6-149.7C172.6,253.7,0.1,203.5,15.1,60.4l1.2,0.2c-14.6,141.8,157,191.9,323.2,240.6 c129.9,37.9,252.4,73.9,285.3,150.4C626.2,454.9,627.5,458,628.6,461.4z" />
                 </svg>
-                </figure>
+            </figure>
 
             <div className="w-full px-0 sm:px-96 lg:px-0 mt-4 text-center">
                 <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white">
@@ -222,7 +220,7 @@ const ServicesSection = () => {
                             Not satisfied yet?
                         </p>
 
-                        <Link href="/services" className="w-full bg-[#09b850] hover:bg-[#0B9944] text-white px-[1rem] py-[0.5rem] rounded-sm inline-block transition-all duration-500 ease-in-out">
+                        <Link href="/services" className="w-full bg-[#09b850] hover:bg-[#0B9944] text-white px-[1rem] py-[0.5rem] rounded-[0.2rem] inline-block transition-all duration-500 ease-in-out">
                             Discover more
                         </Link>
                     </div>
