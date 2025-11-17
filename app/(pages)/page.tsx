@@ -23,6 +23,24 @@ const HomePage = () => {
                 <AboutSection />
             </div>
             <ServicesSection />
+            <video
+                src="/whiteoffice.webm"
+                className="h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls={false}
+                preload="metadata"
+                style={{
+                    height: "40vh",
+                    minHeight: "280px",
+                    maxHeight: "480px",
+                    width: "100vw",        // forces full width
+                    left: 0,
+                    right: 0,
+                }}
+            />
             <div className="max-w-7xl mx-auto">
                 <Approach />
                 <PricingSection />

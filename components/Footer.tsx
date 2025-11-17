@@ -7,7 +7,8 @@ import { JSX } from "react";
 import {careers } from "@/components/conts";
 import  AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import { Button } from "@/components/ui/button";
-import { MessagesSquare } from "lucide-react";
+import { Activity, MessagesSquare } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion"
 
 const Footer = (): JSX.Element => {
     return (
@@ -18,16 +19,16 @@ const Footer = (): JSX.Element => {
                     height={257}
                     src="/decoration-pattern-2.svg"
                     alt=""
-                    className="w-full max-w-none opacity-5 hidden md:block"
+                    className="w-full max-w-none opacity-5 block"
                     aria-hidden="true"
                 />
             </div>
-            <div className="pointer-events-none absolute -left-130 -top-52  overflow-hidden">
+            <div className="pointer-events-none absolute right-0 sm:-left-130 -top-45 sm:-top-52  overflow-hidden">
                 <svg
                     width="5"
                     height="834"
                     viewBox="0 0 775 834"
-                    className="w-[600px] sm:w-[700px] md:w-[775px] lg:w-[900px] max-w-none opacity-5 fill-white hidden md:block"
+                    className="w-[800px] sm:w-[700px] md:w-[775px] lg:w-[900px] max-w-none opacity-5 fill-white block"
                     aria-hidden="true"
                     fill="white"
                 >
@@ -47,64 +48,93 @@ const Footer = (): JSX.Element => {
                 <div className="flex flex-wrap justify-between gap-8">
                     <div className="w-full md:w-1/4">
                         <Link href="/" className="inline-block">
-                            <Image src="/Logo.svg" width={42} height={42} alt="Brand Logo" priority loading="eager" quality={100} />
+                            <svg width="38" height="38" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="31" cy="31" r="31" fill="#09B850"/>
+                            <path d="M48.3844 33.2596C47.0282 33.2596 45.9289 32.1602 45.9289 30.8041C45.9289 29.448 47.0282 28.3486 48.3844 28.3486C49.7405 28.3486 50.8398 29.448 50.8398 30.8041C50.8398 32.1602 49.7405 33.2596 48.3844 33.2596Z" fill="white"/>
+                            <path d="M13.0247 35.3357H13.3685C14.2034 35.3357 14.8418 34.6972 14.8418 33.8624V27.7458C14.8418 26.9109 14.2034 26.2725 13.3685 26.2725H13.0247C12.1899 26.2725 11.5514 26.9109 11.5514 27.7458V33.9115C11.5514 34.6972 12.1899 35.3357 13.0247 35.3357Z" fill="white"/>
+                            <path d="M19.5579 41.916H19.9017C20.7366 41.916 21.375 41.2776 21.375 40.4427V21.1647C21.375 20.3298 20.7366 19.6914 19.9017 19.6914H19.5579C18.7231 19.6914 18.0846 20.3298 18.0846 21.1647V40.3936C18.0846 41.2285 18.7722 41.916 19.5579 41.916Z" fill="white"/>
+                            <path d="M26.138 37.715H26.4818C27.3167 37.715 27.9551 37.0766 27.9551 36.2417V25.3664C27.9551 24.5315 27.3167 23.8931 26.4818 23.8931H26.138C25.3032 23.8931 24.6647 24.5315 24.6647 25.3664V36.2417C24.6647 37.0766 25.3032 37.715 26.138 37.715Z" fill="white"/>
+                            <path d="M44.3083 31.0987C44.0137 32.1265 43.377 32.714 42.593 32.8413C42.1519 32.9295 41.7599 33.2233 41.5835 33.6153L35.8301 46.5149C35.6146 46.9751 35.1444 47.2688 34.6351 47.2688H33.9493C33.2144 47.2688 32.646 46.7004 32.646 45.9656V16.0334C32.646 15.2986 33.2144 14.7302 33.9493 14.7302H34.6842C35.1935 14.7302 35.6637 15.0239 35.8792 15.4841L41.6326 28.4328C41.8091 28.8739 42.201 29.1186 42.6421 29.2068C43.4261 29.3832 44.0628 29.9517 44.3574 30.9794C44.3574 31.1558 44.3574 31.3323 44.3083 31.0987ZM39.3571 30.7147L36.6141 24.1027C36.4086 23.5643 35.5864 23.7307 35.5864 24.3183V37.2107C35.5864 37.7983 36.4086 37.9647 36.6141 37.4263L39.3571 30.8143C39.4845 30.5205 39.4845 30.1876 39.3571 30.7147Z" fill="white"/>
+                            </svg>
                         </Link>
                         <p className="mt-4 mb-2 text-gray-300 text-sm leading-relaxed">
                             Ocean of Tech – Innovate. Scale. Succeed.
                         </p>
                     </div>
+                    <div className="flex items-start justify-between w-full md:w-5/12">
+                        <div className="w-full md:w-1/2 gap-8">
+                            <h6 className="mb-4 text-xl font-semibold text-white">Quick links</h6>
+                            <ul className="flex flex-col space-y-2">
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/about"> About us </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/contact"> Contact us </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors flex items-center group" href="/careers">
+                                        Career{" "}
+                                        {AppSettings.HIRING && <span className="ml-2 bg-[#D8293E] group-hover:text-white font-semibold text-xs px-2 py-0.5 rounded-sm flex items-center justify-center"> {careers?.length} New </span>}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/become-a-partner"> Become a partner </Link>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div className="w-1/2 md:w-1/6">
-                        <h6 className="mb-4 text-xl font-semibold text-white">Quick links</h6>
-                        <ul className="flex flex-col space-y-2">
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/about"> About us </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/contact"> Contact us </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors flex items-center group" href="/careers">
-                                    Career{" "}
-                                    {AppSettings.HIRING && <span className="ml-2 bg-[#D8293E] group-hover:text-white font-semibold text-xs px-2 py-0.5 rounded-sm flex items-center justify-center"> {careers?.length} New </span>}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/become-a-partner"> Become a partner </Link>
-                            </li>
-                        </ul>
+                        <div className="w-full md:w-1/2">
+                            <h6 className="mb-4 text-xl font-semibold text-white">Community</h6>
+                            <ul className="flex flex-col space-y-2">
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/help-center"> Hep Center </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors flex items-center" href="#">
+                                        Supports{" "} <i className="ml-1 text-xs"></i>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/faq"> Faqs </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/privacy-policy" > Privacy Policy </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/blog"> News and blogs </Link>
+                                </li>
+                                <li>
+                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/terms-and-conditions"> Terms &amp; conditions </Link>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div className="w-1/2 md:w-1/6">
-                        <h6 className="mb-4 text-xl font-semibold text-white">Community</h6>
-                        <ul className="flex flex-col space-y-2">
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/help-center"> Hep Center </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors flex items-center" href="#">
-                                    Supports{" "} <i className="ml-1 text-xs"></i>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/faq"> Faqs </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/privacy-policy" > Privacy Policy </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/blog"> News and blogs </Link>
-                            </li>
-                            <li>
-                                <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/terms-and-conditions"> Terms &amp; conditions </Link>
-                            </li>
-                        </ul>
-                    </div>
-
                     <div className="w-full md:w-1/4">
                         <h6 className="mb-4 text-xl font-semibold text-white">Follow on</h6>
                         <SocialIcons />
+                        <div className="mt-6">
+                            <h6 className="mb-4 text-xl font-semibold text-white">Part of the family</h6>
+                            <motion.div
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                >
+                                <Link href={"https://www.peeko.com"} target="_blank" className="flex space-x-3">
+                                    <div className="relative">
+                                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
+                                            <Activity className="w-6 h-6 text-white" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span className="text-xl font-bold text-white">
+                                            Peeko
+                                        </span>
+                                        <div className="text-xs text-gray-500 -mt-1">Monitor</div>
+                                    </div>
+                                </Link>
+                            </motion.div>
+                        </div>
                     </div>
+                    
                 </div>
                 <div className="border-t border-gray-300/30 py-6 mt-6 text-center flex justify-between items-center">
                     <p className="text-sm text-[#c4c5c7]">

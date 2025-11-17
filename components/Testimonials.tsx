@@ -51,7 +51,7 @@ const Testimonials = (): JSX.Element => {
 
     return (
         <section ref={ref}>
-            <div className="max-w-7xl mx-auto px-4 md:px-0 mt-5 py-24 mb-32">
+            <div className="max-w-7xl mx-auto px-4 md:px-0 mt-5 py-16 pb-32 mb-32">
                 <motion.div 
                     className="grid lg:grid-cols-12 gap-10 items-center mx-auto"
                     variants={containerVariants}

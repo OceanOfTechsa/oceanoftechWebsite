@@ -9,12 +9,12 @@ import { GoStarFill } from "react-icons/go";
 
 const HeroSection = () => {
     return (
-        <section className="relative xl:pt-20 pb-0 mt-10 sm:mt-0">
+        <section className="relative xl:pt-20 pb-0 mt-10 sm:mt-0 ">
             {/* Left Decorative Pattern */}
             <div className="absolute top-0 left-0 -mt-16 -ml-80 z-50 hidden xl:block">
                 <Image src="/decoration-pattern.svg" width={250} height={250} quality={100} loading="eager"  alt="Decoration" />
             </div>
-
+          
             <div className="container mx-auto px-4">
                 <div className="grid xl:grid-cols-12 gap-12 items-center">
 
@@ -65,7 +65,7 @@ const HeroSection = () => {
                                 </div>
                                 <div className="mt-2">
                                     <h6 className="font-semibold group-hover:text-[#0B9944] dark:group-hover:text-[#09b850] transition-colors ease-in-out duration-500">10+ Google reviews</h6>
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 -mt-2">
                                         <span className="text-xs mb-3">
                                             5/5
                                         </span>

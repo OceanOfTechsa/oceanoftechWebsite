@@ -65,7 +65,7 @@ const PricingSection = (): JSX.Element => {
 
     return (
         <section ref={ref}>
-            <div className="max-w-7xl mx-auto px-4 py-24 flex flex-col justify-center items-center">
+            <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col justify-center items-center">
                 <motion.span className="inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2" variants={itemVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
                     <AnimatedIcon icon="💵"/> Transparent pricing packages
                 </motion.span>
@@ -109,7 +109,7 @@ const PricingSection = (): JSX.Element => {
                         <motion.h6 className="mb-3 font-black text-[#202124] dark:text-white/90 mt-4" variants={itemVariants} transition={{ delay: 0.6 }}>
                             {/* <span className="text-[4.6rem] font-black align-bottom leading-none">R3,500</span> */}
                             {/* <span className="ml-2 text-xl font-semibold align-bottom">Flexible Monthly Plan</span> */}
-                            <span className="text-xl font-semibold align-bottom">Flexible Monthly Plan</span>
+                            <span className="text-[1.6rem] font-semibold align-bottom">Flexible Monthly Plan</span>
                         </motion.h6>
 
                         <motion.p className="" variants={itemVariants} transition={{ delay: 0.7 }}>
@@ -217,7 +217,7 @@ const PricingSection = (): JSX.Element => {
                             variants={itemVariants}
                             transition={{ delay: 0.7 }}
                         >
-                            <Link href="/about" className="bg-white text-black hover:bg-white/80 font-semibold text-blank px-[1rem] py-[0.5rem] rounded-sm inline-block transition-all duration-500 ease-in-out w-full text-center">Contact Sales</Link>
+                            <Link href="/contact" className="bg-white text-black hover:bg-white/80 font-semibold text-blank px-[1rem] py-[0.5rem] rounded-[0.2rem] inline-block transition-all duration-500 ease-in-out w-full text-center">Contact Sales</Link>
                             <p className="text-white mt-1">Get personalized demo and custom plan</p>
                         </motion.div>
                         <motion.div 
