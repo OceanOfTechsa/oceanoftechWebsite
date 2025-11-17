@@ -152,7 +152,7 @@ const SeoPage = (): JSX.Element => {
                                     With a team of dedicated professionals and years of industry experience, we pride ourselves on delivering innovative and effective SEO solutions tailored to your unique needs.
                                     <br />
                                     <br />
-                                    Whether you're a small startup or a large enterprise, we have the expertise to meet your needs.
+                                    Whether you&apos;re a small startup or a large enterprise, we have the expertise to meet your needs.
                                 </p>
                                 
                                 <div className="bg-[#202124] text-white px-[1.5rem] py-[1rem] rounded-sm inline-block mt-6 font-bold">

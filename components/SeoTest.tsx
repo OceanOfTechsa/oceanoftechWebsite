@@ -123,7 +123,7 @@ export default function TestimonialsStatsSection() {
                   150+
                 </h3>
                 <p className="text-gray-300">
-                  Client's projects complete all over the world
+                  Client&apos;s projects complete all over the world
                 </p>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function TestimonialsStatsSection() {
               </div>
 
               <p className="text-gray-300 leading-relaxed">
-                Whether you're a small startup or a large enterprise, we have the expertise to meet your needs.
+                Whether you&apos;re a small startup or a large enterprise, we have the expertise to meet your needs.
               </p>
             </div>
           </div>
