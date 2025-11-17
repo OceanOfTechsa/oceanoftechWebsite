@@ -7,7 +7,7 @@ const Loading = () => {
     return (
         <main className="w-full h-screen flex flex-col items-center justify-center gap-2 z-50">
             <Image
-                src="/Logo.svg"
+                src="/logo.png"
                 width={35}
                 height={35}
                 quality={100}

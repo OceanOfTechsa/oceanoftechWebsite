@@ -1,9 +1,14 @@
-## [1.0.2](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.0.1...v1.0.2) (2025-11-16)
+# [1.1.0-uat.1](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.0.2-uat.1...v1.1.0-uat.1) (2025-11-17)
 
 
 ### Bug Fixes
 
-* website updates ([e9b0e0f](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/e9b0e0f9aca54b537b74a37ca6208386f09a5073))
+* Deployment issues ([823a76b](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/823a76b0e3abe2d86ab74e3761616e4a1e8e9227))
+
+
+### Features
+
+* Added SEO page, change home page, fixed styling ([4405d00](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/4405d0017d5fea426cbd6b9988cfbbfa5adf2404))
 
 ## [1.0.2-uat.1](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.0.1...v1.0.2-uat.1) (2025-11-16)
 
