@@ -8,11 +8,11 @@ import {careers } from "@/components/conts";
 import  AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import { Button } from "@/components/ui/button";
 import { Activity, MessagesSquare } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Footer = (): JSX.Element => {
     return (
-        <footer className="bg-[#202124] text-white pt-20 relative overflow-hidden">
+        <footer className="bg-[#202124] text-white pt-10 sm:pt-20 relative overflow-hidden">
             <div className="pointer-events-none absolute top-0 right-0">
                 <Image
                     width={270}
@@ -44,7 +44,7 @@ const Footer = (): JSX.Element => {
                     <path d="M670.6,490.3c-19.3,13.7-44.8,17.9-77.7,12.7c-138.5-21.4-227.1-13-287.3,27 c-55.4,36.8-89.1,101.7-112.4,216.9l-0.9-0.3C215.8,631,249.6,566,305.1,528.9c60.3-40.1,149.1-48.6,288.1-27.3 c35.9,5.5,63,0,82.6-16.9c43.2-37.5,42.2-124.3,40.9-216.1C714.9,151,713,28.8,809.9,7.7l0.1,0.8c-96,21.1-94.3,142.7-92.7,260.6 c1.3,92.1,2.4,179-41.1,216.7C674.3,487.4,672.6,488.9,670.6,490.3z" />
                 </svg>
             </div>
-            <div className="max-w-7xl mx-auto px-6 md:px-0">
+            <div className="max-w-7xl mx-auto px-4 md:px-0">
                 <div className="flex flex-wrap justify-between gap-8">
                     <div className="w-full md:w-1/4">
                         <Link href="/" className="inline-block">

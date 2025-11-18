@@ -12,6 +12,7 @@ import SearchForm from "@/components/forms/searchForm";
 import { Toaster } from "@/components/ui/sonner"
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import Twak from "@/components/Twak";
+import SetScrollToTop from "@/components/SetScrollToTop";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -158,6 +159,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                         <Footer />
                         <ScrollToTop />
                         <Toaster />
+                        <SetScrollToTop />
                     </SearchProvider>
                 </ThemeProvider>
                 {process.env.NODE_ENV !== 'development' && <Twak />}
