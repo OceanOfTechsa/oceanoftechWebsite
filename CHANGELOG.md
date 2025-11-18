@@ -1,3 +1,10 @@
+## [1.1.1-uat.2](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.1-uat.1...v1.1.1-uat.2) (2025-11-18)
+
+
+### Bug Fixes
+
+* Hiding Twak locally and on uat ([ae150e1](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/ae150e17c032987662098b34f1d51fb9f004afba))
+
 ## [1.1.1-uat.1](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.0...v1.1.1-uat.1) (2025-11-18)
 
 
