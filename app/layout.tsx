@@ -162,7 +162,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                         <SetScrollToTop />
                     </SearchProvider>
                 </ThemeProvider>
-                {process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'uat' && <Twak />}
+                {process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'test' && <Twak />}
             </body>
         </html>
     );
