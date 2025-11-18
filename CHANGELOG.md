@@ -1,3 +1,11 @@
+## [1.1.1-uat.1](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.0...v1.1.1-uat.1) (2025-11-18)
+
+
+### Bug Fixes
+
+* allowed dev origins ([ba93a90](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/ba93a90c816351e65a3e6893a57473666092f3c3))
+* fixing deployment issues in preview ([5cd5739](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/5cd5739e9dd5bb51a4410c4af2604fc19331efe3))
+
 # [1.1.0](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.0.2...v1.1.0) (2025-11-17)
 
 
