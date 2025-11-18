@@ -36,6 +36,7 @@ const nextConfig: NextConfig = {
         formats: ['image/webp', 'image/avif'],
         minimumCacheTTL: 3600,
     },
+    allowedDevOrigins: ['10.0.0.165:300', '*.local-origin.dev'],
 };
 
 module.exports = withBundleAnalyzer(nextConfig);
