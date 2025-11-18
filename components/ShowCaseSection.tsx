@@ -63,7 +63,7 @@ const ShowCaseSection = () => {
                             quality={100}
                             priority={false}
                         />
-                        <div className="absolute inset-0 flex flex-col">
+                        <div className="absolute inset-0 flex flex-col mb-2">
                             <ul className="flex gap-3 mb-1 mt-auto mx-auto">
                                 <li>
                                     <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-gray-700 shadow">
