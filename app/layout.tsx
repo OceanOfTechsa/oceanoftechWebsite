@@ -146,6 +146,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>): JSX.Element {
+    const shouldRenderTwak: boolean = !['development', 'test', 'preview'].includes(process.env.NODE_ENV);
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
@@ -162,7 +163,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                         <SetScrollToTop />
                     </SearchProvider>
                 </ThemeProvider>
-                {process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'test' && <Twak />}
+                {shouldRenderTwak && <Twak />}
             </body>
         </html>
     );
