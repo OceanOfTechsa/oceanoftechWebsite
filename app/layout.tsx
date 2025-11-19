@@ -12,6 +12,8 @@ import SearchForm from "@/components/forms/searchForm";
 import { Toaster } from "@/components/ui/sonner"
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import Twak from "@/components/Twak";
+import SetScrollToTop from "@/components/SetScrollToTop";
+import GoogleTag from "@/components/GoogleTag";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -145,6 +147,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>): JSX.Element {
+    const shouldRenderTwak = !['development', 'test', 'preview'].includes(process.env.NODE_ENV);
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
@@ -158,9 +161,11 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                         <Footer />
                         <ScrollToTop />
                         <Toaster />
+                        <SetScrollToTop />
                     </SearchProvider>
                 </ThemeProvider>
-                {process.env.NODE_ENV !== 'development' && <Twak />}
+                {shouldRenderTwak && <Twak />}
+                <GoogleTag />
             </body>
         </html>
     );

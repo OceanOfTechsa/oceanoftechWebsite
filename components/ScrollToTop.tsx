@@ -43,21 +43,11 @@ const ScrollToTop = () => {
 
   return (
     <div className="fixed bottom-8 right-8 z-50 flex items-end gap-3">
-      {/* Feedback Button */}
-      {/* <button 
-        type="button" 
-        className="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-md font-semibold text-sm md:text-base transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 flex items-center gap-2 whitespace-nowrap"
-      >
-        <MessageSquareMore className="h-4 w-4 md:h-5 md:w-5" />
-        <span>Feedback</span>
-      </button> */}
-
-      {/* Scroll to Top Button - Fixed width to prevent layout shift */}
       <div className="w-[40px] md:w-[44px]">
         <button
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className={`cursor-pointer bg-[#0B9944] hover:bg-[#09B850] text-white rounded-[0.2rem] h-[40px] w-[40px] md:h-[44px] md:w-[44px] transition-all duration-300 ease-in-out shadow-md  active:scale-95 flex items-center justify-center ${
+          className={`cursor-pointer bg-[#09b850] hover:bg-[#0B9944] text-white rounded-[0.2rem] h-[40px] w-[40px] md:h-[44px] md:w-[44px] transition-all duration-300 ease-in-out shadow-md  active:scale-95 flex items-center justify-center ${
             isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         >

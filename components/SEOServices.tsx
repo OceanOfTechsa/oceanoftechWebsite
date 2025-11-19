@@ -168,13 +168,13 @@ export default function SEOServicesSection() {
 
           {/* Pagination Dots */}
           {itemsPerPage < 3 && totalPages > 1 && (
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center gap-1 mt-8">
               {Array.from({ length: totalPages }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setPage(idx)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    idx === page ? "bg-[#0B9944] w-6" : "bg-gray-400 dark:bg-[#292A2D] w-2"
+                    idx === page ? "bg-[#0B9944] w-5" : "bg-gray-400 dark:bg-[#292A2D] w-2"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />

@@ -35,7 +35,6 @@ const nextConfig: NextConfig = {
         imageSizes: [16, 32, 48, 64, 75, 96, 128, 256, 384],
         formats: ['image/webp', 'image/avif'],
         minimumCacheTTL: 3600,
-    },
+},
 };
-
 module.exports = withBundleAnalyzer(nextConfig);

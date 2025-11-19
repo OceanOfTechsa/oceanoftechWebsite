@@ -91,13 +91,13 @@ export default function TestimonialsStatsSection() {
             </motion.div>
 
             {/* Pagination Dots */}
-            <div className="flex gap-2 mt-8">
+            <div className="flex gap-1 mt-8">
               {Array.from({ length: totalPages }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setPage(idx)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    idx === page ? "bg-[#09b850] w-6" : "bg-gray-600 w-2"
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    idx === page ? "bg-[#09b850] w-5" : "bg-gray-600 w-2"
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
