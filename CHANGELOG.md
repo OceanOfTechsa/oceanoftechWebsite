@@ -1,3 +1,13 @@
+## [1.1.1](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.0...v1.1.1) (2025-11-19)
+
+
+### Bug Fixes
+
+* allowed dev origins ([ba93a90](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/ba93a90c816351e65a3e6893a57473666092f3c3))
+* fixing deployment issues in preview ([5cd5739](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/5cd5739e9dd5bb51a4410c4af2604fc19331efe3))
+* Hiding Twak locally and on uat ([ae150e1](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/ae150e17c032987662098b34f1d51fb9f004afba))
+* Optimised website images and removed unused media files. Also added google tag for google anylitics. also created the feedback page(To change the form). Change the video size on the home page. Added team certificates. ([452ba8b](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/452ba8b77bb9ccf1597406e9a3b55f87b4be0ce3))
+
 ## [1.1.1-uat.3](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.1-uat.2...v1.1.1-uat.3) (2025-11-19)
 
 
