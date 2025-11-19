@@ -140,8 +140,10 @@ const Footer = (): JSX.Element => {
                     <p className="text-sm text-[#c4c5c7]">
                         © {new Date().getFullYear()} {AppSettings.COMPANY_NAME}. All rights reserved.
                     </p>
-                    <Button type="button" variant="outline" size="sm" className="flex items-center gap-2 rounded-[0.2rem] -mt-2 text-black dark:text-white">
-                        <MessagesSquare />Feedback
+                    <Button type="button" variant="outline" size="sm" className="rounded-[0.2rem] -mt-2 text-black dark:text-white">
+                        <Link href="/feedback" className="flex items-center gap-2 ">
+                            <MessagesSquare />Feedback
+                        </Link>
                     </Button>
                 </div>
             </div>

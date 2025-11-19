@@ -54,7 +54,7 @@ const ShowCaseSection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-12 rounded-sm overflow-hidden">
                     <div className="sm:col-span-5 relative">
                         <Image
-                            src="/SHOT.jpg"
+                            src="/ShowCase.jpg"
                             alt="call showcase"
                             className="w-full h-full object-cover"
                             width={503}

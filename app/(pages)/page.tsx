@@ -33,7 +33,7 @@ const HomePage = () => {
                 controls={false}
                 preload="metadata"
                 style={{
-                    height: "40vh",
+                    height: "60vh",
                     minHeight: "280px",
                     maxHeight: "480px",
                     width: "100vw",        // forces full width
