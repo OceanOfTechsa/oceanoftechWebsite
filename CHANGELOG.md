@@ -1,3 +1,10 @@
+## [1.1.1-uat.3](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.1-uat.2...v1.1.1-uat.3) (2025-11-19)
+
+
+### Bug Fixes
+
+* Optimised website images and removed unused media files. Also added google tag for google anylitics. also created the feedback page(To change the form). Change the video size on the home page. Added team certificates. ([452ba8b](https://github.com/OceanOfTechsa/oceanoftechWebsite/commit/452ba8b77bb9ccf1597406e9a3b55f87b4be0ce3))
+
 ## [1.1.1-uat.2](https://github.com/OceanOfTechsa/oceanoftechWebsite/compare/v1.1.1-uat.1...v1.1.1-uat.2) (2025-11-18)
 
 
