@@ -37,17 +37,17 @@ const TeamPage = () => {
       socials: [{ type: "instagram", href: "#" },{ type: "facebook", href: "#" },{ type: "twitter", href: "#" },{ type: "linkedin", href: "#" },
       ],
     },
-    // {
-    //   name: "Sanele Jeza",
-    //   role: "Co Founder / Developer",
-    //   img: "/team/Sithuliso.jpg",
-    //   socials: [
-    //       { type: "instagram", href: "#" },
-    //       { type: "facebook", href: "#" },
-    //       { type: "twitter", href: "#" },
-    //       { type: "linkedin", href: "#" },
-    //   ],
-    // },
+    {
+      name: "Sanele Jeza",
+      role: "Co Founder / Developer",
+      img: "/team/Sithuliso.jpg",
+      socials: [
+          { type: "instagram", href: "#" },
+          { type: "facebook", href: "#" },
+          { type: "twitter", href: "#" },
+          { type: "linkedin", href: "#" },
+      ],
+    },
     {
       name: "Respect Mashego",
       role: "Developer",
@@ -188,40 +188,48 @@ const TeamPage = () => {
         </section>
 
         <section className="pt-0 mb-[7.5rem] mt-[4.5rem]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-0 divide-x">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
               
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 w-full">
                 <h2 className="text-[56.96px] md:text-[2.75rem] font-[700] mb-[1rem] leading-tight">Our Lifetime Achievements</h2>
                 <p className="mb-4 text-[#606261] dark:text-[#c4c5c7] font-normal">
-                  Join our team Creative Agency Specializing in: Video Production, Web Design, Branding, Brand Strategy.
+                  At Ocean of Tech, we prioritize excellence, industry compliance, and continuous professional development.
+                  Our team's certifications reflect a commitment to delivering reliable, future-focused, and high-quality technology solutions.
                 </p>
-                 <div className="bg-[#F8F8F8] dark:bg-[#202124] px-[1.5rem] py-[1rem] rounded-sm inline-block mt-6 font-normal border">
-                    <span>Work with us?</span>
-                    <Link href="/contact" className="text-[#0B9944] hover:text-[#0B9944]/80 ml-2 inline-flex items-center transition-all duration-500 ease-in-out">
-                        Join our community <span className="text-sm ml-1"><FiChevronRight size={19}/></span>
-                    </Link>
+                <div className="bg-[#F8F8F8] dark:bg-[#202124] px-[1.5rem] py-[1rem] rounded-sm inline-block mt-6 font-normal border">
+                  <span>Work with us?</span>
+                  <Link href="/contact" className="text-[#0B9944] hover:text-[#0B9944]/80 ml-2 inline-flex items-center transition-all duration-500 ease-in-out">
+                    Join our community <span className="text-sm ml-1"><FiChevronRight size={19}/></span>
+                  </Link>
                 </div>
               </div>
 
-              <div className="lg:col-span-7 xl:col-span-6 lg:ml-auto">
+              <div className="lg:col-span-7 w-full">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-                  <div>
-                    <h5 className="text-[26.16px] md:text-[1.5rem] font-[700] mb-3">Certificates</h5>
+                  <div className="w-full">
+                    <h5 className="text-[26.16px] md:text-[1.5rem] font-[700] mb-3">Team Certifications</h5>
+                    <p className="text-sm mb-4 text-[#606261] dark:text-[#c4c5c7]">Professionally attained by individual team members and contributing directly to the capability and credibility of Ocean of Tech.</p>
                     <ul className="space-y-2 text-gray-900">
-                      <li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">Microsoft Power platform / 2021</li>
-                      <li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">React Developer / 2021</li>
+                      <li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">
+                        <Link href="https://www.credly.com/badges/1619b837-1bbc-40ad-ac66-693d56a701a6/public_url" target="_blank" className="inline-flex items-start gap-2 hover:text-[#09b850] transition-colors ease-in-out duration-400">
+                            <Image src="/certificates/microsoft-certified-fundamentals-badge.svg" className="rounded-sm h-10 w-10" alt="certificate-badge" width={100} height={100}/>
+                            Microsoft Certified: Power Platform Fundamentals
+                        </Link>
+                      </li>
+                      <li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">
+                        <Link href="https://www.credly.com/badges/fbfd222e-7d33-41a5-b790-4d121731f3e5/public_url" target="_blank" className="inline-flex items-start gap-2 hover:text-[#09b850] transition-colors ease-in-out duration-400">
+                            <Image src="/certificates/getting-started-with-threat-intelligence-and-hunting.png" className="rounded-sm h-10 w-10" alt="certificate-badge" width={100} height={100}/>
+                            Getting Started with Threat Intelligence and Hunting
+                        </Link>
+                      </li>
                     </ul>
                   </div>
-                  <div>
+                  {/* <div>
                     <h5 className="text-[26.16px] md:text-[1.5rem] font-[700] mb-3">Awards</h5>
-                    <ul className="space-y-2 text-gray-900">
-                      {/*<li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">Microsoft Power platform / 2021</li>*/}
-                      {/*<li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">Nothing to sjhow</li>*/}
-                    </ul>
-                      Nothing to show
-                  </div>
-            
+                    <p className="text-sm text-[#606261] dark:text-[#c4c5c7]">Ocean of Tech is actively building a portfolio designed to meet and exceed industry benchmarks.
+                    While no formal awards have been issued yet, our trajectory, customer satisfaction, and project performance position us strongly for upcoming recognitions and industry distinctions.</p>
+                  </div> */}
                 </div>
               </div>
             </div>

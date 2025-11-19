@@ -83,7 +83,7 @@ const AboutPage = (): JSX.Element => {
                                    <video
                                         src="https://ik.imagekit.io/oceanoftech/about.mp4"
                                         className="rounded-sm"
-                                        controls
+                                        controls={false}
                                         loop
                                         autoPlay
                                         controlsList="nodownload"
@@ -92,7 +92,7 @@ const AboutPage = (): JSX.Element => {
                                         style={{ width: "100%", height: "100%", objectFit: "cover" }}   
                                     />
                                 </div>
-                                <div className="bg-white p-2 rounded-sm text-black font-semibold absolute top-0 right-0 transform rotate-12 mt-10 -mr-4">4+ Years of experience</div>
+                                <div className="bg-white p-2 rounded-sm text-black font-semibold text-2xl hidden sm:block absolute top-0 right-0 transform rotate-12 mt-10 -mr-4">4+ Years of experience</div>
                             </div>
                         </div>
                     </div>
