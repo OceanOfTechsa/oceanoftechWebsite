@@ -5,7 +5,6 @@ import { useEffect, useRef, useState, JSX } from "react"
 import Image from "next/image";
 
 const images = [
-  { src: "/01.jpg", height: 300, width: 1030},
   { src: "/12.jpg", height: 250, width: 1030},
   { src: "/08.jpg", height: 350, width: 1030},
   { src: "/14.jpg", height: 280, width: 1030},

@@ -40,7 +40,7 @@ const TeamPage = () => {
     {
       name: "Sanele Jeza",
       role: "Co Founder / Developer",
-      img: "/team/Sithuliso.jpg",
+      img: "/team/sanele.jpeg",
       socials: [
           { type: "instagram", href: "#" },
           { type: "facebook", href: "#" },
@@ -140,47 +140,47 @@ const TeamPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                 {teamMembers.map((member, idx) => (
                     <div
-                    key={idx}
-                    className="relative bg-transparent rounded-sm overflow-hidden  transition-shadow group"
+                      key={idx}
+                      className="relative bg-transparent rounded-sm overflow-hidden  transition-shadow group"
                     >
-                    {/* Social links */}
-                    <div className="absolute top-3 right-3 gap-2 z-10 hidden group-hover:flex">
-                        {member.socials.map((social, i) => {
-                            const data = socialIconMap[social.type];
-                            if (!data) return null; // skip unknown types
+                      {/* Social links */}
+                      <div className="absolute top-3 right-3 gap-2 z-10 hidden group-hover:flex">
+                          {member.socials.map((social, i) => {
+                              const data = socialIconMap[social.type];
+                              if (!data) return null; // skip unknown types
 
-                            return (
-                            <Link
-                                key={i}
-                                href={social.href}
-                                className={`w-9 h-9 flex items-center justify-center rounded-sm text-white ${data.bg} hover:scale-105 transition-transform`}
-                            >
-                                {data.icon}
-                            </Link>
-                            );
-                        })}
-                    </div>
+                              return (
+                              <Link
+                                  key={i}
+                                  href={social.href}
+                                  className={`w-9 h-9 flex items-center justify-center rounded-sm text-white ${data.bg} hover:scale-105 transition-transform`}
+                              >
+                                  {data.icon}
+                              </Link>
+                              );
+                          })}
+                      </div>
 
-                    {/* Image */}
-                    <div className="relative overflow-hidden rounded-sm">
-                      <Image
-                        src={member.img}
-                        alt={member.name}
-                        width={275.76} height={367.7}
-                        quality={100}
-                        loading="eager"
-                        priority={true}
-                        className="object-cover transform hover:scale-104 transition-transform duration-800 ease-in-out w-full h-full"
-                      />
-                    </div>
+                      {/* Image */}
+                      <div className="relative overflow-hidden rounded-sm">
+                        <Image
+                          src={member.img}
+                          alt={member.name}
+                          width={275.76} height={367.7}
+                          quality={100}
+                          loading="eager"
+                          priority={true}
+                          className="object-cover transform hover:scale-104 transition-transform duration-800 ease-in-out w-full h-full"
+                        />
+                      </div>
 
-                    {/* Body */}
-                    <div className="text-center mt-4">
-                        <h6 className="text-[1.2rem] font-semibold group-hover:text-[#0B9944] dark:hover:text-green-500 transition-colors duration-500 ease-in-out">
-                            {member.name}
-                        </h6>
-                        <span className="font-normal text-[#c4c5c7] text-[0.875em]">{member.role}</span>
-                    </div>
+                      {/* Body */}
+                      <div className="text-start mt-4">
+                          <h6 className="text-[1.2rem] font-semibold group-hover:text-[#0B9944] dark:hover:text-green-500 transition-colors duration-500 ease-in-out">
+                              {member.name}
+                          </h6>
+                          <div className="font-normal text-[#c4c5c7] text-[0.875em] -mt-2">{member.role}</div>
+                      </div>
                     </div>
                 ))}
                 </div>
@@ -191,7 +191,7 @@ const TeamPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-0 divide-x">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
               
-              <div className="lg:col-span-5 w-full">
+              <div className="lg:col-span-6 w-full">
                 <h2 className="text-[56.96px] md:text-[2.75rem] font-[700] mb-[1rem] leading-tight">Our Lifetime Achievements</h2>
                 <p className="mb-4 text-[#606261] dark:text-[#c4c5c7] font-normal">
                   At Ocean of Tech, we prioritize excellence, industry compliance, and continuous professional development.
@@ -205,8 +205,8 @@ const TeamPage = () => {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 w-full">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+              <div className="lg:col-span-6 w-full">
+                <div className="grid  gap-6 md:gap-8">
                   <div className="w-full">
                     <h5 className="text-[26.16px] md:text-[1.5rem] font-[700] mb-3">Team Certifications</h5>
                     <p className="text-sm mb-4 text-[#606261] dark:text-[#c4c5c7]">Professionally attained by individual team members and contributing directly to the capability and credibility of Ocean of Tech.</p>
@@ -221,6 +221,12 @@ const TeamPage = () => {
                         <Link href="https://www.credly.com/badges/fbfd222e-7d33-41a5-b790-4d121731f3e5/public_url" target="_blank" className="inline-flex items-start gap-2 hover:text-[#09b850] transition-colors ease-in-out duration-400">
                             <Image src="/certificates/getting-started-with-threat-intelligence-and-hunting.png" className="rounded-sm h-10 w-10" alt="certificate-badge" width={100} height={100}/>
                             Getting Started with Threat Intelligence and Hunting
+                        </Link>
+                      </li>
+                      <li className="border-b pb-2 text-[#606261] dark:text-[#c4c5c7] mb-2">
+                        <Link href="/documents/Azure Fundamentals.pdf" target="_blank" className="inline-flex items-start gap-2 hover:text-[#09b850] transition-colors ease-in-out duration-400">
+                            <Image src="/certificates/microsoft-certified-fundamentals-badge.svg" className="rounded-sm h-10 w-10" alt="certificate-badge" width={100} height={100}/>
+                            Microsoft Certified: Azure Fundamentals
                         </Link>
                       </li>
                     </ul>

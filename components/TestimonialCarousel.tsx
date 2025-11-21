@@ -37,7 +37,7 @@ export default function TestimonialCarousel() {
         if (paused) return;
         const interval = setInterval(() => {
             setPage((prev) => (prev + 1) % totalPages);
-        }, 4000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [paused, totalPages]);
 
@@ -59,11 +59,11 @@ export default function TestimonialCarousel() {
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -100, opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[200px] relative"
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 md:grid-cols-2 min-h-[200px] relative"
             >
                 {currentItems.map((review, i) => (
-                    <div key={i} className="flex-shrink-0 basis-[85%] md:basis-[48%] lg:basis-[45%] p-3 rounded-sm bg-white dark:bg-[#202124] shadow-sm">
+                    <div key={i} className="flex-shrink-0 basis-[85%] md:basis-[48%] lg:basis-[45%] p-3 ">
                         {/* Rating */}
                         <div className="flex gap-1 text-yellow-400 mb-3">
                             {Array.from({ length: review.rating }).map((_, idx) => (
@@ -72,7 +72,7 @@ export default function TestimonialCarousel() {
                         </div>
 
                         {/* Review text */}
-                        <p className="text-gray-800 text-base font-normal dark:text-gray-200 mb-4 leading-relaxed line-clamp-3">
+                        <p className=" dark:text-gray-300 text-lg mb-4 leading-relaxed line-clamp-3">
                             {review.details}
                         </p>
 
@@ -80,7 +80,7 @@ export default function TestimonialCarousel() {
                         <div className="flex items-center gap-3">
                             <Image
                                 src={review.avatar}
-                                className="w-10 h-10 rounded-full object-cover"
+                                className="w-10 h-10 rounded-sm object-cover"
                                 alt={review.name}
                                 title="review photo"
                                 placeholder="blur"
@@ -101,7 +101,7 @@ export default function TestimonialCarousel() {
 
                 {/* If only one review is visible, show a "Leave a Review" card */}
                 {currentItems.length === 1 && (
-                    <div className="hidden md:flex-shrink-0 basis-[85%] md:basis-[48%] lg:basis-[45%] p-3 rounded-sm bg-white dark:bg-[#202124] shadow-sm md:flex flex-col items-center justify-center text-center">
+                    <div className="hidden md:flex-shrink-0 basis-[85%] md:basis-[48%] lg:basis-[45%] md:flex flex-col items-center justify-center text-center">
                         <h5 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
                             <Image src="/emoji.png" width={38} height={39} alt="thinking emoji" loading="lazy" priority={false} quality={100}/>
                         </h5>
