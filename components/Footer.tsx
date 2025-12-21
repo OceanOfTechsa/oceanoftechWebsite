@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import SocialIcons from "@/components/SocialIcons";
-import { JSX } from "react";
+import React, { JSX } from "react";
 import {careers } from "@/components/conts";
 import  AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import { Button } from "@/components/ui/button";
@@ -57,8 +57,11 @@ const Footer = (): JSX.Element => {
                             <path d="M44.3083 31.0987C44.0137 32.1265 43.377 32.714 42.593 32.8413C42.1519 32.9295 41.7599 33.2233 41.5835 33.6153L35.8301 46.5149C35.6146 46.9751 35.1444 47.2688 34.6351 47.2688H33.9493C33.2144 47.2688 32.646 46.7004 32.646 45.9656V16.0334C32.646 15.2986 33.2144 14.7302 33.9493 14.7302H34.6842C35.1935 14.7302 35.6637 15.0239 35.8792 15.4841L41.6326 28.4328C41.8091 28.8739 42.201 29.1186 42.6421 29.2068C43.4261 29.3832 44.0628 29.9517 44.3574 30.9794C44.3574 31.1558 44.3574 31.3323 44.3083 31.0987ZM39.3571 30.7147L36.6141 24.1027C36.4086 23.5643 35.5864 23.7307 35.5864 24.3183V37.2107C35.5864 37.7983 36.4086 37.9647 36.6141 37.4263L39.3571 30.8143C39.4845 30.5205 39.4845 30.1876 39.3571 30.7147Z" fill="white"/>
                             </svg>
                         </Link>
-                        <p className="mt-4 mb-2 text-gray-300 text-sm leading-relaxed">
-                            Ocean of Tech – Innovate. Scale. Succeed.
+                        {/*<p className="mt-4 mb-2 text-gray-300 text-sm leading-relaxed">*/}
+                        {/*    Ocean of Tech – Innovate. Scale. Succeed.*/}
+                        {/*</p>*/}
+                        <p className="t-4 mb-2 text-gray-300 text-sm leading-relaxed">
+                            Ocean of Tech – Innovate <span className="text-green-500">•</span> Scale <span className="text-green-500">•</span> Succeed
                         </p>
                     </div>
                     <div className="flex items-start justify-between w-full md:w-5/12">
@@ -97,12 +100,12 @@ const Footer = (): JSX.Element => {
                                 <li>
                                     <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/faq"> Faqs </Link>
                                 </li>
-                                <li>
-                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/privacy-policy" > Privacy Policy </Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/blog"> News and blogs </Link>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/privacy-policy" > Privacy Policy </Link>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+                                {/*    <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/blog"> News and blogs </Link>*/}
+                                {/*</li>*/}
                                 <li>
                                     <Link className="text-gray-300 hover:text-green-400 transition-colors" href="/terms-and-conditions"> Terms &amp; conditions </Link>
                                 </li>
@@ -112,27 +115,27 @@ const Footer = (): JSX.Element => {
                     <div className="w-full md:w-1/4">
                         <h6 className="mb-4 text-xl font-semibold text-white">Follow on</h6>
                         <SocialIcons />
-                        <div className="mt-6">
-                            <h6 className="mb-4 text-xl font-semibold text-white">Part of the family</h6>
-                            <motion.div
-                                whileHover={{ scale: 1.01 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                >
-                                <Link href={"https://www.peeko.com"} target="_blank" className="flex space-x-3">
-                                    <div className="relative">
-                                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
-                                            <Activity className="w-6 h-6 text-white" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span className="text-xl font-bold text-white">
-                                            Peeko
-                                        </span>
-                                        <div className="text-xs text-gray-500 -mt-1">Monitor</div>
-                                    </div>
-                                </Link>
-                            </motion.div>
-                        </div>
+                        {/*<div className="mt-6">*/}
+                        {/*    <h6 className="mb-4 text-xl font-semibold text-white">Part of the family</h6>*/}
+                        {/*    <motion.div*/}
+                        {/*        whileHover={{ scale: 1.01 }}*/}
+                        {/*        transition={{ type: "spring", stiffness: 400, damping: 10 }}*/}
+                        {/*        >*/}
+                        {/*        <Link href={"https://www.peeko.com"} target="_blank" className="flex space-x-3">*/}
+                        {/*            <div className="relative">*/}
+                        {/*                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">*/}
+                        {/*                    <Activity className="w-6 h-6 text-white" />*/}
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*            <div>*/}
+                        {/*                <span className="text-xl font-bold text-white">*/}
+                        {/*                    Peeko*/}
+                        {/*                </span>*/}
+                        {/*                <div className="text-xs text-gray-500 -mt-1">Monitor</div>*/}
+                        {/*            </div>*/}
+                        {/*        </Link>*/}
+                        {/*    </motion.div>*/}
+                        {/*</div>*/}
                     </div>
                     
                 </div>

@@ -140,7 +140,7 @@ export default function ServicesSearchSection() {
                 <Link
                   key={service.id}
                   href={service.href}
-                  className="flex flex-row h-full p-6 pb-2 border rounded-lg shadow-sm hover:shadow-md relative group hover:border-[#09b850]/50 hover:bg-[#09b850]/5 transition-all duration-500 group"
+                  className="flex flex-row h-full p-6 pb-2 border rounded-lg relative group hover:border-[#09b850]/50 hover:bg-[#09b850]/5 transition-all duration-500 group"
                 >
                   <div className="bg-gray-100 dark:bg-[#202124] absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] group-hover:bg-[#09b850] dark:group-hover:bg-[#09b850] group-hover:text-white transition-colors">
                     <Icon className="w-7 h-7" />

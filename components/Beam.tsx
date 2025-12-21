@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef } from "react"
+import React, {JSX, useRef} from "react"
 import { 
   Code2, 
   Database, 
@@ -17,17 +17,14 @@ import {
 import Image from "next/image"
 import { AnimatedBeam } from "@/components/ui/shadcn-io/animated-beam"
 
-export function TechStackBeams() {
+export function TechStackBeams():JSX.Element {
   const containerRef = useRef<HTMLDivElement>(null)
   const centerRef = useRef<HTMLDivElement>(null)
   
   const refs = Array.from({ length: 8 }, () => useRef<HTMLDivElement>(null))
 
   return (
-    <div 
-      className="relative flex w-full items-center justify-center overflow-hidden py-10 sm:py-0"
-      ref={containerRef}
-    >
+    <div className="relative flex w-full items-center justify-center overflow-hidden py-10 sm:py-0" ref={containerRef}>
       {/* Animated Beams from shadcn */}
       {refs.map((ref, i) => (
         <AnimatedBeam

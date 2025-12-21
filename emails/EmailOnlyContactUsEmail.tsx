@@ -1,15 +1,7 @@
-import {
-    Body,
-    Container,
-    Head,
-    Heading,
-    Html,
-    Link,
-    Preview,
-    Text,
-} from '@react-email/components';
+import { Body, Container, Head, Heading, Html, Link, Preview, Text} from '@react-email/components';
+import {JSX} from "react";
 interface GeoLocationData {
-    query: string;       // IP address
+    query: string;
     city: string;
     country: string;
     countryCode: string;
@@ -24,12 +16,12 @@ interface GeoLocationData {
     message?: string;
 }
 
-interface EmailOnlyContactUsEmail {
+interface EmailOnlyContactUsEmailProps {
     email: string;
     location: GeoLocationData;
 }
 
-export const EmailOnlyContactUsEmail = ({email, location}: EmailOnlyContactUsEmail) => (
+export const EmailOnlyContactUsEmail = ({email, location}: EmailOnlyContactUsEmailProps): JSX.Element => (
     <Html>
         <Head />
         <Body style={main}>
@@ -94,7 +86,7 @@ EmailOnlyContactUsEmail.PreviewProps = {
         as: 'Sample AS',
         status: 'success'
     }
-} as EmailOnlyContactUsEmail;
+} as EmailOnlyContactUsEmailProps;
 export default EmailOnlyContactUsEmail;
 
 const main = {

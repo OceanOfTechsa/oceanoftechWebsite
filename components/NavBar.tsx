@@ -15,25 +15,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
 import { FaRegUserCircle } from "react-icons/fa";
-import LinkPreview from "@/components/ui/link-preview";
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import { CgMenuLeft } from "react-icons/cg";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
+import {JSX, RefObject} from "react";
+import {Timeout} from "@radix-ui/primitive";
+import {cn} from "@/lib/utils";
+// import LinkPreview from "@/components/ui/link-preview";
 
-const NavBar = (): React.JSX.Element => {
-  const pathname = usePathname();
+
+const NavBar = ():JSX.Element => {
+  const pathname: string = usePathname();
   const [navOffset, setNavOffset] = React.useState(0);
   const [scrolled, setScrolled] = React.useState(false);
-  const ticking = React.useRef(false);
-  const lastScrollY = React.useRef(0);
-  const effectTriggered = React.useRef(false);
-  const animationTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const ticking: RefObject<boolean> = React.useRef(false);
+  const lastScrollY: RefObject<number> = React.useRef(0);
+  const effectTriggered: RefObject<boolean> = React.useRef(false);
+  const animationTimeoutRef: RefObject<Timeout  | null> = React.useRef<NodeJS.Timeout | null>(null);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
+  React.useEffect((): () => void => {
+    const handleScroll: () => void = (): void => {
       if (!ticking.current) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
+        window.requestAnimationFrame((): void => {
+          const currentScrollY: number = window.scrollY;
           if (currentScrollY < 80) {
             effectTriggered.current = false;
             setNavOffset(0);
@@ -53,7 +57,6 @@ const NavBar = (): React.JSX.Element => {
               animationTimeoutRef.current = null;
             }, 220);
           }
-
           lastScrollY.current = currentScrollY;
           ticking.current = false;
         });
@@ -62,7 +65,7 @@ const NavBar = (): React.JSX.Element => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
+    return (): void => {
       window.removeEventListener("scroll", handleScroll);
       if (animationTimeoutRef.current) clearTimeout(animationTimeoutRef.current);
     };
@@ -76,8 +79,7 @@ const NavBar = (): React.JSX.Element => {
           "transform 0.50s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.35s ease-in-out",
         opacity: navOffset === 0 ? 1 : 0.95,
       }}
-      className={`w-full bg-transparent dark:text-white fixed top-0 left-0 z-50 will-change-transform transition-all ease-in-out duration-500
-        ${!scrolled ? "py-1 md:py-3 bg-transparent" : "py-0 border-b bg-white dark:bg-[#161618] shadow-stone-200"}`}
+      className={cn("w-full bg-transparent dark:text-white fixed top-0 left-0 z-50 will-change-transform transition-all ease-in-out duration-500", !scrolled ? "py-1 md:py-3 bg-transparent" : "py-0 border-b bg-white dark:bg-[#161618] shadow-stone-200")}
     >
       <nav className="p-3">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -101,30 +103,24 @@ const NavBar = (): React.JSX.Element => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`
-                      relative px-1 transition-colors font-[500] text-[16.008px]
-                      ${isActive ? "text-[#09b850] font-semibold" : "hover:text-[#09b850] dark:hover:hover:text-[#0B9944] text-[#606261] dark:text-[#ffffffd9]"}
-                      after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 
-                      after:bg-[#0B9944] after:transition-all after:duration-300 
-                      hover:after:w-full 
-                    `}
+                    className={cn("relative px-1 transition-colors font-[500] text-[16.008px] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0  after:bg-[#0B9944] after:transition-all after:duration-300hover:after:w-full", isActive ? "text-[#09b850] font-semibold" : "hover:text-[#09b850] dark:hover:hover:text-[#0B9944] text-[#606261] dark:text-[#ffffffd9]")}
                   >
                     {link.label}
                   </Link>
                 );
               })}
-            <NavMegaMenu />
+            {/*<NavMegaMenu />*/}
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-2 ps-2">
             <ModeToggle />
-            <Button className="bg-[#202124] hover:bg-[#3c3e41] text-white rounded-[0.2rem]">
-              <span className="flex gap-2 items-center">
-                <FaRegUserCircle />
-                <LinkPreview url="https://oceanoftechsa.com">Sign in</LinkPreview>
-              </span>
-            </Button>
+            {/*<Button className="bg-[#202124] hover:bg-[#3c3e41] text-white rounded-[0.2rem]">*/}
+            {/*  <span className="flex gap-2 items-center">*/}
+            {/*    <FaRegUserCircle />*/}
+            {/*    <LinkPreview url="https://oceanoftechsa.com">Sign in</LinkPreview>*/}
+            {/*  </span>*/}
+            {/*</Button>*/}
             <Button className="bg-[#09b850] hover:bg-[#0B9944] text-white rounded-[0.2rem]">
               <Link href="/contact" className="flex gap-2 items-center justify-start">
                 <TfiHeadphoneAlt />
@@ -154,11 +150,7 @@ const NavBar = (): React.JSX.Element => {
                     <SheetClose asChild key={link.href}>
                       <Link
                         href={link.href}
-                        className={`text-lg font-medium transition-colors ${
-                          pathname === link.href
-                            ? "text-[#0B9944]"
-                            : "text-foreground hover:text-[#09b850]"
-                        }`}
+                        className={cn("text-lg font-medium transition-colors", pathname === link.href ? "text-[#0B9944]" : "text-foreground hover:text-[#09b850]")}
                       >
                         {link.label}
                       </Link>
@@ -168,7 +160,7 @@ const NavBar = (): React.JSX.Element => {
                   <div className="pt-4 border-t border-border">
                     <SheetClose asChild>
                       <div className="w-full">
-                        <NavMegaMenu />
+                        {/*<NavMegaMenu />*/}
                       </div>
                     </SheetClose>
                   </div>

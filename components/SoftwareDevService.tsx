@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-import { Database, Terminal as TerminalIcon, Table } from 'lucide-react'
+import {Terminal as TerminalIcon, Table } from 'lucide-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 // BEST themes for perfect readability in both modes
@@ -66,7 +66,7 @@ CREATE INDEX idx_users_email ON users(email);`
 
 function CodeWindow({ activeTab, setActiveTab }: { activeTab: keyof typeof codeSnippets; setActiveTab: any }) {
   const snippet = codeSnippets[activeTab]
-  const isDark = document?.documentElement?.classList?.contains('dark')
+  const isDark = typeof window !== 'undefined' && document?.documentElement?.classList?.contains('dark')
   const style = isDark ? vscDarkPlus : tomorrow
 
   return (
