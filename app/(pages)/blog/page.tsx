@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import {JSX} from "react";
+import {GoDotFill} from "react-icons/go";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -13,7 +14,13 @@ const BlogPage = (): JSX.Element => {
         <div className="flex flex-col w-full">
 
             <section className="flex flex-col w-full justify-between items-start gap-3 max-w-7xl mx-auto px-6 py-16">
-
+                <ul className="flex items-center space-x-2">
+                    <li className="hover:text-[#0b9944] dark:hover:text-[#09b850] transition-colors duration-500 ease-in-out">
+                        <Link href="/">Home</Link></li> <li className="text-black">•</li>
+                    <li className="text-[#0B9944] dark:text-[#09b850]"
+                        aria-current="page">Our Blog
+                    </li>
+                </ul>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center">
                     Our Blog
                 </h1>
