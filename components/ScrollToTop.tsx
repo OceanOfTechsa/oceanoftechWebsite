@@ -1,7 +1,9 @@
 "use client";
 
-import { ArrowUpFromDot } from "lucide-react";
-import { useState, useEffect } from "react";
+import {ArrowUpFromDot, MessagesSquare} from "lucide-react";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,17 +39,22 @@ const ScrollToTop = () => {
         window.scrollTo(0, 0);
       }
     }
-
     requestAnimationFrame(animation);
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex items-end gap-3">
-      <div className="w-[40px] md:w-[44px]">
+    <div className="fixed bottom-8 right-28 z-50 flex items-end gap-3">
+      <div className="w-[150px] md:w-[154px] flex items-end gap-1">
+          <Button type="button" variant="outline" size="sm" className={`rounded-[0.2rem] mt-4 text-white bg-[#292a2d] border-gray-300/30 ${
+              isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} `}>
+              <Link href="/feedback" className="flex items-center gap-2 ">
+                  <MessagesSquare />Feedback
+              </Link>
+          </Button>
         <button
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className={`cursor-pointer bg-[#09b850] hover:bg-[#0B9944] text-white rounded-[0.2rem] h-[40px] w-[40px] md:h-[44px] md:w-[44px] transition-all duration-300 ease-in-out shadow-md  active:scale-95 flex items-center justify-center ${
+          className={`cursor-pointer bg-[#09b850] hover:bg-[#0B9944] text-white rounded-[0.2rem] h-[30px] w-[30px] md:h-[34px] md:w-[34px] transition-all duration-300 ease-in-out shadow-md  active:scale-95 flex items-center justify-center ${
             isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         >

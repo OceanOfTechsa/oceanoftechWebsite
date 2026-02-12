@@ -107,7 +107,6 @@ const HostingPage = () => {
                   </Link>
               </div>
           </div>
-
           <HostingShowcase />
         </div>
       </section>

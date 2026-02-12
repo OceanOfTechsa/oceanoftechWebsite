@@ -10,13 +10,59 @@ import { BsBriefcase } from "react-icons/bs";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { FaHeart, FaFire, FaBullseye, FaTrophy } from "react-icons/fa";
 import OpenPositions from "@/components/ActiveJobs";
-import NewsLetterSubForm from "@/components/forms/newsLetter";
 import { type Career, careers } from "@/components/conts";
 import OpenSearchFormBtn from "@/components/OpenSearchFormBtn";
+import NewsLetterSubCTA from "@/components/NewsLetterSubCTA";
 
 export const metadata: Metadata = {
-  title: "Careers",
-};
+    title: 'Careers | Join Our Team',
+    description:
+        'Explore open career opportunities and join our team of passionate developers, designers, and innovators. Build your future with us.',
+
+    keywords: [
+        'careers',
+        'jobs',
+        'software developer jobs',
+        'tech careers',
+        'join our team',
+        'web development jobs',
+    ],
+
+    openGraph: {
+        title: 'Careers | Join Our Team',
+        description:
+            'We are hiring! Explore open roles and become part of a growing tech team building impactful products.',
+        url: 'https://oceanoftechsa.com/careers',
+        siteName: 'Ocean of tech',
+        images: [
+            {
+                url: 'https://oceanoftechsa.com/og-careers.png',
+                width: 1200,
+                height: 630,
+                alt: 'Careers at Your Company',
+            },
+        ],
+        locale: 'en_ZA',
+        type: 'website',
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Careers | Join Our Team',
+        description:
+            'Looking for your next opportunity? Join our team and help us build amazing digital experiences.',
+        images: ['https://oceanoftechsa.com/og-careers.png'],
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    alternates: {
+        canonical: 'https://oceanoftechsa.com/careers',
+    },
+}
 
 const CareersPage = (): JSX.Element => {
   return (
@@ -270,88 +316,7 @@ const CareersPage = (): JSX.Element => {
       </section>
 
       <OpenPositions />
-
-      <section className="relative overflow-hidden bg-gray-100 dark:bg-[#292a2d] py-16">
-        {/* SVG Decoration */}
-        <figure className="absolute top-0 left-0 -ml-8 mt-5">
-          <svg
-            width="371"
-            height="354"
-            viewBox="0 0 371 354"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse
-              cx="172.5"
-              cy="176.5"
-              rx="131.5"
-              ry="125.5"
-              fill="url(#paint0_linear_195_2)"
-            ></ellipse>
-            <ellipse
-              cx="185.5"
-              cy="177"
-              rx="185.5"
-              ry="177"
-              fill="url(#paint1_linear_195_2)"
-            ></ellipse>
-            <defs>
-              <linearGradient
-                id="paint0_linear_195_2"
-                x1="172.5"
-                y1="51"
-                x2="172.5"
-                y2="302"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.0569271" stopColor="#D9D9D9" stopOpacity="0.5" />
-                <stop offset="0.998202" stopColor="#D9D9D9" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_195_2"
-                x1="185.5"
-                y1="0"
-                x2="185.5"
-                y2="354"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.0569271" stopColor="#D9D9D9" stopOpacity="0.2" />
-                <stop offset="0.998202" stopColor="#D9D9D9" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </figure>
-
-        {/* Right-side Decoration */}
-        <div className="absolute bottom-0 right-0 hidden md:block md:mr-20 -ml-30">
-          <Image
-            src="/cta-vector.svg"
-            width={163} height={200}
-            loading="lazy"
-            quality={100}
-            className="h-[200px]"
-            alt="vector-img"
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 md:px-0 relative">
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 items-center gap-8">
-            {/* Title and Content */}
-            <div className="xl:col-span-2">
-              <h2 className="text-[2.7rem] font-bold mb-3">
-                Subscribe to our newsletter
-              </h2>
-              <p className="text-[#606261] dark:text-[#c4c5c7] text-lg">
-                Our passion for customer excellence is just one reason why we are the market leader. We&apos;ve <br />
-                always worked very hard to give our customers the best experience.
-              </p>
-            </div>
-
-            {/* Input + Button */}
-            <NewsLetterSubForm />
-          </div>
-        </div>
-      </section>
+      <NewsLetterSubCTA />
     </div>
   );
 };

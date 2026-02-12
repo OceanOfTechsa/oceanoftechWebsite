@@ -147,7 +147,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>): JSX.Element {
-    const shouldRenderTwak = !['development', 'test', 'preview'].includes(process.env.NODE_ENV);
+    const shouldRenderTwak: boolean = !['development', 'test', 'preview'].includes(process.env.NODE_ENV);
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
@@ -155,7 +155,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                     <SearchProvider>
                         <NavBar />
                         <SearchForm />
-                        <main className="flex-grow flex items-center justify-center dark:bg-[#161618] dark:text-white pt-16">
+                        <main className="flex-grow flex items-center justify-center bg-[#fff] dark:bg-[#161618] dark:text-white pt-16">
                             {children}
                         </main>
                         <Footer />
@@ -164,7 +164,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                         <SetScrollToTop />
                     </SearchProvider>
                 </ThemeProvider>
-                {shouldRenderTwak && <Twak />}
+                    {shouldRenderTwak && <Twak />}
                 <GoogleTag />
             </body>
         </html>

@@ -107,16 +107,16 @@ export default class AppSettings {
     ];
     public static NavLinks: { label: string, href: string }[] = [
         {label: "Home", href: "/"},
-        {label: "About", href: "/about"},
+        {label: "About", href: "/about-us"},
         {label: "Services", href: "/services"},
-        // {label: "Portfolio", href: "/portfolio"},
-        {label: "Team", href: "/team"},
-        {label: "Become A Partner", href: "/become-a-partner"},
+        {label: "Our Team", href: "/team"},
+        {label: "Portfolio", href: "/portfolio"},
     ];
     public static CompanyContacts = {
-        Email: "contact@oceanoftech.com",
+        Email: `contact@oceanoftechsa.com`,
         Phone: "+27 72 627 2521",
         Address: "44 Isaiah Ntshangase Rd, Stamford Hill, Durban, 4023",
-        WorkingHours: "Time: 9am to 5pm (Sunday close)"
+        WorkingHours: "Time: 9am to 5pm (Weekdays)",
+        Domain:"oceanoftechsa.com"
     }
 }

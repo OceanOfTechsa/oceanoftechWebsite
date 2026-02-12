@@ -9,9 +9,9 @@ import Image from "next/image";
 import CaseStudyCarousel from '@/components/CaseStudyCard';
 import ImageGallery from '@/components/ImageGallery';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const portfolio = caseStudies.find((c) => c.projectUrl === params.slug);
-
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const portfolio = caseStudies.find(async (c) => c.id === await params.id);
+console.log(await params)
   if (!portfolio) {
     return {
       title: "portfolio not found",
@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-const SinglePortfolioPage = ({ params }: { params: { slug: string } }) => {
-  const portfolio: CaseStudy | undefined = caseStudies.find((c: CaseStudy) => c.projectUrl === params.slug);
+const SinglePortfolioPage = ({ params }: { params: { id: string } }) => {
+  const portfolio: CaseStudy | undefined = caseStudies.find(async (c: CaseStudy) => c.id === await params.id);
 
   if (!portfolio) {
     return <div className="text-center py-20">portfolio not found.</div>;

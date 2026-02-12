@@ -8,6 +8,7 @@ import PricingSection from "@/components/PricingSection";
 import Testimonials from "@/components/Testimonials";
 import _CTAHome from "@/components/partials/_HomeCTA";
 import {Metadata} from "next";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
 
 export const metadata: Metadata = {
     title: "Home"
@@ -19,7 +20,7 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto">
                 <HeroSection />
                 <ShowCaseSection />
-                {/* <TrustedBySection /> */}
+                 <TrustedBySection />
                 <AboutSection />
             </div>
             <ServicesSection />
@@ -36,7 +37,7 @@ const HomePage = () => {
                     height: "60vh",
                     minHeight: "280px",
                     maxHeight: "480px",
-                    width: "100vw",        // forces full width
+                    width: "100vw",
                     left: 0,
                     right: 0,
                 }}
@@ -44,6 +45,9 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto">
                 <Approach />
                 <PricingSection />
+            </div>
+            <CaseStudiesSection />
+            <div className="max-w-7xl mx-auto">
                 <Testimonials/>
                 <_CTAHome />
             </div>

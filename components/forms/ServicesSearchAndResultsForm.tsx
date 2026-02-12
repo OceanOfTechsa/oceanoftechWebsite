@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, JSX } from "react";
 import {
   Search,
   MoveRight,
@@ -18,30 +18,26 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { type Service, servicesData } from "@/lib/ServicesData";
 
-// Proper SVG icon component type – replaces React.ComponentType<any>
 type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
 
-export default function ServicesSearchSection() {
+const ServicesSearchSection = (): JSX.Element =>  {
   const [query, setQuery] = useState("");
-
-  const filteredServices = useMemo(() => {
+  const filteredServices: Service[] = useMemo(() => {
     if (!query.trim()) return servicesData;
-
-    const q = query.toLowerCase();
+    const lowerCaseQuery: string = query.toLowerCase();
     return servicesData.filter(
-      (s) =>
-        s.title.toLowerCase().includes(q) ||
-        s.description.toLowerCase().includes(q)
+      (s: Service): boolean =>
+        s.title.toLowerCase().includes(lowerCaseQuery) ||
+        s.description.toLowerCase().includes(lowerCaseQuery)
     );
   }, [query]);
 
-  const staticSuggestions = [
+  const staticSuggestions: Service[] = [
     servicesData[0],
     servicesData[1],
     servicesData[6],
   ];
 
-  // Only change: replaced React.ComponentType<any> with proper type
   const iconMap: Record<Service["iconName"], IconComponent> = {
     "code-xml": CodeXml,
     "scale-3d": Scale3d,
@@ -56,7 +52,7 @@ export default function ServicesSearchSection() {
 
   return (
     <section className="xl:pt-20 pb-0 mt-10 sm:mt-0 w-full max-w-7xl mx-auto mb-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-0">
         {/* Search Bar – Centered & Not Full Width */}
         <div className="max-w-2xl mb-12">
           <form onSubmit={(e) => e.preventDefault()} className="bg-transparent border rounded-sm flex items-center p-2 w-full gap-2">
@@ -84,7 +80,7 @@ export default function ServicesSearchSection() {
           </form>
 
           {/* Static Suggestion Chips – Always Visible */}
-          <div className="flex flex-wrap gap-3 justify-start items-center mt-3">
+          <div className="flex flex-wrap gap-3 justify-start items-center mt-3 text-[#606261] dark:text-[#c4c5c7] ">
             Suggestions: 
             {staticSuggestions.map((s) => {
               const Icon = iconMap[s.iconName];
@@ -92,7 +88,7 @@ export default function ServicesSearchSection() {
                 <Link
                   key={s.id}
                   href={s.href}
-                  className="group flex items-center gap-3 px-5 py-1 bg-gray-50 dark:bg-[#1a1a1c] border border-gray-200 dark:border-[#333335] rounded-full hover:bg-[#09b850]/10 hover:border-[#09b850]/50 transition-all duration-300"
+                  className="group flex items-center gap-3 px-3 py-1 bg-gray-50 dark:bg-[#1a1a1c] border border-gray-200 dark:border-[#333335] rounded-full hover:bg-[#09b850]/10 hover:border-[#09b850]/50 text-[#606261] dark:text-[#c4c5c7]  transition-all duration-300"
                 >
                   <Icon className="h-4 w-4 text-[#09b850] group-hover:scale-110 transition-transform" />
                   <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
@@ -105,12 +101,12 @@ export default function ServicesSearchSection() {
           </div>
 
           {query && (
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+            <p className="text-sm text-[#606261] dark:text-[#c4c5c7] mt-4">
               Showing {filteredServices.length} of {servicesData.length} services
               {query && filteredServices.length < servicesData.length && (
                 <button
                   onClick={() => setQuery("")}
-                  className="ml-3 text-[#09b850] hover:underline font-medium cursor-pointer p-0 hover:p-2 hover:bg-transparent"
+                  className="ml-3 text-[#09b850] font-medium cursor-pointer p-0 hover:underline hover:bg-transparent"
                 >
                   Clear filter
                 </button>
@@ -140,14 +136,14 @@ export default function ServicesSearchSection() {
                 <Link
                   key={service.id}
                   href={service.href}
-                  className="flex flex-row h-full p-6 pb-2 border rounded-lg relative group hover:border-[#09b850]/50 hover:bg-[#09b850]/5 transition-all duration-500 group"
+                  className="flex flex-row w-full h-full gap-3 p-6 pb-2 rounded-sm group bg-[#f8f8f8] dark:bg-[#191b1d] transition-all duration-500 group hover:shadow-xl hover:shadow-card"
                 >
-                  <div className="bg-gray-100 dark:bg-[#202124] absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] group-hover:bg-[#09b850] dark:group-hover:bg-[#09b850] group-hover:text-white transition-colors">
-                    <Icon className="w-7 h-7" />
+                  <div className="items-center justify-center h-16 w-16 text-[#09b850]/50">
+                    <Icon className="w-8 h-8" />
                   </div>
 
-                  <div className="flex flex-col mt-8 w-full">
-                    <h3 className="mb-3 text-2xl lg:text-3xl font-bold group-hover:text-[#09b850] transition-colors">
+                  <div className="flex flex-col">
+                    <h3 className="mb-3 text-2xl lg:text-3xl font-bold transition-colors">
                       {service.title}
                     </h3>
                     <p className="mb-5 text-gray-600 dark:text-[#c4c5c7] line-clamp-3">
@@ -167,3 +163,5 @@ export default function ServicesSearchSection() {
     </section>
   );
 }
+
+export default ServicesSearchSection;

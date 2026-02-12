@@ -69,7 +69,7 @@ const SoftwareDevelopmentPage = (): JSX.Element => {
                         </li>
                         <GoDotFill size={10} className="mt-1 text-gray-500" />
                         <li className="text-[#0B9944] dark:text-green-500 transition-colors duration-500">
-                            Custome Software Developmet
+                            Custom Software Development
                         </li>
                     </ol>
                 </nav>

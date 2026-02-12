@@ -32,7 +32,7 @@ const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonB
         defaultValues: {email: "",},
     });
 
-    async function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>): Promise<void> {
         if(values.email === ""){
             setEmailError(true);
         }

@@ -2,8 +2,6 @@ import { JSX } from "react"
 import Link from "next/link";
 import {GoDotFill} from "react-icons/go";
 import PartnerForm from "@/components/PartnerForm";
-import {Mail, MapPin, Phone} from "lucide-react";
-import Image from "next/image";
 import {Metadata} from "next";
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import Map from "@/components/Map"
@@ -13,7 +11,7 @@ const FeedbackPage = (): JSX.Element => {
         <div className="w-full">
         <div className="w-full flex flex-col px-4">
             <section className="w-full mx-auto pt-6 px-4 md:px-0 rounded-sm overflow-hidden">
-                <div className="max-w-[70rem] mx-auto">
+                <div className="max-w-[110rem] mx-auto">
                     <div className="relative h-[300px] md:h-[400px] xl:h-[500px] bg-center bg-cover rounded-sm overflow-hidden bg-fixed"  style={{ backgroundImage: "url('/feedback.webp')" }} />
                 </div>
             </section>

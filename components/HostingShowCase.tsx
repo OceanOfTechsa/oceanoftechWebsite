@@ -1,10 +1,7 @@
 "use client"
-import * as React from "react"
 import { Server, Activity, Globe, HardDrive, Cpu, MemoryStick, Clock } from 'lucide-react'
-
-function cn(...classes: (string | undefined | false)[]) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from "@/lib/utils"
+import {JSX} from "react";
 
 // Server Metrics Dashboard
 function ServerMetrics() {
@@ -82,7 +79,7 @@ function DeploymentStatus() {
 
 // Server Console/Logs
 function ServerConsole() {
-  const logs = [
+  const logs: { type: string, message: string, time: string }[]= [
     { type: "info", message: "Server started on port 3000", time: "14:23:01" },
     { type: "success", message: "SSL certificate renewed successfully", time: "14:23:45" },
     { type: "info", message: "Database connection established", time: "14:24:12" },
@@ -103,7 +100,7 @@ function ServerConsole() {
       </div>
       <div className="p-5 font-mono text-xs leading-relaxed bg-zinc-50/50 dark:bg-black/20">
         <div className="space-y-2">
-          {logs.map((log, i) => (
+          {logs.map((log: { type: string, message: string, time: string }, i: number): JSX.Element => (
             <div key={i} className="flex gap-3">
               <span className="text-zinc-400 dark:text-zinc-600">[{log.time}]</span>
               <span className={cn(
@@ -150,7 +147,7 @@ function DomainSSL() {
             </tr>
           </thead>
           <tbody>
-            {domains.map((domain, index) => (
+            {domains.map((domain:  { name: string, ssl: string, expires: string }, index: number): JSX.Element => (
               <tr key={domain.name} className="border-t border-zinc-200 dark:border-white/10">
                 <td className="py-3 font-mono text-xs text-zinc-700 dark:text-zinc-300">{domain.name}</td>
                 <td className="py-3">

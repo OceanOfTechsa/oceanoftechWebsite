@@ -23,7 +23,6 @@ import {Timeout} from "@radix-ui/primitive";
 import {cn} from "@/lib/utils";
 // import LinkPreview from "@/components/ui/link-preview";
 
-
 const NavBar = ():JSX.Element => {
   const pathname: string = usePathname();
   const [navOffset, setNavOffset] = React.useState(0);
@@ -103,13 +102,13 @@ const NavBar = ():JSX.Element => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={cn("relative px-1 transition-colors font-[500] text-[16.008px] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0  after:bg-[#0B9944] after:transition-all after:duration-300hover:after:w-full", isActive ? "text-[#09b850] font-semibold" : "hover:text-[#09b850] dark:hover:hover:text-[#0B9944] text-[#606261] dark:text-[#ffffffd9]")}
+                    className={cn("relative px-1 transition-colors font-[500] text-[16.008px] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0  after:bg-[#0B9944] after:transition-all after:duration-300 hover:after:w-full", isActive ? "text-[#09b850] font-semibold" : "hover:text-[#09b850] dark:hover:hover:text-[#0B9944] text-[#606261] dark:text-[#ffffffd9]")}
                   >
                     {link.label}
                   </Link>
                 );
               })}
-            {/*<NavMegaMenu />*/}
+            <NavMegaMenu />
           </div>
 
           {/* Desktop CTA */}
