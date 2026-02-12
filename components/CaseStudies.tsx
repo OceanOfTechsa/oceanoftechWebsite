@@ -100,6 +100,8 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
                 </div>
               </div>
             ))
+
+
           : currentItems.map((caseStudy: CaseStudy, i: number): JSX.Element => (
                 <Link
                     href={`/portfolio/${caseStudy.id}`}
