@@ -9,6 +9,7 @@ import Image from "next/image";
 import { FiUsers } from "react-icons/fi";
 import type { Metadata } from "next";
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    console.log(params.slug);
   const job = careers?.find((c) => c.slug === params.slug);
 
   if (!job) {

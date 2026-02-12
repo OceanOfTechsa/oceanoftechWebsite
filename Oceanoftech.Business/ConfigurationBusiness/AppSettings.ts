@@ -60,7 +60,7 @@ export default class AppSettings {
             "details": "Exceptional Service with Ocean of Tech!, Ocean of Tech delivered a stunning, user-friendly website that exceeded my expectations. Their team truly understood my vision and brought it to life with professionalism and expertise. Plus, their reliable hosting has kept everything running smoothly from day one. For top-notch web design, development, and hosting, Ocean of Tech is the way to go. Highly recommended",
             "rating": 5,
             "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVtx35H5O75YWKrsP0LyZJQ5m6XOz7Pbj6SNph5OIaV1VijoqM=s36-c-rp-mo-br100",
-            "date": "05 Sept 2024",
+            "date": "05 Sep 2024",
             "title": "Mr",
             "categories": ["seo-optimization", "web-development", "web-design", "hosting"]
         },
@@ -107,15 +107,16 @@ export default class AppSettings {
     ];
     public static NavLinks: { label: string, href: string }[] = [
         {label: "Home", href: "/"},
-        {label: "About", href: "/about"},
+        {label: "About", href: "/about-us"},
         {label: "Services", href: "/services"},
+        {label: "Our Team", href: "/team"},
         {label: "Portfolio", href: "/portfolio"},
-        {label: "Team", href: "/team"},
     ];
     public static CompanyContacts = {
-        Email: "contact@oceanoftech.com",
+        Email: `contact@oceanoftechsa.com`,
         Phone: "+27 72 627 2521",
-        Address: "123 Ocean Drive, Tech City, TX 75001",
-        WorkingHours: "Time: 9am to 5pm (Sunday close)"
+        Address: "44 Isaiah Ntshangase Rd, Stamford Hill, Durban, 4023",
+        WorkingHours: "Time: 9am to 5pm (Weekdays)",
+        Domain:"oceanoftechsa.com"
     }
 }

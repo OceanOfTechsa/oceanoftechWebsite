@@ -34,9 +34,9 @@ const OpenPositions = () : JSX.Element => {
           {TABS.map((tab: string): JSX.Element => (
             <button
               key={tab}
-              className={`px-[1rem] py-[0.5rem] rounded-sm text-sm font-medium transition cursor-pointer hover:bg-[#f8f8f8] dark:hover:bg-[#292a2d] text-[#606261] dark:text-[#c4c5c7] ${
+              className={`px-[1rem] py-[0.5rem] rounded-sm text-sm font-medium transition cursor-pointer hover:bg-white dark:hover:bg-[#292a2d] text-[#606261] dark:text-[#c4c5c7] ${
                 activeTab === tab &&
-                "bg-[#f8f8f8] dark:bg-[#292a2d] text-black dark:text-white font-semibold"
+                "bg-white dark:bg-[#292a2d] text-black dark:text-white font-semibold"
               }`}
               onClick={() => setActiveTab(tab)}
             >
@@ -48,7 +48,7 @@ const OpenPositions = () : JSX.Element => {
         <div className="space-y-4">
           {filteredCareers.length > 0 ? (
             filteredCareers.map((job: Career): JSX.Element => (
-              <Link href={`/careers/${job.slug}`} key={job.slug} className="bg-[#f8f8f8] dark:bg-[#292a2d] rounded-sm p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 group">
+              <Link href={`/careers/${job.slug}`} key={job.slug} className="bg-white dark:bg-[#292a2d] rounded-sm p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 group">
                 <div>
                   <span className="inline-block bg-[#202124] text-white text-xs font-medium px-3 py-1 rounded mb-3 capitalize">
                     {job.category}

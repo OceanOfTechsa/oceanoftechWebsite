@@ -12,7 +12,7 @@ import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSetting
 
 
 interface ServiceTestimonialCarouselProps {
-    serviceSlug?: string; // The slug of the current service page
+    serviceSlug?: string; 
 }
 
 export default function ServiceTestimonialCarousel({serviceSlug}: ServiceTestimonialCarouselProps) {

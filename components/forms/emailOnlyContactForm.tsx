@@ -32,7 +32,7 @@ const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonB
         defaultValues: {email: "",},
     });
 
-    async function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>): Promise<void> {
         if(values.email === ""){
             setEmailError(true);
         }
@@ -49,7 +49,7 @@ const EmailOnlyContactForm = ({bg = "bg-transparent", showBorder = true, buttonB
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className={`${bg} ${showBorder ? "border" : ""} ${emailError && "border-rose-500"} rounded-sm flex items-center p-2 w-full gap-2`}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className={`${bg} ${showBorder ? "border" : ""} ${emailError && "border-rose-500"} $ rounded-sm flex items-center p-2 w-full gap-2`}>
                 <FormField
                     control={form.control}
                     name="email"

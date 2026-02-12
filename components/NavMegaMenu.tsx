@@ -8,7 +8,7 @@ const NavMegaMenu = (): JSX.Element => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="focus:outline-none">
-                <span className="relative px-1 transition-colors hover:text-[#0B9944]  flex items-center gap-2 cursor-pointer after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-[#0B9944] after:transition-all after:duration-300 hover:after:w-full">
+                <span className="relative font-[500] px-1 transition-colors hover:text-[#0B9944] dark:hover:hover:text-[#0B9944] text-[#606261] dark:text-[#ffffffd9] flex items-center gap-2 cursor-pointer after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-[#0B9944] after:transition-all after:duration-300 hover:after:w-full">
                     Resources
                     <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 14.25C9.8125 14.25 9.65625 14.1875 9.5 14.0625L2.3125 7C2.03125 6.71875 2.03125 6.28125 2.3125 6C2.59375 5.71875 3.03125 5.71875 3.3125 6L10 12.5312L16.6875 5.9375C16.9688 5.65625 17.4062 5.65625 17.6875 5.9375C17.9688 6.21875 17.9688 6.65625 17.6875 6.9375L10.5 14C10.3437 14.1562 10.1875 14.25 10 14.25Z" fill="currentColor"/>
