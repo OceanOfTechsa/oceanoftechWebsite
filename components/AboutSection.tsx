@@ -3,7 +3,6 @@
 import AnimatedIcon from "@/components/animations/animatedIcon";
 import Image from "next/image";
 import Link from "next/link";
-import { BsFillPatchCheckFill } from "react-icons/bs";
 import { motion, type Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { JSX } from "react";
@@ -117,7 +116,7 @@ const AboutSection = () : JSX.Element => {
                                 </motion.div>
                                 <motion.div variants={imageVariants}>
                                     <Image 
-                                        src="/HomeAboutSection2.jpg" 
+                                        src="/codingAboutImg.jpg"
                                         className="rounded-lg" 
                                         alt="about-img" 
                                         width={330} 
@@ -131,51 +130,51 @@ const AboutSection = () : JSX.Element => {
                     </div>
 
                     <motion.div className="lg:col-span-5 mt-5 sm:mt-0" variants={containerVariants}>
-                        <motion.span className="inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2 z-50" variants={itemVariants}>
+                        <motion.span className="inline-block bg-[#f8f8f8] dark:bg-[#292a2d] text-[#606261] dark:text-[#c4c5c7] text-sm rounded-sm font-semibold px-3 py-1 z-50" variants={itemVariants}>
                              <AnimatedIcon icon="🤝" /> Your gateway to digital success
                         </motion.span>
                         <motion.h2  className="my-4 text-4xl font-bold" variants={itemVariants}>
                             Defining the future of online experiences!
                         </motion.h2>
-                        <motion.p className="mb-4 dark:text-[#c4c5c7]" variants={itemVariants}>
+                        <motion.p className="mb-4 text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants}>
                             Embrace a new era of digital success with {AppSettings.COMPANY_NAME}. Our team
                             combines cutting-edge design with robust development to deliver solutions that captivate and
                             convert.
                         </motion.p>
                         <div className="flex flex-col sm:flex-row sm:items-center border-t pt-5 justify-start sm:gap-5 w-full">
                             <motion.ul className="space-y-2 mb-2 sm:mb-4 w-full" variants={containerVariants}>
-                                <motion.li  className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants}>
+                                <motion.li  className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
                                     Tailored Solutions
                                 </motion.li>
-                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
+                                <motion.li className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
                                     Client-Centric Approach
                                 </motion.li>
-                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                <motion.li className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
                                     Proven Track Record
                                 </motion.li>     
-                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                <motion.li className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
                                     Scalability
                                 </motion.li>                            
                             </motion.ul>
 
                             <motion.ul className="space-y-2 mb-4 w-full" variants={containerVariants}>
-                                <motion.li  className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants}>
+                                <motion.li  className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
                                     Quality Assurance
                                 </motion.li>
-                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
+                                <motion.li className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.1 }}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
                                     Cost-Effectiveness
                                 </motion.li>
-                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                <motion.li className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
                                     Long-Term Partnership
                                 </motion.li>  
-                                <motion.li className="flex items-center dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
+                                <motion.li className="flex items-center text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.2 }}>
                                     <BadgeCheck className="text-[#0B9944] mr-2" size="18"/>
                                     24/7 tech & business support
                                 </motion.li>                            

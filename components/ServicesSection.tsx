@@ -31,7 +31,7 @@ const ServicesSection = () => {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     return (
         <section className="relative bg-[#202124] min-w-full mt-20 py-16 text-center text-white flex flex-col items-center justify-center overflow-hidden">
-            <span className="inline-block bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2">
+            <span className="inline-block bg-[#292a2d] text-[#c4c5c7] text-sm rounded-sm font-semibold px-3 py-1">
                 <AnimatedIcon icon="🚀" /> Innovative solutions, Measurable results
             </span>
             <figure className="pointer-events-none absolute -top-20 -right-32  hidden md:block">
@@ -76,139 +76,153 @@ const ServicesSection = () => {
                 className="mt-10 grid grid-cols-1 sm:grid-cols-4 items-center justify-center px-4 sm:p-0 w-full gap-6 space-y-4 max-w-7xl mx-auto"
             >
                 {/* Web Development */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850]">
-                        <CodeXml />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/web-development">Websites & Web Applications</Link>
-                        </h3>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We build and maintain modern, fast websites and powerful online systems that help your business run smoothly and grow.
-                        </p>
-                        <Link href="/services/web-development" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/web-development" className="p-4">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <CodeXml />
+                        </div>
+                        <div className="mt-8 flex flex-col items-start text-start">
+                            <h3 className=" text-xl font-bold mb-3 text-white">
+                                Websites & Web Applications
+                            </h3>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We build and maintain modern, fast websites and powerful online systems that help your business run smoothly and grow.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 {/* Custom Software */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 ">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center">
-                        <BsCircleSquare size={25} />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/web-design">Custom Software Development</Link>
-                        </h3>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We develop tailored desktop programs, mobile apps, and business software that perfectly fit the way your company works.
-                        </p>
-                        <Link href="/services/web-design" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] translate-x-2 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/web-design" className="p-4">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <BsCircleSquare size={25} />
+                        </div>
+                        <div className="group mt-8 flex flex-col items-start text-start">
+                            <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
+                                Custom Software Development
+                            </h3>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We develop tailored desktop programs, mobile apps, and business software that perfectly fit the way your company works.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 {/* Hosting & Domain Services */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850]">
-                        <Server />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/hosting">Hosting & Domain Services</Link>
-                        </h3>
-                        <br className="hidden md:block"/>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We provide fast, secure, load-shedding-proof hosting and domain management so your business is always online and protected.
-                        </p>
-                        <Link href="/services/hosting" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-2 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative  rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/hosting" className="p-4">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <Server />
+                        </div>
+                        <div className="group mt-8 flex flex-col items-start text-start">
+                            <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
+                                Hosting & Domain Services
+                            </h3>
+                            <br className="hidden md:block"/>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We provide fast, secure, load-shedding-proof hosting and domain management so your business is always online and protected.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 {/* UI/UX Design */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center">
-                        <BsVectorPen size={25} />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/ui-ux-design">Website & UI/UX Design</Link>
-                        </h3>
-                        <br className="hidden md:block"/>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We design beautiful, user-friendly websites and interfaces that look professional and make your customers love using them.
-                        </p>
-                        <Link href="/services/ui-ux-design" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] translate-x-2 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/ui-ux-design">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <BsVectorPen size={25} />
+                        </div>
+                        <div className="group mt-8 flex flex-col items-start text-start">
+                            <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
+                                Website & UI/UX Design
+                            </h3>
+                            <br className="hidden md:block"/>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We design beautiful, user-friendly websites and interfaces that look professional and make your customers love using them.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 {/* Business Emails */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center">
-                        <Mails />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/business-emails">Business Email Solutions</Link>
-                        </h3>
-                        <br className="hidden md:block"/>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We set up secure, professional @yourcompany.co.za emails that build trust and keep your team connected from anywhere.
-                        </p>
-                        <Link href="/services/business-emails" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] translate-x-2 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/business-emails">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <Mails />
+                        </div>
+                        <div className="group mt-8 flex flex-col items-start text-start">
+                            <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
+                                Business Email Solutions
+                            </h3>
+                            <br className="hidden md:block"/>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We set up secure, professional @yourcompany.co.za emails that build trust and keep your team connected from anywhere.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 {/* SEO */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center">
-                        <Search />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/seo">Search Engine Optimization (SEO)</Link>
-                        </h3>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We optimize your website to rank higher on Google and bring you more customers and enquiries without paying for ads.
-                        </p>
-                        <Link href="/services/seo" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] translate-x-2 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/seo">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <Search />
+                        </div>
+                        <div className="group mt-8 flex flex-col items-start text-start">
+                            <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
+                                Search Engine Optimization (SEO)
+                            </h3>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We optimize your website to rank higher on Google and bring you more customers and enquiries without paying for ads.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 {/* Maintenance and Support */}
-                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3">
-                    <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center">
-                        <Headset />
-                    </div>
-                    <div className="group mt-8 flex flex-col items-start text-start">
-                        <h3 className=" text-xl font-bold hover:text-[#09b850] mb-3 text-white">
-                            <Link href="/services/maintenance-and-support">Maintenance & Ongoing Support</Link>
-                        </h3>
-                        <p className="w-full text-start mb-3 text-[#c4c5c7]">
-                            We keep your website and systems updated, secure, backed up and running perfectly with fast local support when you need it.
-                        </p>
-                        <Link href="/services/maintenance-and-support" className="text-[#09b850] flex items-center gap-2 font-semibold">
-                            Know more{" "}
-                            <MoveRight className="group-hover:text-[#09b850] translate-x-2 transition duration-150 ease-in-out" />
-                        </Link>
-                    </div>
+                <motion.div variants={cardVariants} className="relative p-4 rounded-md bg-[#292a2d] flex flex-col justify-start items-start gap-3 group">
+                    <Link href="/services/maintenance-and-support">
+                        <div className="bg-white absolute top-0 -mt-5 rounded-full p-3 left-0 ml-6 text-[#09b850] flex items-center justify-center group-hover:bg-[#09b850] group-hover:text-white transition-colors duration-500 ease-in-out">
+                            <Headset />
+                        </div>
+                        <div className="mt-8 flex flex-col items-start text-start">
+                            <h3 className="text-xl font-bold hover:text-[#09b850] mb-3 text-white">
+                                Maintenance & Ongoing Support
+                            </h3>
+                            <p className="w-full text-start mb-3 text-[#c4c5c7]">
+                                We keep your website and systems updated, secure, backed up and running perfectly with fast local support when you need it.
+                            </p>
+                            <div className="text-[#09b850] flex items-center gap-2 font-semibold">
+                                Know more{" "}
+                                <MoveRight className="group-hover:text-[#09b850] group-hover:translate-x-1 transition duration-150 ease-in-out" />
+                            </div>
+                        </div>
+                    </Link>
                 </motion.div>
 
                 <motion.div variants={cardVariants} className="">
@@ -220,8 +234,29 @@ const ServicesSection = () => {
                             Not satisfied yet?
                         </p>
 
-                        <Link href="/services" className="w-full bg-[#09b850] hover:bg-[#0B9944] text-white px-[1rem] py-[0.5rem] rounded-[0.2rem] inline-block transition-all duration-500 ease-in-out">
+                        <Link href="/services"  className="
+                            w-full bg-transparent
+                            bg-gradient-to-r
+                            from-[#09b850]
+                            via-[#09b850]/60
+                            to-[#09b850]
+                            [background-size:200%_auto]
+                            hover:bg-transparent
+                            hover:bg-[99%_center]
+                            focus-visible:ring-[#09b850]/30
+                            dark:from-[#0B9944]
+                            dark:via-[#0B9944]/60
+                            dark:to-[#0B9944]
+                            dark:focus-visible:ring-[#0B9944]/40
+                            text-white px-[1rem] py-[0.5rem]
+                            rounded-[0.2rem] inline-flex
+                            transition-all duration-500 ease-in-out
+                            group
+                            items-center justify-center gap-3
+                            "
+                        >
                             Discover more
+                            <MoveRight className="group-hover:translate-x-1 transition duration-150 ease-in-out" />
                         </Link>
                     </div>
                 </motion.div>

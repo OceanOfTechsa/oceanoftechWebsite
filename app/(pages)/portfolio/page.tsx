@@ -34,7 +34,7 @@ const PortfolioPage = (): React.JSX.Element => {
                 </nav>
 
                 <h1 className="text-4xl md:text-[3rem] font-black leading-tight">
-                    Our Work in Action
+                    Highlights of cases that we've built
                 </h1>
             </div>
             <div className="w-full flex flex-col md:justify-end items-start mb-10">

@@ -159,7 +159,7 @@ const mockApplications: Record<string, Application> = {
         jobTitle: "UI/UX Designer",
         company: "Creative Studio",
         appliedDate: "2024-01-10",
-        status: ApplicationStatus.REJECTED,
+        status: ApplicationStatus.UNDER_REVIEW,
         location: { city: "Johannesburg", country: "South Africa" },
         salary: { amount: 650000, currency: "ZAR", period: "year" },
         type: "Remote",

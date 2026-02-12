@@ -38,24 +38,17 @@ const _CTAHome = () => (
                 <h6 className="text-3xl text-white md:text-4xl font-bold leading-tight md:hidden flex items-center">
                     Let&apos;s talk about your{" "}
                     <br/>
-                    {/* <span className="text-primary block md:inline-block">
-                        <TypedText strings={["Business", "Agency", "Startup", "Enterprise", "Brand"]} typeSpeed={90} className="text-center text-white font-black"/>
-                    </span> */}
-                    {" "}
-                    goals
+                    {" "}Project
                 </h6>
 
                 <h6 className="text-3xl md:text-4xl font-bold leading-tight hidden sm:block text-white">
                     Let&apos;s talk about your
                     <br/>
-                    <span className="text-primary block md:inline-block">
-                        <TypedText strings={["Business", "Agency", "Startup", "Enterprise", "Brand"]} typeSpeed={90} className="text-center text-white font-black"/>
-                    </span>
-                    {" "}goals
+                    {" "}Project
                 </h6>
                 <EmailOnlyContactForm bg="bg-white dark:bg-[#202124] text-black dark:text-white" showBorder={false} buttonBg="bg-black hover:bg-black/80 dark:bg-white text-white dark:text-black"/>
             </div>
-            <div className="md:mt-0 w-full flex flex-col justify-center mt-5 sm:mt-2 z-50">
+            <div className="md:mt-0 w-full flex flex-col justify-center mt-5 sm:mt-2 z-40">
                 <ul className="flex flex-col gap-2 justify-start items-start sm:items-end">
                     <li><Link href={`tel:${AppSettings.CompanyContacts.Phone}`} className="flex items-center font-semibold"><TfiHeadphoneAlt className="mr-2"/> Call on: {AppSettings.CompanyContacts.Phone}</Link></li>
                     <li><Link href="tel:012525899322" className="flex items-center font-semibold"><FiClock className="mr-2"/>{AppSettings.CompanyContacts.WorkingHours}</Link></li>

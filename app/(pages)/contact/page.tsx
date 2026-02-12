@@ -2,12 +2,11 @@ import { Metadata } from "next";
 import {JSX} from "react";
 import Link from "next/link";
 import ContactForm from "@/components/forms/Contact";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { FaFacebook, FaGithub} from "react-icons/fa";
-import { GoArrowRight, GoDotFill } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import SocialIcons from "@/components/SocialIcons";
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import Map from "@/components/Map"
+
 export const metadata: Metadata = {
     title: "Contact Us"
 }

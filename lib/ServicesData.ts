@@ -28,10 +28,10 @@ export type Service = {
     {
       id: 2,
       title: "Custom Software Development",
-      slug: "custom-software-Development",
+      slug: "software-development",
       description: "We develop tailored desktop programs, mobile apps, and business software that perfectly fit the way your company works",
       iconName: "scale-3d",
-      href: "/services/custom-software-Development",
+      href: "/services/software-development",
     },
     {
       id: 3,
