@@ -9,6 +9,7 @@ import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSetting
 import NewsLetterSubCTA from "@/components/NewsLetterSubCTA";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import * as React from "react";
+import {GoDotFill} from "react-icons/go";
 
 export const metadata: Metadata = {
     title: 'Our Team',
@@ -136,7 +137,16 @@ const TeamPage = (): JSX.Element => {
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
 
                     {/* Title */}
-                    <div className="absolute inset-0 flex items-center justify-center text-center z-20">
+                    <div className="absolute inset-0 flex flex-col gap-2 items-center justify-center text-center z-20">
+                        <nav className="mb-3" aria-label="breadcrumb">
+                            <ol className="flex items-center gap-2 pt-0">
+                                <li className="hover:text-[#0b9944] dark:hover:text-[#09b850] transition-colors duration-500 ease-in-out">
+                                    <Link href="/">Home</Link>
+                                </li>
+                                <GoDotFill size={10} className="mt-1"/>
+                                <li className="text-[#0B9944] dark:text-[#09b850]" aria-current="page">Our Team</li>
+                            </ol>
+                        </nav>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
                         We&apos;re Superheroes
                         </h1>
