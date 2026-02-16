@@ -2,7 +2,7 @@ import { IReview } from "@/Shared/IReview";
 
 export default class AppSettings {
     public static COMPANY_NAME: string = "Ocean of Tech";
-    public static HIRING: boolean = false;
+    public static HIRING: boolean = true;
     public static ITEMS_PER_PAGE: number = 4;
     public static CompanySocials = {
         Facebook: "https://web.facebook.com/oceanoftechsa/",
@@ -34,16 +34,16 @@ export default class AppSettings {
             "title": "Ms",
             "categories": ["web-development", "seo-optimization", "web-design", "ui-ux-design"]
         },
-        {
-            "name": "Sithembiso",
-            "surname": "Ncwane",
-            "details": "One of the most reliable tech companies out there. I got my product within given time with no issues.",
-            "rating": 5,
-            "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVUjZnOR1Or66ariGnNLMrIpjsmk-eBcfz5u0-2rGU5DSIuSSR3Nw=s50-c-mo",
-            "date": "18 Aug 2024",
-            "title": "Mr",
-            "categories": ["web-development", "automation", "mentorship"]
-        },
+        // {
+        //     "name": "Sithembiso",
+        //     "surname": "Ncwane",
+        //     "details": "One of the most reliable tech companies out there. I got my product within given time with no issues.",
+        //     "rating": 5,
+        //     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVUjZnOR1Or66ariGnNLMrIpjsmk-eBcfz5u0-2rGU5DSIuSSR3Nw=s50-c-mo",
+        //     "date": "18 Aug 2024",
+        //     "title": "Mr",
+        //     "categories": ["web-development", "automation", "mentorship"]
+        // },
         {
             "name": "Thamsanqa",
             "surname": "Ngwane",
