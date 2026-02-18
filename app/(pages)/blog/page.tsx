@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import {JSX} from "react";
-import {GoDotFill} from "react-icons/go";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -12,7 +11,6 @@ const BlogPage = (): JSX.Element => {
 
     return (
         <div className="flex flex-col w-full">
-
             <section className="flex flex-col w-full justify-between items-start gap-3 max-w-7xl mx-auto px-6 py-16">
                 <ul className="flex items-center space-x-2">
                     <li className="hover:text-[#0b9944] dark:hover:text-[#09b850] transition-colors duration-500 ease-in-out">
@@ -31,11 +29,8 @@ const BlogPage = (): JSX.Element => {
                 </p>
             </section>
 
-            <section className="w-full bg-gray-50 dark:bg-[#0f172a] py-16">
-
+            <section className="w-full py-16">
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
                     <div className="bg-white dark:bg-[#1e293b] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
                         <Image
                             src = "/blog/blog.jpg"

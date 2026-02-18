@@ -83,14 +83,14 @@ const TeamPage = (): JSX.Element => {
     {
       name: "Sithuliso",
       surname: "Zulu",
-      role: "Founder / Software Developer",
+      role: "Senior Software Developer",
       img: "/team/Mondli.jpg",
       socials: [{ type: "instagram", href: "#" },{ type: "facebook", href: "#" },{ type: "twitter", href: "#" },{ type: "linkedin", href: "#" }],
     },
     {
       name: "Sanele",
       surname: "Jeza",
-      role: "Co-Founder / Software Developer",
+      role: "Senior Software Developer",
       img: "/team/sanele.jpeg",
       socials: [{ type: "instagram", href: "#" },{ type: "facebook", href: "#" },{ type: "twitter", href: "#" }, { type: "linkedin", href: "#" }],
     },
