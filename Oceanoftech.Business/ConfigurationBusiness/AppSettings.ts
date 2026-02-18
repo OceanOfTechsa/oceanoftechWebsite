@@ -2,7 +2,7 @@ import { IReview } from "@/Shared/IReview";
 
 export default class AppSettings {
     public static COMPANY_NAME: string = "Ocean of Tech";
-    public static HIRING: boolean = false;
+    public static HIRING: boolean = true;
     public static ITEMS_PER_PAGE: number = 4;
     public static CompanySocials = {
         Facebook: "https://web.facebook.com/oceanoftechsa/",
@@ -34,16 +34,16 @@ export default class AppSettings {
             "title": "Ms",
             "categories": ["web-development", "seo-optimization", "web-design", "ui-ux-design"]
         },
-        {
-            "name": "Sithembiso",
-            "surname": "Ncwane",
-            "details": "One of the most reliable tech companies out there. I got my product within given time with no issues.",
-            "rating": 5,
-            "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVUjZnOR1Or66ariGnNLMrIpjsmk-eBcfz5u0-2rGU5DSIuSSR3Nw=s50-c-mo",
-            "date": "18 Aug 2024",
-            "title": "Mr",
-            "categories": ["web-development", "automation", "mentorship"]
-        },
+        // {
+        //     "name": "Sithembiso",
+        //     "surname": "Ncwane",
+        //     "details": "One of the most reliable tech companies out there. I got my product within given time with no issues.",
+        //     "rating": 5,
+        //     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVUjZnOR1Or66ariGnNLMrIpjsmk-eBcfz5u0-2rGU5DSIuSSR3Nw=s50-c-mo",
+        //     "date": "18 Aug 2024",
+        //     "title": "Mr",
+        //     "categories": ["web-development", "automation", "mentorship"]
+        // },
         {
             "name": "Thamsanqa",
             "surname": "Ngwane",
@@ -107,15 +107,16 @@ export default class AppSettings {
     ];
     public static NavLinks: { label: string, href: string }[] = [
         {label: "Home", href: "/"},
-        {label: "About", href: "/about"},
+        {label: "About", href: "/about-us"},
         {label: "Services", href: "/services"},
+        {label: "Our Team", href: "/team"},
         {label: "Portfolio", href: "/portfolio"},
-        {label: "Team", href: "/team"},
     ];
     public static CompanyContacts = {
-        Email: "contact@oceanoftech.com",
+        Email: `contact@oceanoftechsa.com`,
         Phone: "+27 72 627 2521",
         Address: "44 Isaiah Ntshangase Rd, Stamford Hill, Durban, 4023",
-        WorkingHours: "Time: 9am to 5pm (Sunday close)"
+        WorkingHours: "Time: 9am to 5pm (Weekdays)",
+        Domain:"oceanoftechsa.com"
     }
 }

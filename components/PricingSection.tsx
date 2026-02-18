@@ -66,7 +66,7 @@ const PricingSection = (): JSX.Element => {
     return (
         <section ref={ref}>
             <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col justify-center items-center">
-                <motion.span className="inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2" variants={itemVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
+                <motion.span className="inline-block bg-[#f8f8f8] dark:bg-[#292a2d] text-[#606261] dark:text-[#c4c5c7] text-sm rounded-sm font-semibold px-3 py-1" variants={itemVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
                     <AnimatedIcon icon="💵"/> Transparent pricing packages
                 </motion.span>
                 
@@ -112,7 +112,7 @@ const PricingSection = (): JSX.Element => {
                             <span className="text-[1.6rem] font-semibold align-bottom">Flexible Monthly Plan</span>
                         </motion.h6>
 
-                        <motion.p className="" variants={itemVariants} transition={{ delay: 0.7 }}>
+                        <motion.p className="text-[#606261] dark:text-[#c4c5c7]" variants={itemVariants} transition={{ delay: 0.7 }}>
                             The all-in-one solution for businesses that want to succeed online.
                         </motion.p>
                     </motion.div>
@@ -127,7 +127,7 @@ const PricingSection = (): JSX.Element => {
                         </motion.h5>
 
                         <motion.span
-                            className="flex items-center mt-4"
+                            className="flex items-center mt-4 "
                             variants={itemVariants}
                             transition={{ delay: 0.45 }}
                         >
@@ -180,10 +180,10 @@ const PricingSection = (): JSX.Element => {
                             variants={itemVariants}
                             transition={{ delay: 0.7 }}
                         >
-                            <Link href="/about" className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] mt-6 rounded-sm inline-block transition-all duration-500 ease-in-out">Get in contact today</Link>
+                            <Link href="/contact" className="bg-[#202124] hover:bg-[#3c3e41] text-white px-[1rem] py-[0.5rem] mt-6 rounded-sm inline-block transition-all duration-500 ease-in-out">Get in contact today</Link>
                         </motion.div>
                         <motion.p 
-                            className="mt-1"
+                            className="mt-1 text-[#606261] dark:text-[#c4c5c7] text-sm"
                             variants={itemVariants}
                             transition={{ delay: 0.75 }}
                         >

@@ -76,13 +76,6 @@ const FaqSearchForm: React.FC<FaqSearchFormProps> = ({
                 onSubmit={form.handleSubmit(handleSubmit)}
                 className={`${bg} ${showBorder ? "border" : ""} rounded-sm flex items-center p-2 w-full gap-2`}
             >
-                <Button
-                    type="submit"
-                    className={`text-white rounded-sm px-4 py-2 transition cursor-pointer ${buttonBg}`}
-                    disabled={isLoading}
-                >
-                    <Search />
-                </Button>
                 <FormField
                     control={form.control}
                     name="query"
@@ -92,7 +85,7 @@ const FaqSearchForm: React.FC<FaqSearchFormProps> = ({
                                 <Input
                                     type="text"
                                     placeholder="Enter your keyword..."
-                                    className="border-none focus-visible:ring-0 focus-visible:outline-none shadow-none outline-none ring-0 bg-transparent"
+                                    className="border-none focus-visible:ring-0 focus-visible:outline-none shadow-none outline-none ring-0 bg-transparent dark:bg-[#161618]"
                                     {...field}
                                     onChange={(e) => {
                                         field.onChange(e);
@@ -111,6 +104,13 @@ const FaqSearchForm: React.FC<FaqSearchFormProps> = ({
                         </FormItem>
                     )}
                 />
+                <Button
+                    type="submit"
+                    className={`text-white rounded-sm px-4 py-2 transition cursor-pointer ${buttonBg}`}
+                    disabled={isLoading}
+                >
+                    <Search />
+                </Button>
             </form>
         </Form>
     );
