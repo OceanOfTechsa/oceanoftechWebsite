@@ -1,21 +1,18 @@
 "use client"
 
-import {useEffect, useState} from "react";
+import {JSX, useEffect, useState} from "react";
 import {motion} from "framer-motion";
 
 interface animatedIconProps {
     icon: string;
 }
 
-export default function AnimatedIcon({icon}: animatedIconProps) {
+export default function AnimatedIcon({icon}: animatedIconProps): JSX.Element {
     const [isMounted, setIsMounted] = useState(false)
-
     useEffect(() => {
         setIsMounted(true)
     }, [])
-
     if (!isMounted) return <span>{icon}</span>
-
     return (
         <motion.span
             animate={{

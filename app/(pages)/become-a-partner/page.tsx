@@ -7,9 +7,59 @@ import {Metadata} from "next";
 import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 import Map from "@/components/Map"
 
+
 export const metadata: Metadata = {
-    title: "Become Our Partner"
+    title: 'Become a Partner | Technology Partnerships in South Africa',
+    description:
+        'Partner with Ocean of Tech, a South Africa–based software development company. We collaborate with startups, agencies, and enterprises to build scalable digital solutions.',
+
+    keywords: [
+        'become a partner',
+        'technology partner South Africa',
+        'software development partner South Africa',
+        'digital agency partnership',
+        'IT partners in South Africa',
+        'Durban software company',
+        'KwaZulu-Natal tech partners',
+        'Ocean of Tech partners',
+    ],
+
+    openGraph: {
+        title: 'Become a Partner | Ocean of Tech South Africa',
+        description:
+            'Looking for a trusted technology partner in South Africa? Partner with Ocean of Tech to deliver innovative, scalable digital solutions.',
+        url: 'https://oceanoftechsa.com/partners',
+        siteName: 'Ocean of Tech',
+        images: [
+            {
+                url: 'https://oceanoftechsa.com/og-partner.png',
+                width: 1200,
+                height: 630,
+                alt: 'Technology Partnership with Ocean of Tech South Africa',
+            },
+        ],
+        locale: 'en_ZA',
+        type: 'website',
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Become a Partner | Ocean of Tech SA',
+        description:
+            'Partner with a South African software development team to build powerful digital solutions and grow together.',
+        images: ['https://oceanoftechsa.com/og-partner.png'],
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    alternates: {
+        canonical: 'https://oceanoftechsa.com/partners',
+    },
 }
+
 const BecomeAPartnerPage = () => {
     return (
         <div className="w-full">

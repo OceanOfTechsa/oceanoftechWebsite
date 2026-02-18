@@ -4,6 +4,13 @@
 /*---break---*/
 @custom-variant dark (&:is(.dark *));
 
+@layer base {
+    p {
+        @apply text-[#606261] dark:text-[#c4c5c7];
+    }
+}
+
+
 @font-face {
     font-family: "InstrumentSans";
     src: url("/assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth,wght.ttf") format("truetype");

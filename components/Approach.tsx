@@ -89,7 +89,7 @@ const Approach = (): JSX.Element => {
           </div>
 
           <div className="max-w-2xl lg:full relative">
-            <span className="mb-4 inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2 z-50">
+            <span className="mb-4 inline-block bg-[#f8f8f8] dark:bg-[#292a2d] text-[#606261] dark:text-[#c4c5c7] text-sm rounded-sm font-semibold px-3 py-1 z-50">
               <AnimatedIcon icon="😊" /> Your Ideas, Our Execution
             </span>
 
@@ -113,7 +113,7 @@ const Approach = (): JSX.Element => {
               <div className="flex gap-2 ms-1 relative z-10">
                 <div className="flex flex-col items-center mr-5">
                     <div className="flex gap-2 w-full divide-x">
-                        <Link className="bg-[#0B9944] hover:bg-[#09b850] text-white px-[1rem] py-[0.5rem] rounded-[0.2rem] transition-all duration-500 ease-in-out flex items-center gap-2 group" href={AppSettings.CompanyContacts.Phone}>
+                        <Link className="bg-[#0B9944] hover:bg-[#09b850] text-white px-[1rem] py-[0.5rem] rounded-[0.2rem] transition-all duration-500 ease-in-out flex items-center gap-2 group" href={`tel:${AppSettings.CompanyContacts.Phone}`}>
                           <svg
                             className="shrink-0 size-4"
                             xmlns="http://www.w3.org/2000/svg"

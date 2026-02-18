@@ -1,122 +1,96 @@
 import {
     Body,
-    Container,
     Head,
-    Heading,
     Html,
     Link,
     Preview,
     Text,
+    Tailwind,
+    pixelBasedPreset,
+    Hr
 } from '@react-email/components';
-interface GeoLocationData {
-    query: string;       // IP address
-    city: string;
-    country: string;
-    countryCode: string;
-    regionName: string;
-    lat: number;
-    lon: number;
-    timezone: string;
-    isp: string;
-    org: string;
-    as: string;
-    status: 'success' | 'fail';
-    message?: string;
-}
+import {GeoLocationData} from "@/lib/GeoLocationData";
 
-interface EmailOnlyContactUsEmail {
+
+interface EmailOnlyContactUsEmailProps {
     email: string;
-    location: GeoLocationData;
 }
 
-export const EmailOnlyContactUsEmail = ({email, location}: EmailOnlyContactUsEmail) => (
-    <Html>
+function EmailOnlyContactUsEmail({email}: EmailOnlyContactUsEmailProps, location: GeoLocationData) {
+    return <Html>
         <Head />
-        <Body style={main}>
-            <Preview>Someone just submitted your contact form. Email: {email}</Preview>
-        <Container style={container}>
-                <Heading style={h1}>New Contact Inquiry Received</Heading>
-
-                <Text style={text}>Hello Admin,</Text>
-
-                <Text>You’ve received a new contact form submission from your website.</Text>
-
-                <Text style={text}>Details</Text>
-
-                <code style={emailStyles}>Email:
+        <Tailwind
+            config={{
+                presets: [pixelBasedPreset],
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: '#2250f4',
+                            offwhite: '#fafbfb',
+                        },
+                        spacing: {
+                            0: '0px',
+                            20: '20px',
+                            45: '45px',
+                        },
+                    },
+                },
+            }}
+        >
+            <Body style={main}>
+                <Preview>Someone just submitted your contact form. Email: {email}</Preview>
+                <div>
+                    {/*<Heading style={h1}>New Contact Inquiry Received</Heading>*/}
+                    <div className="bg-amber-500/10 p-2 border-l-4 border-amber-500 my-2 text-[#49494f] flex items-center">
+                        <div className="text-amber-500 me-2">
+                            CAUTION:
+                        </div>
+                        This email originated from outside the organisation. Do not click links or open attachments unless you recognise the sender and you know the content is safe.
+                    </div>
+                    <p className="text-[#49494f] -mb-5">Hello Admin 👋🏾,</p>
+                    <p style={text}>You have received a new contact form submission on Ocean of Tech.</p>
+                    <p className="text-[#49494f] -mb-1">Submission Details:</p>
                     <Link
-                    href={`mailto:${email}`}
-                    target="_blank"
-                    style={{ ...link, color: '#898989' }}
+                        href={`mailto:${email}`}
+                        target="_blank"
+                        style={{ ...link, color: '#898989' }}
                     >
                         {email}
                     </Link>
-                </code>
-                <Text
-                    style={{
-                        ...text,
-                        color: '#ababab',
-                        marginTop: '14px',
-                        marginBottom: '16px',
-                    }}
-                >
-                    Please follow up as needed.
-                </Text>
-
-                <Text style={footer}>
-                    This invitation was intended for{' '}
-                    <span >Ocean of tech Admin</span>. This email was
-                    sent from <span>{location?.query}</span>{' '}
-                    located in{' '}
-                    <span >{location?.city}, {location?.country}</span>. If you
-                    were not expecting this invitation, you can ignore this email. If
-                    you are concerned about your account&#39;s safety, please reply to
-                    this email to get in touch with us.
-                </Text>
-            </Container>
-        </Body>
+                    <Text
+                        style={{
+                            ...text,
+                            color: '#ababab',
+                            marginTop: '14px',
+                            marginBottom: '16px',
+                        }}
+                    >
+                        Please follow up as needed.
+                    </Text>
+                    <Hr className="border-[#e6ebf1] my-5" />
+                    <Text style={footer}>
+                        This invitation was intended for{' '}
+                        <span >Ocean of tech Admin</span>. This email was
+                        sent from <span>{location?.query}</span>{' '}
+                        located in{' '}
+                        <span >{location?.regionName}, {location?.country}</span>. If you
+                        were not expecting this invitation, you can ignore this email. If
+                        you are concerned about your account&#39;s safety, please reply to
+                        this email to get in touch with us.
+                    </Text>
+                </div>
+            </Body>
+        </Tailwind>
     </Html>
-);
+}
 
-EmailOnlyContactUsEmail.PreviewProps = {
-    email: 'example@mail.com',
-    location: {
-        query: '0.0.0.0',
-        city: 'Sample City',
-        country: 'Sample Country',
-        countryCode: 'US',
-        regionName: 'Sample Region',
-        lat: 0,
-        lon: 0,
-        timezone: 'UTC',
-        isp: 'Sample ISP',
-        org: 'Sample Org',
-        as: 'Sample AS',
-        status: 'success'
-    }
-} as EmailOnlyContactUsEmail;
+EmailOnlyContactUsEmail.PreviewProps = {email: 'example@mail.com'} as EmailOnlyContactUsEmailProps;
+
 export default EmailOnlyContactUsEmail;
 
 const main = {
     backgroundColor: '#ffffff',
 };
-
-const container = {
-    paddingLeft: '12px',
-    paddingRight: '12px',
-    margin: '0 auto',
-};
-
-const h1 = {
-    color: '#333',
-    fontFamily:
-        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-    fontSize: '24px',
-    fontWeight: 'bold',
-    margin: '40px 0',
-    padding: '0',
-};
-
 const link = {
     color: '#2754C5',
     fontFamily:
@@ -129,8 +103,7 @@ const text = {
     color: '#333',
     fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-    fontSize: '14px',
-    margin: '24px 0',
+    fontSize: '14px'
 };
 
 const footer = {
@@ -141,14 +114,4 @@ const footer = {
     lineHeight: '22px',
     marginTop: '12px',
     marginBottom: '24px',
-};
-
-const emailStyles = {
-    display: 'inline-block',
-    padding: '16px 4.5%',
-    width: '90.5%',
-    backgroundColor: '#f4f4f4',
-    borderRadius: '5px',
-    border: '1px solid #eee',
-    color: '#333',
 };

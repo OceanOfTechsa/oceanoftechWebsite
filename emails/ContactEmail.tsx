@@ -1,4 +1,4 @@
-import { getUserGeoData } from "@/lib/GeoLocationData";
+import {GeoLocationData, getUserGeoData} from "@/lib/GeoLocationData";
 import {
     Body,
     Container,
@@ -23,26 +23,12 @@ interface VercelInviteUserEmailProps {
     otherServices?: string;
 }
 
-export  const ContactEmail = async ({
-                                        name,
-                                        surname,
-                                        email,
-                                        company,
-                                        message,
-                                        otherServices,
-                                        services,
-                                      }: VercelInviteUserEmailProps) => {
+export  const ContactEmail = ({name,surname,email,company,message,otherServices,services}: VercelInviteUserEmailProps, location: GeoLocationData) => {
     const previewText = "A visitor has just submitted a new inquiry. Review their details below";
-    const location = await getUserGeoData();
-
     return (
         <Html>
             <Head />
-            <Tailwind
-                config={{
-                    presets: [pixelBasedPreset],
-                }}
-            >
+            <Tailwind config={{presets: [pixelBasedPreset]}}>
                 <Body className="mx-auto my-auto bg-white px-2 font-sans">
                     <Preview>{previewText}</Preview>
                     <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-[#eaeaea]  border-solid p-[20px]">
