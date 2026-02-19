@@ -27,7 +27,7 @@ export type Service = {
     },
     {
       id: 2,
-      title: "Custom Software Development",
+      title: "Front-End Development",
       slug: "software-development",
       description: "We develop tailored desktop programs, mobile apps, and business software that perfectly fit the way your company works",
       iconName: "scale-3d",
@@ -35,7 +35,7 @@ export type Service = {
     },
     {
       id: 3,
-      title: "Hosting & Domain Services",
+      title: "Backend-End Development",
       slug: "hosting",
       description: "We provide fast, secure, load-shedding-proof hosting and domain management so your business is always online and protected.",
       iconName: "server",
@@ -43,7 +43,7 @@ export type Service = {
     },
     {
       id: 4,
-      title: "Website & UI/UX Design",
+      title: "UI/UX Design",
       slug: "design-services",
       description: "We design beautiful, user-friendly websites and interfaces that look professional and make your customers love using them.",
       iconName: "pen-tool",
@@ -75,7 +75,7 @@ export type Service = {
     },
     {
       id: 8,
-      title: "Automation & Integrations",
+      title: "Code Audits",
       slug: "automation",
       description: "We connect your systems and automate repetitive tasks so you save time, reduce mistakes and cut costs",
       iconName: "workflow",

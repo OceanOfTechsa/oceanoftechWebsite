@@ -69,7 +69,7 @@ export default function TestimonialCarousel({shadesBg = "#fff", showFullCard = f
                 className="grid grid-cols-1 md:grid-cols-2 min-h-[200px] relative"
             >
                 {
-                    showFullCard == false ?
+                    !showFullCard ?
                         <>
                             {currentItems.map((review, i) => (
                                 <div key={i} className="flex-shrink-0 basis-[85%] md:basis-[48%] lg:basis-[45%] p-3 ">
@@ -131,7 +131,7 @@ export default function TestimonialCarousel({shadesBg = "#fff", showFullCard = f
                                       <div className="flex items-center gap-3">
                                           <Image
                                               src={review.avatar}
-                                              className="w-10 h-10 rounded-sm object-cover"
+                                              className="w-10 h-10 rounded-sm object-fill"
                                               alt={review.name}
                                               title="review photo"
                                               placeholder="blur"

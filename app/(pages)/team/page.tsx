@@ -9,6 +9,7 @@ import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSetting
 import NewsLetterSubCTA from "@/components/NewsLetterSubCTA";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import * as React from "react";
+import {GoDotFill} from "react-icons/go";
 
 export const metadata: Metadata = {
     title: 'Our Team',
@@ -82,14 +83,14 @@ const TeamPage = (): JSX.Element => {
     {
       name: "Sithuliso",
       surname: "Zulu",
-      role: "Founder / Software Developer",
+      role: "Senior Software Developer",
       img: "/team/Mondli.jpg",
       socials: [{ type: "instagram", href: "#" },{ type: "facebook", href: "#" },{ type: "twitter", href: "#" },{ type: "linkedin", href: "#" }],
     },
     {
       name: "Sanele",
       surname: "Jeza",
-      role: "Co-Founder / Software Developer",
+      role: "Senior Software Developer",
       img: "/team/sanele.jpeg",
       socials: [{ type: "instagram", href: "#" },{ type: "facebook", href: "#" },{ type: "twitter", href: "#" }, { type: "linkedin", href: "#" }],
     },
@@ -126,6 +127,15 @@ const TeamPage = (): JSX.Element => {
       { type: "instagram", href: "#" },
         ],
     },
+      {
+          name: "Sithembiso",
+          surname: "Ncwane",
+          role: " Software Developer",
+          img: "/team/sthembiso.jpeg",
+          socials: [
+              { type: "instagram", href: "#" },
+          ],
+      },
   ]
   return (
     <div className="w-full flex flex-col">
@@ -136,7 +146,16 @@ const TeamPage = (): JSX.Element => {
                     <div className="absolute inset-0 bg-black/50 z-10"></div>
 
                     {/* Title */}
-                    <div className="absolute inset-0 flex items-center justify-center text-center z-20">
+                    <div className="absolute inset-0 flex flex-col gap-2 items-center justify-center text-center z-20">
+                        <nav className="mb-3" aria-label="breadcrumb">
+                            <ol className="flex items-center gap-2 pt-0">
+                                <li className="hover:text-[#0b9944] dark:hover:text-[#09b850] transition-colors duration-500 ease-in-out text-white">
+                                    <Link href="/">Home</Link>
+                                </li>
+                                <GoDotFill size={10} className="mt-1 text-white"/>
+                                <li className="text-[#0B9944] dark:text-[#09b850]" aria-current="page">Our Team</li>
+                            </ol>
+                        </nav>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
                         We&apos;re Superheroes
                         </h1>
@@ -151,6 +170,7 @@ const TeamPage = (): JSX.Element => {
                     {teamMembers.map((member: TeamMember, index: number): JSX.Element => (
                         <div key={index} className="relative bg-transparent rounded-sm overflow-hidden  transition-shadow group">
                           {/* Social links */}
+                            {/*TODO Remove*/}
                           <div className="absolute top-3 right-3 gap-2 z-10 hidden ">
                               {member.socials.map((social: SocialLink, i: number): JSX.Element | null => {
                                   const data: {icon: JSX.Element, bg: string} = socialIconMap[social.type];
@@ -170,16 +190,15 @@ const TeamPage = (): JSX.Element => {
                           {/* Image */}
                           <div className="relative overflow-hidden rounded-sm">
                               {
-                                  member.img != ""
+                                  member.img !== ""
                                       ?
                                       <Image
                                           src={member.img}
-                                          alt={member.name}
-                                          width={275.76} height={367.7}
+                                          alt={`${member.name} ${member.surname}`}
+                                          width={275} height={367}
                                           quality={100}
-                                          loading="eager"
                                           priority={true}
-                                          className="object-cover transform hover:scale-104 transition-transform duration-800 ease-in-out w-full h-full"
+                                          className="object-cover transform group-hover:scale-104 transition-transform duration-800 ease-in-out w-full h-full"
                                       />
                                       :
                                     <div className="h-[405px] flex items-center justify-center bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 dark:from-[#202124] dark:via-[#2a2b2f] dark:to-[#1a1b1e]">
