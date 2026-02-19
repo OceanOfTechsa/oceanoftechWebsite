@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import {JSX} from "react";
 import {GoDotFill} from "react-icons/go";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -27,7 +28,10 @@ const BlogPage = (): JSX.Element => {
 
                 <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
                     Insights, tips, and expert knowledge about web development, design,
-                    and digital innovation from OceanOfTech.
+                    and digital innovation from {
+                    AppSettings.COMPANY_NAME
+                }
+
                 </p>
             </section>
 
