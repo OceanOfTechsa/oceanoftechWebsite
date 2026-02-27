@@ -3,32 +3,35 @@ import Image from "next/image";
 import { Metadata } from "next";
 import {JSX} from "react";
 import {GoDotFill} from "react-icons/go";
+import {getCategorisedArticles} from "@/lib/articles";
+import ArticleItemList from "@/components/ArticleListItem";
+import {article} from "framer-motion/m";
 
 export const metadata: Metadata = {
-    title: "Blog",
+    title: "Blogs",
 };
 
 const BlogPage = (): JSX.Element => {
+    const articles = getCategorisedArticles();
+
+    console.log(articles);
 
     return (
         <div className="flex flex-col w-full">
 
             <section className="flex flex-col w-full justify-between items-start gap-3 max-w-7xl mx-auto px-6 py-16">
-                <ul className="flex items-center space-x-2">
-                    <li className="hover:text-[#0b9944] dark:hover:text-[#09b850] transition-colors duration-500 ease-in-out">
-                        <Link href="/">Home</Link></li> <li className="text-black">•</li>
-                    <li className="text-[#0B9944] dark:text-[#09b850]"
-                        aria-current="page">Our Blog
-                    </li>
-                </ul>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center">
-                    Our Blog
-                </h1>
-
-                <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
-                    Insights, tips, and expert knowledge about web development, design,
-                    and digital innovation from OceanOfTech.
-                </p>
+                <header className="font-cormorantGaramond font-light text-6xl text-neutral-900 text-center">
+                    <h1> Blogs  </h1>
+                </header>
+                <section className="md:grid md:grid-cols-2 flex flex-col gap-10">
+                    {articles !== null &&
+                    Object.keys(articles).map((article) => (
+                        <ArticleItemList
+                        category = {article}
+                        articles={articles[article]}
+                        key={article}/>
+                    ))}
+                </section>
             </section>
 
             <section className="w-full bg-gray-50 dark:bg-[#0f172a] py-16">
