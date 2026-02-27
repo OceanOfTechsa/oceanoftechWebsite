@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react';
-import { BadgeCheck, Info, Rocket } from 'lucide-react';
-import { LiaAwardSolid } from 'react-icons/lia';
-import { PiHandshake } from 'react-icons/pi';
-import { Button } from './ui/button';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from './ui/hover-card';
+import React, { useState } from "react";
+import { BadgeCheck, Info, Rocket } from "lucide-react";
+import { LiaAwardSolid } from "react-icons/lia";
+import { PiHandshake } from "react-icons/pi";
+import { Button } from "./ui/button";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "./ui/hover-card";
 
 const PricingCards = () => {
-  const [billingCycle, setBillingCycle] = useState('once-off');
+  const [billingCycle, setBillingCycle] = useState("once-off");
 
   return (
     <div className="mx-auto mt-10 px-4">
@@ -16,21 +16,21 @@ const PricingCards = () => {
       <div className="flex justify-center mb-8">
         <div className="inline-flex rounded-md shadow-sm bg-gray-100 dark:bg-[#292a2d] p-1">
           <button
-            onClick={() => setBillingCycle('once-off')}
+            onClick={(): void => setBillingCycle("once-off")}
             className={`px-6 py-2 text-sm font-medium rounded transition-all ${
-              billingCycle === 'once-off'
-                ? 'bg-white dark:bg-[#202124] text-gray-900 dark:text-white shadow'
-                : 'text-gray-600 dark:text-gray-400'
+              billingCycle === "once-off"
+                ? "bg-white dark:bg-[#202124] text-gray-900 dark:text-white shadow"
+                : "text-gray-600 dark:text-gray-400"
             }`}
           >
             Once-Off
           </button>
           <button
-            onClick={() => setBillingCycle('recurring')}
+            onClick={(): void => setBillingCycle("recurring")}
             className={`px-6 py-2 text-sm font-medium rounded transition-all ${
-              billingCycle === 'recurring'
-                ? 'bg-white dark:bg-[#202124] text-gray-900 dark:text-white shadow'
-                : 'text-gray-600 dark:text-gray-400'
+              billingCycle === "recurring"
+                ? "bg-white dark:bg-[#202124] text-gray-900 dark:text-white shadow"
+                : "text-gray-600 dark:text-gray-400"
             }`}
           >
             Recurring
@@ -45,26 +45,35 @@ const PricingCards = () => {
             <div className="p-6">
               <h6 className="text-2xl font-semibold mb-2">Fixed Price</h6>
               <p className="mb-4">
-                Perfect for well-defined projects with clear requirements and deliverables.
+                Perfect for well-defined projects with clear requirements and
+                deliverables.
               </p>
-              
+
               {/* Pricing */}
               <div className="mb-4">
-                {billingCycle === 'once-off' ? (
+                {billingCycle === "once-off" ? (
                   <div>
                     <div className="flex items-baseline">
                       <span className="text-3xl font-bold">R150,000</span>
-                      <span className="text-gray-500 dark:text-gray-400 ml-2">- R500,000</span>
+                      <span className="text-gray-500 dark:text-gray-400 ml-2">
+                        - R500,000
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">One-time payment</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      One-time payment
+                    </p>
                   </div>
                 ) : (
                   <div>
                     <div className="flex items-baseline">
                       <span className="text-3xl font-bold">R25,000</span>
-                      <span className="text-gray-500 dark:text-gray-400 ml-2">/month</span>
+                      <span className="text-gray-500 dark:text-gray-400 ml-2">
+                        /month
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">3-6 month engagement</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      3-6 month engagement
+                    </p>
                   </div>
                 )}
               </div>
@@ -97,12 +106,14 @@ const PricingCards = () => {
                   Complete documentation
                 </li>
                 <li className="flex items-center dark:text-[#c4c5c7]">
-                  <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
-                  3 months post-launch support
+                  <BadgeCheck className="text-[#0B9944] mr-2" size="18" />3
+                  months post-launch support
                 </li>
               </ul>
               <Button className="bg-[#3c3e41] hover:dark:bg-[#161618] text-white rounded-[0.2rem] w-full">
-                <span className="flex gap-2 items-center justify-center">Get started</span>
+                <span className="flex gap-2 items-center justify-center">
+                  Get started
+                </span>
               </Button>
             </div>
           </div>
@@ -117,26 +128,35 @@ const PricingCards = () => {
             <div className="p-6">
               <h6 className="text-2xl font-semibold mb-2">Time & Materials</h6>
               <p className="mb-4">
-                Ideal for evolving projects that require flexibility and iterative development.
+                Ideal for evolving projects that require flexibility and
+                iterative development.
               </p>
 
               {/* Pricing */}
               <div className="mb-4">
-                {billingCycle === 'once-off' ? (
+                {billingCycle === "once-off" ? (
                   <div>
                     <div className="flex items-baseline">
                       <span className="text-3xl font-bold">R850</span>
-                      <span className="text-gray-500 dark:text-gray-400 ml-2">- R1,500/hr</span>
+                      <span className="text-gray-500 dark:text-gray-400 ml-2">
+                        - R1,500/hr
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Pay as you go</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      Pay as you go
+                    </p>
                   </div>
                 ) : (
                   <div>
                     <div className="flex items-baseline">
                       <span className="text-3xl font-bold">R45,000</span>
-                      <span className="text-gray-500 dark:text-gray-400 ml-2">/month</span>
+                      <span className="text-gray-500 dark:text-gray-400 ml-2">
+                        /month
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">160 hours monthly retainer</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      160 hours monthly retainer
+                    </p>
                   </div>
                 )}
               </div>
@@ -179,7 +199,9 @@ const PricingCards = () => {
                     <HoverCardTrigger asChild>
                       <div className="flex items-center gap-1 text-green-600 hover:text-green-700 ml-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full" />
-                        <span className="text-sm font-medium">Show Everything</span>
+                        <span className="text-sm font-medium">
+                          Show Everything
+                        </span>
                         <Info className="w-4 h-4" />
                       </div>
                     </HoverCardTrigger>
@@ -190,23 +212,38 @@ const PricingCards = () => {
                       </div>
                       <ul className="space-y-2 mb-2 sm:mb-4 w-full">
                         <li className="flex items-center dark:text-[#c4c5c7]">
-                          <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                          <BadgeCheck
+                            className="text-[#0B9944] mr-2"
+                            size="18"
+                          />
                           Transparent time tracking
                         </li>
                         <li className="flex items-center dark:text-[#c4c5c7]">
-                          <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                          <BadgeCheck
+                            className="text-[#0B9944] mr-2"
+                            size="18"
+                          />
                           Bi-weekly sprint planning
                         </li>
                         <li className="flex items-center dark:text-[#c4c5c7]">
-                          <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                          <BadgeCheck
+                            className="text-[#0B9944] mr-2"
+                            size="18"
+                          />
                           Code reviews & QA testing
                         </li>
                         <li className="flex items-center dark:text-[#c4c5c7]">
-                          <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                          <BadgeCheck
+                            className="text-[#0B9944] mr-2"
+                            size="18"
+                          />
                           Technical documentation
                         </li>
                         <li className="flex items-center dark:text-[#c4c5c7]">
-                          <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
+                          <BadgeCheck
+                            className="text-[#0B9944] mr-2"
+                            size="18"
+                          />
                           Agile methodology
                         </li>
                       </ul>
@@ -227,25 +264,32 @@ const PricingCards = () => {
             <div className="p-6">
               <h6 className="text-2xl font-semibold mb-2">Dedicated Team</h6>
               <p className="mb-4">
-                Get a dedicated team of developers working exclusively on your project.
+                Get a dedicated team of developers working exclusively on your
+                project.
               </p>
 
               {/* Pricing */}
               <div className="mb-4">
-                {billingCycle === 'once-off' ? (
+                {billingCycle === "once-off" ? (
                   <div>
                     <div className="flex items-baseline">
                       <span className="text-3xl font-bold">R500,000+</span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">6-12 month project</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      6-12 month project
+                    </p>
                   </div>
                 ) : (
                   <div>
                     <div className="flex items-baseline">
                       <span className="text-3xl font-bold">R85,000</span>
-                      <span className="text-gray-500 dark:text-gray-400 ml-2">/month</span>
+                      <span className="text-gray-500 dark:text-gray-400 ml-2">
+                        /month
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">3-5 person team</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      3-5 person team
+                    </p>
                   </div>
                 )}
               </div>
@@ -278,12 +322,14 @@ const PricingCards = () => {
                   Scalable team size
                 </li>
                 <li className="flex items-center dark:text-[#c4c5c7]">
-                  <BadgeCheck className="text-[#0B9944] mr-2" size="18" />
-                  6 months post-launch support
+                  <BadgeCheck className="text-[#0B9944] mr-2" size="18" />6
+                  months post-launch support
                 </li>
               </ul>
               <Button className="bg-[#3c3e41] hover:dark:bg-[#161618] text-white rounded-[0.2rem] w-full">
-                <span className="flex gap-2 items-center justify-center">Get started</span>
+                <span className="flex gap-2 items-center justify-center">
+                  Get started
+                </span>
               </Button>
             </div>
           </div>
@@ -292,7 +338,10 @@ const PricingCards = () => {
 
       {/* Pricing Note */}
       <div className="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
-        <p>All prices in South African Rand (ZAR). Final pricing depends on project complexity and requirements.</p>
+        <p>
+          All prices in South African Rand (ZAR). Final pricing depends on
+          project complexity and requirements.
+        </p>
       </div>
     </div>
   );
