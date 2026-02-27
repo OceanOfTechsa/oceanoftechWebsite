@@ -10,7 +10,7 @@ import {title} from "framer-motion/m";
 
 const articlesDirectory = path.join(process.cwd(), "articles")
 
-const getSortedArticles = (): ArticleItem[] => {
+export const getSortedArticles = (): ArticleItem[] => {
     const fileNames = fs.readdirSync(articlesDirectory)
 
     const allArticlesData = fileNames.map(fileName => {

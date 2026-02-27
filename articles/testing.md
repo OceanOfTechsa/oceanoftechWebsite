@@ -1,5 +1,5 @@
 ---
-title: "How to learn coding"
+title: "How to test your code"
 category: "learning"
 date: "27-02-2026"
 ---
