@@ -1,88 +1,63 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
-import {JSX} from "react";
+import React, { JSX } from "react";
+import Image from "next/image";
+import Blogs from "@/components/Blogs";
 
 export const metadata: Metadata = {
-    title: "Blog",
+  title: "Blog",
 };
 
 const BlogPage = (): JSX.Element => {
+  return (
+    <div className="w-full flex flex-col">
+      <section className="flex flex-col w-full justify-between items-start gap-3 max-w-7xl mx-auto sm:mt-0 xl:pt-20 pb-0 mt-10 px-2 sm:px-0">
+        <Link
+          href="#"
+          className="rounded-sm hover:bg-gray-100 dark:hover:bg-[#202124] p-2 transition-colors duration-500 ease-in-out mt-10 flex flex-col sm:flex-row gap-5 sm:gap-10 items-center justify-start w-full"
+        >
+          <Image
+            src="/thumb.webp"
+            quality={100}
+            width={547}
+            height={564}
+            priority
+            className="object-cover rounded-sm border"
+            alt="blog image"
+          />
+          <div className="flex flex-col max-w-lg">
+            <p className="text-xs mb-2">13 February 2024 • 22 minutes read</p>
+            <h4 className="mb-2">Supabase incident on February 12, 2026</h4>
+            <p className="">
+              A detailed account of the February 12 outage in us-east-2, what
+              caused it, and the steps we are taking to prevent it from
+              happening again A detailed account of the February 12 outage in
+              us-east-2, what caused it, and the steps we are taking to prevent
+              it from happening again
+            </p>
+            <div className="flex items-center gap-2">
+              <div className="relative h-6 w-6 rounded-full">
+                <Image
+                  src="/team/Mondli.jpg"
+                  quality={100}
+                  fill
+                  className="object-cover rounded-full"
+                  alt="blog image"
+                />
+              </div>
+              <p className="mb-0">Sithuliso Zulu</p>
+            </div>
+          </div>
+        </Link>
+      </section>
 
-    return (
-        <div className="flex flex-col w-full">
-            <section className="flex flex-col w-full justify-between items-start gap-3 max-w-7xl mx-auto px-6 py-16">
-                <ul className="flex items-center space-x-2">
-                    <li className="hover:text-[#0b9944] dark:hover:text-[#09b850] transition-colors duration-500 ease-in-out">
-                        <Link href="/">Home</Link></li> <li className="text-black">•</li>
-                    <li className="text-[#0B9944] dark:text-[#09b850]"
-                        aria-current="page">Our Blog
-                    </li>
-                </ul>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center">
-                    Our Blog
-                </h1>
-
-                <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
-                    Insights, tips, and expert knowledge about web development, design,
-                    and digital innovation from OceanOfTech.
-                </p>
-            </section>
-
-            <section className="w-full py-16">
-                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="bg-white dark:bg-[#1e293b] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                        <Image
-                            src = "/blog/blog.jpg"
-                            alt="Blog Image"
-                            width={600}
-                            height={400}
-                            className="w-full h-56 object-cover"
-                        />
-                        <div className="p-6">
-                            <h2 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
-                                How to Build a Modern Website
-                            </h2>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                                Learn the fundamentals of building a fast, responsive and SEO-friendly website using modern technologies.
-                            </p>
-                            <Link
-                                href="/blog/how-to-build-modern-website"
-                                className="text-[#0B9944] dark:text-[#09b850] font-medium hover:underline"
-                            >
-                                Read More →
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="bg-white dark:bg-[#1e293b] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                        <Image
-                            src="/blog/blog.jpg"
-                            alt="Blog Image"
-                            width={600}
-                            height={400}
-                            className="w-full h-56 object-cover"
-                        />
-                        <div className="p-6">
-                            <h2 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
-                                Why SEO Matters in 2026
-                            </h2>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                                Discover why search engine optimization is still one of the most powerful digital marketing tools.
-                            </p>
-                            <Link
-                                href="/blog/why-seo-matters"
-                                className="text-[#0B9944] dark:text-[#09b850] font-medium hover:underline"
-                            >
-                                Read More →
-                            </Link>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+      <section className="border-t mt-10">
+        <div className="max-w-7xl mx-auto flex flex-col my-5">
+          <Blogs />
         </div>
-    );
+      </section>
+    </div>
+  );
 };
 
 export default BlogPage;

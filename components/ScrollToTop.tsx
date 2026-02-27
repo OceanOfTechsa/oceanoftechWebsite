@@ -43,7 +43,7 @@ const ScrollToTop = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-28 z-50 flex items-end gap-3">
+    <div className="fixed bottom-8 right-3 sm:right-28 z-50 flex items-end gap-3">
       <div className="w-[150px] md:w-[154px] flex items-end gap-1">
           <Button type="button" variant="outline" size="sm" className={`rounded-[0.2rem] mt-4 text-white bg-[#292a2d] border-gray-300/30 ${
               isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} `}>

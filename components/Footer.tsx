@@ -14,7 +14,7 @@ import { TbExternalLink } from "react-icons/tb";
 const Footer = (): JSX.Element => {
     return (
         <footer className="bg-[#202124] text-white pt-10 relative overflow-hidden">
-            <div className="pointer-events-none absolute top-0 right-0">
+            <div className="pointer-events-none hidden sm:block absolute top-0 right-0">
                 <Image
                     width={270}
                     height={257}
@@ -159,7 +159,7 @@ const Footer = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
-                <div className="border-t border-gray-300/20 py-6 mt-6 text-center flex justify-between items-center">
+                <div className="border-t border-gray-300/20 py-6 mt-6 text-center flex sm:justify-between items-center">
                     <Link href="/" className="inline-block">
                         <svg width="38" height="38" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="31" cy="31" r="31" fill="#09B850"/>
@@ -170,7 +170,7 @@ const Footer = (): JSX.Element => {
                             <path d="M44.3083 31.0987C44.0137 32.1265 43.377 32.714 42.593 32.8413C42.1519 32.9295 41.7599 33.2233 41.5835 33.6153L35.8301 46.5149C35.6146 46.9751 35.1444 47.2688 34.6351 47.2688H33.9493C33.2144 47.2688 32.646 46.7004 32.646 45.9656V16.0334C32.646 15.2986 33.2144 14.7302 33.9493 14.7302H34.6842C35.1935 14.7302 35.6637 15.0239 35.8792 15.4841L41.6326 28.4328C41.8091 28.8739 42.201 29.1186 42.6421 29.2068C43.4261 29.3832 44.0628 29.9517 44.3574 30.9794C44.3574 31.1558 44.3574 31.3323 44.3083 31.0987ZM39.3571 30.7147L36.6141 24.1027C36.4086 23.5643 35.5864 23.7307 35.5864 24.3183V37.2107C35.5864 37.7983 36.4086 37.9647 36.6141 37.4263L39.3571 30.8143C39.4845 30.5205 39.4845 30.1876 39.3571 30.7147Z" fill="white"/>
                         </svg>
                     </Link>
-                    <p className="text-sm text-[#c4c5c7]">
+                    <p className="text-sm text-[#c4c5c7] mb-0 ml-4 sm:ml-0">
                         © {new Date().getFullYear()} {AppSettings.COMPANY_NAME}. All rights reserved.
                     </p>
                 </div>

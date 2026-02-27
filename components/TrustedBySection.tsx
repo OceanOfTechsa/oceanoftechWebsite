@@ -1,40 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useMotionValue } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { motion, MotionValue, useMotionValue } from "framer-motion";
+import React, {JSX, RefObject, useEffect, useRef, useState} from "react";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import TypedText from "@/components/animations/TypedText";
 
-const TrustedBySection = () => {
-    const logos = [
+const TrustedBySection = (): JSX.Element => {
+    const logos: {src: string; url: string}[] = [
         { src: "/clients/the-success-company-logo.webp", url: "https://successco.co.za/" },
         { src: "/clients/ifind101-logo.webp", url: "https://ifind101.com/" },
         { src: "/clients/ncukumanedigital.webp", url: "https://www.ncukumanedigital.com/" },
-        // { src: "/04.jpg", url: "https://example4.com" },
-        // { src: "/05.jpg", url: "https://example5.com" },
     ];
 
-    const repeatedLogos = [...logos, ...logos, ...logos];
-    const x = useMotionValue(0);
+    const repeatedLogos: {src: string; url: string}[] = [...logos, ...logos, ...logos];
+    const x : MotionValue<number> = useMotionValue(0);
     const [isHovered, setIsHovered] = useState(false);
-    const frameRef = useRef<number>(null);
-    const containerRef = useRef<HTMLDivElement>(null);
-    const innerRef = useRef<HTMLDivElement>(null);
+    const frameRef: RefObject<number | null> = useRef<number>(null);
+    const containerRef: RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
+    const innerRef: RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
     const [constraints, setConstraints] = useState({ left: 0, right: 0 });
 
-    useEffect(() => {
+    useEffect((): void => {
         if (containerRef.current && innerRef.current) {
-            const containerWidth = containerRef.current.offsetWidth;
-            const innerWidth = innerRef.current.scrollWidth;
-            const maxDrag = containerWidth - innerWidth;
+            const containerWidth: number = containerRef.current.offsetWidth;
+            const innerWidth: number = innerRef.current.scrollWidth;
+            const maxDrag: number = containerWidth - innerWidth;
             setConstraints({ left: maxDrag, right: 0 });
         }
     }, []);
 
-    useEffect(() => {
-        const step = () => {
+    useEffect((): () => void => {
+        const step: () => void = () => {
             if (!isHovered) {
                 x.set(x.get() - 0.5);
                 const resetPoint = -(logos.length * 140);
@@ -45,7 +43,7 @@ const TrustedBySection = () => {
             frameRef.current = requestAnimationFrame(step);
         };
         frameRef.current = requestAnimationFrame(step);
-        return () => cancelAnimationFrame(frameRef.current!);
+        return (): void => cancelAnimationFrame(frameRef.current!);
     }, [isHovered, logos.length, x]);
 
     return (
@@ -80,10 +78,7 @@ const TrustedBySection = () => {
                         dragElastic={0.2}
                     >
                         {repeatedLogos.map((logo, idx) => (
-                            <div
-                                key={idx}
-                                className="relative flex-shrink-0 w-20 sm:w-28 h-16 sm:h-20 flex items-center justify-center group"
-                            >
+                            <div key={idx} className="relative flex-shrink-0 w-20 sm:w-28 h-16 sm:h-20 flex items-center justify-center group">
                                 <Link
                                     href={logo.url}
                                     target="_blank"
