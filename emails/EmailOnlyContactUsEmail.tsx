@@ -42,12 +42,12 @@ function EmailOnlyContactUsEmail(
       >
         <Body style={main}>
           <Preview>
-            Someone just submitted your contact form. Email: {email}
+            A client just submitted a contact form. Email: {email}
           </Preview>
           <div>
             {/*<Heading style={h1}>New Contact Inquiry Received</Heading>*/}
             <div className="bg-amber-500/10 p-2 border-l-4 border-amber-500 my-2 text-[#49494f] flex items-center text-xs">
-              <div className="text-amber-500 me-2">CAUTION:</div>
+              <div className="text-amber-500 me-2 text-xs">CAUTION:</div>
               This email originated from outside the organisation. Do not click
               links or open attachments unless you recognise the sender and you
               know the content is safe.

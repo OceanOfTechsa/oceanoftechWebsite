@@ -4,21 +4,23 @@ import { Resend } from "resend";
 import { z } from "zod";
 import {PartnerFormSchema} from "@/Shared/PartnerFormSchema";
 import PartnerRequestEmail from "@/emails/PartnerRequestForm";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 if (!process.env.RESEND_API_KEY) {
     throw new Error("RESEND_API_KEY environment variable is not configured");
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY);export type FormValues = z.infer<typeof PartnerFormSchema>;
+const resend = new Resend(process.env.RESEND_API_KEY);
+export type FormValues = z.infer<typeof PartnerFormSchema>;
 
 export async function SendPartnerRequestEmail(data: FormValues) {
     try {
         const { data: email, error } = await resend.emails.send({
-            from: "Oceanoftech <accounts@oceanoftechsa.com>",
-            to: "okasithuli@outlook.com",
-            subject: "New Contact Form Submission – Ocean of Tech",
-            react: PartnerRequestEmail(PartnerFormSchema.parse(data)),
-            replyTo: PartnerFormSchema.parse(data).email,
+          from: `${data.name} <${AppSettings.CompanyContacts.Email}>`,
+          to: AppSettings.CompanyContacts.Email,
+          subject: `📩 New Contact Form Submission – ${AppSettings.COMPANY_NAME}`,
+          react: PartnerRequestEmail(PartnerFormSchema.parse(data)),
+          replyTo: PartnerFormSchema.parse(data).email,
         });
 
         if (error) {

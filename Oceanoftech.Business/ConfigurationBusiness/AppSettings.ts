@@ -20,9 +20,9 @@ type SettingsReturnType = Setting["value"] | undefined;
 export default class AppSettings {
   private static settingsBusiness: SettingsBusiness = new SettingsBusiness();
   public static readonly ENVIRONMENT_PORT: string =
-    process.env.ENVIRONMENT_PORT;
+    process.env.ENVIRONMENT_PORT as string;
   public static readonly NEXT_PUBLIC_BASE_URL: string =
-    process.env.NEXT_PUBLIC_BASE_URL;
+    process.env.NEXT_PUBLIC_BASE_URL as string;
   public static readonly COMPANY_NAME: string = "Ocean of Tech";
   public static readonly SITE_DESCRIPTION: string = `${AppSettings.COMPANY_NAME} is a leading software company in South Africa, offering website design, development, hosting, UI/UX design, SEO, and business email solutions. We create innovative, custom software and web solutions to help businesses in Durban and across South Africa succeed online.`;
   public static readonly HIRING: boolean = false;
@@ -34,7 +34,7 @@ export default class AppSettings {
     DEVELOPMENT: "development",
   };
   public static CompanyContacts = {
-    Email: `contact@oceanoftechsa.com`,
+    Email: `info@oceanoftechsa.com`,
     Phone: "+27 72 627 2521",
     Address: "44 Isaiah Ntshangase Rd, Stamford Hill, Durban, 4023",
     WorkingHours: "Time: 9am to 5pm (Weekdays)",

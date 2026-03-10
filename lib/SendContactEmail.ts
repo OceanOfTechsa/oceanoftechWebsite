@@ -5,6 +5,7 @@ import { ContactSchema } from "@/Shared/ContactSchema";
 import { Resend } from "resend";
 import { z } from "zod";
 import {getUserGeoData} from "@/lib/GeoLocationData";
+import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSettings";
 
 if (!process.env.RESEND_API_KEY) {
     throw new Error("RESEND_API_KEY environment variable is not configured");
@@ -18,11 +19,11 @@ export async function SendContactEmail(data: FormValues) {
         const validatedData = ContactSchema.parse(data);
         const location = await getUserGeoData();
         const { data: email, error } = await resend.emails.send({
-            from: "Oceanoftech <accounts@oceanoftechsa.com>",
-            to: "okasithuli@outlook.com",
-            subject: "New Contact Form Submission – Ocean of Tech",
-            react: ContactEmail(validatedData, location),
-            replyTo: validatedData.email,
+          from: `${validatedData.name} <${AppSettings.CompanyContacts.Email}>`,
+          to: AppSettings.CompanyContacts.Email,
+          subject: `📩 New Contact Form Submission – ${AppSettings.COMPANY_NAME}`,
+          react: ContactEmail(validatedData, location),
+          replyTo: validatedData.email,
         });
 
         if (error) {
