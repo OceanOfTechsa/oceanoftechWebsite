@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   ),
 };
 
+
 const NoFoundPage = (): JSX.Element => {
   return (
     <div className="w-full flex items-center justify-center relative">
