@@ -1,10 +1,22 @@
 import type { NextConfig } from "next";
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
-})
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig: NextConfig = {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        os: false,
+      };
+    }
+    return config;
+  },
+
   images: {
     remotePatterns: [
       {
@@ -24,10 +36,41 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
-      // Added api.microlink.io for link preview functionality
       {
         protocol: "https",
         hostname: "api.microlink.io",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.vercel.com",
+      },
+      {
+        protocol: "https",
+        hostname: "github.githubassets.com",
+      },
+      {
+        protocol: "https",
+        hostname: "astro.build",
+      },
+      {
+        protocol: "https",
+        hostname: "remix.run",
+      },
+      {
+        protocol: "https",
+        hostname: "www.netlify.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.sanity.io",
+      },
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
       },
     ],
     qualities: [25, 50, 75, 80, 100],
@@ -37,4 +80,5 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 3600,
   },
 };
+
 module.exports = withBundleAnalyzer(nextConfig);
