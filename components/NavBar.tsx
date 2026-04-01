@@ -18,7 +18,6 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { CgMenuLeft } from "react-icons/cg";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { JSX, RefObject } from "react";
-import { Timeout } from "@radix-ui/primitive";
 import { cn } from "@/lib/utils";
 // import LinkPreview from "@/components/ui/link-preview";
 
@@ -29,8 +28,7 @@ const NavBar = (): JSX.Element => {
   const ticking: RefObject<boolean> = React.useRef(false);
   const lastScrollY: RefObject<number> = React.useRef(0);
   const effectTriggered: RefObject<boolean> = React.useRef(false);
-  const animationTimeoutRef: RefObject<Timeout | null> =
-    React.useRef<NodeJS.Timeout | null>(null);
+  const animationTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
   React.useEffect((): (() => void) => {
     const handleScroll: () => void = (): void => {

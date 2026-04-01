@@ -15,8 +15,8 @@ tags:
   - frontend
   - backend
 slug: "typescript-best-practices-2026"
-canonical: "https://oceanoftech.dev/blog/typescript-best-practices-2026"
-ogImage: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=1200&q=80"
+canonical: "/blog/cover1_typescript.png"
+ogImage: "/blog/cover1_typescript.png"
 readingTime: "8 min read"
 category: "TypeScript"
 keywords:
@@ -32,7 +32,7 @@ keywords:
 {/* Hero */}
 <div className="relative w-full rounded-sm overflow-hidden mb-8">
     <img
-        src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=1200&q=80"
+        src="/blog/cover1_typescript.png"
         alt="TypeScript code on a dark editor"
         className="w-full h-[420px] object-cover"
     />
@@ -49,7 +49,6 @@ TypeScript is no longer a differentiator — it's the baseline. The question mos
 
 The past two years brought a wave of refinements: narrower inference, better `satisfies` adoption, AI-assisted type generation, and a community that has largely converged on a small set of configuration and pattern standards. If you haven't revisited your TypeScript setup since 2023, this overview will catch you up on what's changed and what the ecosystem has settled on.
 
----
 
 ## 1. The `satisfies` Operator Is Now Standard
 
@@ -73,7 +72,6 @@ const palette = {
 
 The practical impact: fewer places where you cast with `as`, fewer `const` assertions, and autocomplete that actually knows the exact values in your config objects.
 
----
 
 ## 2. `strict: true` Is the Floor, Not the Ceiling
 
@@ -109,7 +107,6 @@ console.log(first?.toUpperCase()); // forced to handle the undefined case
 
 `exactOptionalPropertyTypes` closes a long-standing gap where `{ name?: string }` would accept `{ name: undefined }` — they now mean different things as they should.
 
----
 
 ## 3. AI-Assisted Type Generation Is Mainstream
 
@@ -117,12 +114,12 @@ console.log(first?.toUpperCase()); // forced to handle the undefined case
     <img
         src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80"
         alt="AI code generation tools"
-        className="rounded-xl shadow-md w-full h-52 object-cover"
+        className="rounded-sm w-full h-52 object-cover"
     />
     <img
         src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"
         alt="Developer workflow with AI tools"
-        className="rounded-xl shadow-md w-full h-52 object-cover"
+        className="rounded-sm w-full h-52 object-cover"
     />
 </div>
 
@@ -133,8 +130,6 @@ Two shifts have happened around AI and TypeScript that are worth tracking:
 **AI catching type errors before the compiler** — Cursor, GitHub Copilot, and similar tools now surface TypeScript errors inline before you save. The result is that many teams report their CI type-check step catches far fewer errors than it did two years ago, because developers are fixing them in real-time as they write.
 
 > **The key shift:** TypeScript is increasingly the *output* of tools (ORMs, API clients, form libraries) rather than something you author entirely by hand. Your job is to define the schema or contract once and let the toolchain derive the types.
-
----
 
 ## 4. Type Inference — Write Less, Mean More
 
@@ -165,14 +160,13 @@ function processOrder(order: Order): ProcessedOrder {
 
 This produces code that is easier to read and refactor — changing `Order.id` from `string` to `number` propagates through all the inferred locals automatically.
 
----
 
 ## 5. Patterns That Have Fallen Out of Favour
 
 <img
     src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80"
     alt="Code review and refactoring"
-    className="w-full rounded-xl shadow-lg my-6 h-64 object-cover"
+    className="w-full rounded-sm my-6 h-64 object-cover"
 />
 
 Several patterns that were common a few years ago are now considered code smells in 2026 TypeScript:
@@ -222,11 +216,9 @@ const user: User = getUser();
 
 `import type` is now enforced by ESLint in most setups and removes a category of circular dependency issues.
 
----
-
 ## 6. The 2026 TypeScript Toolchain
 
-<div className="not-prose overflow-x-auto my-8 rounded-xl border border-zinc-200 dark:border-zinc-800">
+<div className="not-prose overflow-x-auto my-8 rounded-sm border">
     <table className="w-full text-sm text-left">
         <thead className="bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 dark:text-zinc-400 text-xs uppercase tracking-wide">
         <tr>
@@ -293,44 +285,40 @@ type Article = z.infer<typeof ArticleSchema>;
 const article = ArticleSchema.parse(req.body); // throws ZodError if invalid
 ```
 
----
-
 ## Key Takeaways
 
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/20 border border-blue-200 dark:border-blue-700 rounded-xl p-5">
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/20 border border-blue-200 dark:border-blue-700 rounded-sm p-5">
         <span className="text-2xl mb-2 block">🔵</span>
         <strong className="block mb-1">satisfies Over Annotations</strong>
         <p className="text-sm text-gray-600 dark:text-gray-400">Use satisfies to validate shape without losing literal types. Fewer as casts, better autocomplete.</p>
     </div>
-    <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/20 border border-purple-200 dark:border-purple-700 rounded-xl p-5">
+    <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/20 border border-purple-200 dark:border-purple-700 rounded-sm p-5">
         <span className="text-2xl mb-2 block">🔒</span>
         <strong className="block mb-1">Go Beyond strict: true</strong>
         <p className="text-sm text-gray-600 dark:text-gray-400">Add noUncheckedIndexedAccess and exactOptionalPropertyTypes. They catch real bugs strict misses.</p>
     </div>
-    <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/20 border border-green-200 dark:border-green-700 rounded-xl p-5">
+    <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/20 border border-green-200 dark:border-green-700 rounded-sm p-5">
         <span className="text-2xl mb-2 block">🤖</span>
         <strong className="block mb-1">Generate, Don't Write</strong>
         <p className="text-sm text-gray-600 dark:text-gray-400">Let ORMs, API clients, and Zod schemas generate your types. Define the source of truth once.</p>
     </div>
-    <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/20 border border-orange-200 dark:border-orange-700 rounded-xl p-5">
+    <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/20 border border-orange-200 dark:border-orange-700 rounded-sm p-5">
         <span className="text-2xl mb-2 block">✂️</span>
         <strong className="block mb-1">Annotate Boundaries Only</strong>
         <p className="text-sm text-gray-600 dark:text-gray-400">Explicit types on function signatures. Let inference handle everything inside the body.</p>
     </div>
-    <div className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/20 border border-red-200 dark:border-red-700 rounded-xl p-5">
+    <div className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/20 border border-red-200 dark:border-red-700 rounded-sm p-5">
         <span className="text-2xl mb-2 block">🚫</span>
         <strong className="block mb-1">Ban any, Restrict as</strong>
         <p className="text-sm text-gray-600 dark:text-gray-400">Treat any as a lint error. Use unknown at boundaries and narrow with type guards or Zod.</p>
     </div>
-    <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 border border-teal-200 dark:border-teal-700 rounded-xl p-5">
+    <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 border border-teal-200 dark:border-teal-700 rounded-sm p-5">
         <span className="text-2xl mb-2 block">🧰</span>
         <strong className="block mb-1">Zod Is the Standard</strong>
         <p className="text-sm text-gray-600 dark:text-gray-400">One schema gives you both runtime validation and TypeScript types. Stop maintaining both separately.</p>
     </div>
 </div>
-
----
 
 ## Conclusion
 
@@ -339,13 +327,7 @@ TypeScript in 2026 is a mature, settled ecosystem. The big debates have mostly b
 <img
     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
     alt="Engineering team collaborating on TypeScript codebase"
-    className="w-full rounded-xl shadow-lg my-6 h-64 object-cover"
+    className="w-full rounded-sm my-6 h-64 object-cover"
 />
 
 If there's one theme across all these trends it's this: **TypeScript should describe reality, not decorate code**. The teams writing the best TypeScript in 2026 are the ones who've removed the most of it — not by giving up on types, but by letting their tools derive them from authoritative sources.
-
----
-
-*Published by [Ocean of Tech](https://oceanoftech.dev) · March 8, 2026 · 8 min read*
-
-*Tags: [TypeScript](#) · [Best Practices](#) · [Zod](#) · [Developer Tools](#) · [Type Safety](#)*

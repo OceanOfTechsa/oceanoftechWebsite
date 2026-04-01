@@ -28,11 +28,13 @@ interface BlogsPageProps {
 
 type viewType = "grid" | "table";
 
-const Blogs = ({Blogs, basePath}: BlogsPageProps): JSX.Element => {
-    const storedView = localStorage.getItem("BlogsView");
-    const initialView: viewType = storedView === "grid" || storedView === "table" ? (storedView as viewType) : "table";
+const Blogs = ({Blogs}: BlogsPageProps): JSX.Element => {
 
-    const [view, setView] = useState<viewType>(initialView);
+    const [view, setView] = useState<viewType>(() => {
+        if (typeof window === "undefined") return "table";
+        const storedView = localStorage.getItem("BlogsView");
+        return storedView === "grid" || storedView === "table" ? (storedView as viewType) : "table";
+    });
     const [searchExpanded, setSearchExpanded] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCat, setSelectedCat] = useState<string>("All");
@@ -223,7 +225,6 @@ const Blogs = ({Blogs, basePath}: BlogsPageProps): JSX.Element => {
             </div>
           </div>
         </div>
-
         {/* VIEWS */}
         <div className="-mt-3 w-full px-2 sm:px-0">
           {filteredBlogs.length === 0 ? (
@@ -289,7 +290,7 @@ const Blogs = ({Blogs, basePath}: BlogsPageProps): JSX.Element => {
                 <Link
                   key={index}
                   href={`/blog/${blog.slug}`}
-                  className="rounded-sm hover:bg-gray-100 dark:hover:bg-[#202124] p-3 transition-colors duration-500 ease-in-out mt-10 flex flex-col gap-5 items-start justify-start w-full h-full"
+                  className="rounded-sm hover:bg-gray-100 dark:hover:bg-[#202124] p-2 pb-0 transition-colors duration-500 ease-in-out mt-10 flex flex-col gap-5 items-start justify-start w-full h-full"
                 >
                   <div className="relative w-full h-[220px]">
                     <Image

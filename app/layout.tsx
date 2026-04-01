@@ -15,6 +15,7 @@ import SetScrollToTop from "@/components/SetScrollToTop";
 import GoogleTag from "@/components/GoogleTag";
 import { Instrument_Sans } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
+import { Analytics } from "@vercel/analytics/next"
 
 const instrument_Sans: NextFont = Instrument_Sans({
   weight: ["400", "700"],
@@ -173,6 +174,7 @@ const RootLayout = ({ children }: { children: ReactNode }): JSX.Element => {
         </ThemeProvider>
         {shouldRenderTwak && <Twak />}
         <GoogleTag />
+        <Analytics />
       </body>
     </html>
   );
