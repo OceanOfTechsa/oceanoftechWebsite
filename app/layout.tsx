@@ -14,6 +14,7 @@ import AppSettings from "@/Oceanoftech.Business/ConfigurationBusiness/AppSetting
 import Twak from "@/components/Twak";
 import SetScrollToTop from "@/components/SetScrollToTop";
 import GoogleTag from "@/components/GoogleTag";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -166,6 +167,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                 </ThemeProvider>
                     {shouldRenderTwak && <Twak />}
                 <GoogleTag />
+                <Analytics />
             </body>
         </html>
     );
