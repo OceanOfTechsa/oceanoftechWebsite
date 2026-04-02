@@ -8,7 +8,8 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {Badge} from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
+import {Skeleton} from "@/components/ui/skeleton";
+
 
 type Heading = {
   id: string;
