@@ -3,7 +3,11 @@
 import { useState, useEffect, JSX } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaLongArrowAltLeft,
+  FaLongArrowAltRight,
+} from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import type { CaseStudy } from "@/data/caseStudies";
@@ -15,13 +19,20 @@ interface CaseStudiesListProps {
   onPageChange?: () => void;
 }
 
-const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPageChange,}: CaseStudiesListProps): JSX.Element => {
+const CaseStudiesList = ({
+  items,
+  itemsPerPage = AppSettings.CASE_STUDY_ITEMS_PER_PAGE,
+  onPageChange,
+}: CaseStudiesListProps): JSX.Element => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
   const totalPages: number = Math.ceil(items.length / itemsPerPage);
   const startIndex: number = (currentPage - 1) * itemsPerPage;
-  const currentItems: CaseStudy[] = items.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems: CaseStudy[] = items.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
 
   useEffect(() => {
     if (loading && onPageChange) onPageChange();
@@ -46,7 +57,11 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
     let last: number | undefined;
 
     for (let i = 1; i <= totalPages; i++) {
-      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+      if (
+        i === 1 ||
+        i === totalPages ||
+        (i >= currentPage - delta && i <= currentPage + delta)
+      ) {
         range.push(i);
       }
     }
@@ -72,15 +87,20 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
       <div className="space-y-20">
         {loading
           ? [...Array(itemsPerPage)].map((_, idx) => (
-              <div key={idx} className="grid md:grid-cols-2 gap-10 items-center animate-pulse">
-                <div className={`rounded-lg overflow-hidden ${idx % 2 === 1 ? "md:order-2" : ""}`}>
+              <div
+                key={idx}
+                className="grid md:grid-cols-2 gap-10 items-center animate-pulse"
+              >
+                <div
+                  className={`rounded-lg overflow-hidden ${idx % 2 === 1 ? "md:order-2" : ""}`}
+                >
                   <div className="h-[400px] bg-gray-200 dark:bg-[#292a2d] rounded-lg"></div>
                 </div>
                 <div className={`${idx % 2 === 1 ? "md:order-1" : ""}`}>
                   <div className="space-y-6">
-                    <div className="h-8 w-48 bg-gray-200 dark:bg-[#292a2d] rounded"></div>
-                    <div className="h-4 w-full bg-gray-200 dark:bg-[#292a2d] rounded"></div>
-                    <div className="h-4 w-3/4 bg-gray-200 dark:bg-[#292a2d] rounded"></div>
+                    <div className="h-10 w-10 bg-gray-200 dark:bg-[#292a2d] rounded-full"></div>
+                    <div className="h-4 w-full bg-gray-200 dark:bg-[#292a2d] rounded-full"></div>
+                    <div className="h-2 w-3/4 bg-gray-200 dark:bg-[#292a2d] rounded-full -mt-2"></div>
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center gap-1">
                         <div className="h-4 w-4 bg-gray-200 dark:bg-[#292a2d] rounded-full"></div>
@@ -90,7 +110,7 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
                         {[...Array(3)].map((__, i) => (
                           <div
                             key={i}
-                            className="h-6 w-20 bg-gray-200 dark:bg-[#292a2d] rounded-full"
+                            className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-[#292a2d] border rounded-[0.2rem]"
                           ></div>
                         ))}
                       </div>
@@ -100,64 +120,79 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
                 </div>
               </div>
             ))
-          : currentItems.map((caseStudy, i): JSX.Element => (
-              <Link
-                href={`/portfolio/${caseStudy.projectUrl}`}
-                key={caseStudy.id}
-                className="grid md:grid-cols-2 gap-10 items-center group"
-              >
-                {/* Image */}
-                <div className={`rounded-md overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                  <Image
-                    src={caseStudy.imageUrl}
-                    width={608}
-                    height={456}
-                    quality={100}
-                    loading="eager"
-                    className="object-cover w-full h-[400px] transform group-hover:scale-105 transition-transform duration-500"
-                    alt={caseStudy.title}
-                  />
-                </div>
-
-                {/* Text */}
-                <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <Image
-                    width={141}
-                    height={30}
-                    quality={100}
-                    loading="lazy"
-                    src={caseStudy.clientLogo}
-                    className="h-[30px] mb-3 lg:mb-4"
-                    alt={caseStudy.title}
-                  />
-                  <h3 className="text-[25.7px] md:text-[2rem] font-bold text-gray-900 dark:text-white">
-                    {caseStudy.title}
-                  </h3>
-                  <p className="mb-3 text-[#606261] dark:text-[#c4c5c7] font-normal text-lg">
-                    {caseStudy.subtitle}
-                  </p>
-                  <div className="flex flex-col gap-3 mb-6 text-gray-600 dark:text-gray-300 font-normal text-base">
-                    <div className="flex items-center gap-1 text-[#606261] dark:text-[#c4c5c7]">
-                      <GoDotFill size={15} className="text-green-500" />
-                      {caseStudy.year}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {caseStudy.categories.map((cat, j) => (
-                        <span
-                          key={j}
-                          className="bg-gray-100 dark:bg-[#292a2d] px-3 py-1 rounded-full"
-                        >
-                          {cat}
-                        </span>
-                      ))}
-                    </div>
+          : currentItems.map(
+              (caseStudy: CaseStudy, i: number): JSX.Element => (
+                <Link
+                  href={`/portfolio/${caseStudy.id}`}
+                  key={caseStudy.id}
+                  className="grid md:grid-cols-2 gap-20 items-center group"
+                >
+                  {/* Image */}
+                  <div
+                    className={`rounded-md overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}
+                  >
+                    <Image
+                      src={caseStudy.imageUrl}
+                      width={608}
+                      height={456}
+                      quality={100}
+                      loading="eager"
+                      className="object-cover w-full h-[400px] transition-transform duration-500 group-hover:scale-105"
+                      alt={caseStudy.title}
+                    />
                   </div>
-                  <span className="group-hover:text-green-600 group-dark:hover:text-green-700 inline-flex items-center font-medium transition-all duration-300">
-                    View case study <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </div>
-              </Link>
-            ))}
+
+                  {/* Text */}
+                  <div
+                    className={`flex flex-col justify-center ${i % 2 === 1 ? "md:order-1 md:items-end md:text-right" : ""}`}
+                  >
+                    <Image
+                      width={100}
+                      height={100}
+                      quality={100}
+                      loading="lazy"
+                      src={caseStudy.clientLogo}
+                      className="object-cover mb-4"
+                      alt={caseStudy.title}
+                    />
+
+                    <h3 className="text-[25.7px] md:text-[2rem] font-bold text-gray-900 dark:text-white">
+                      {caseStudy.title}
+                    </h3>
+
+                    <p className="mb-4 text-[#606261] dark:text-[#c4c5c7] font-normal text-lg -mt-1">
+                      {caseStudy.subtitle}
+                    </p>
+
+                    <div className="flex flex-col gap-3 mb-6 text-gray-600 dark:text-gray-300 text-base">
+                      <div
+                        className={`flex items-center gap-2 ${i % 2 === 1 && "md:justify-end"}`}
+                      >
+                        <GoDotFill size={15} className="text-green-500" />
+                        {caseStudy.year}
+                      </div>
+
+                      <div
+                        className={`flex flex-wrap gap-2 ${i % 2 === 1 && "md:justify-end"}`}
+                      >
+                        {caseStudy.categories.map((cat, j) => (
+                          <span
+                            key={j}
+                            className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-[#292a2d] border rounded-[0.2rem]"
+                          >
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <span className="inline-flex items-center font-medium transition-all duration-300 group-hover:text-green-600">
+                      View case study
+                      <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              ),
+            )}
       </div>
 
       {/* Pagination */}
@@ -192,7 +227,7 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
               >
                 {page}
               </button>
-            )
+            ),
           )}
 
           <button
@@ -206,6 +241,6 @@ const  CaseStudiesList = ({items,itemsPerPage = AppSettings.ITEMS_PER_PAGE, onPa
       )}
     </div>
   );
-}
+};
 
 export default CaseStudiesList;

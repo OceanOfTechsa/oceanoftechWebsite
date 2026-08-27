@@ -63,7 +63,7 @@ const Testimonials = (): JSX.Element => {
                         variants={containerVariants}
                     >
                         <motion.span 
-                            className="inline-block bg-gray-100 dark:bg-[#292a2d] text-sm rounded-md font-semibold px-3 py-2 z-50"
+                            className="inline-block bg-[#f8f8f8] dark:bg-[#292a2d] text-[#606261] dark:text-[#c4c5c7] text-sm rounded-sm font-semibold px-3 py-1 z-50"
                             variants={itemVariants}
                         >
                             <AnimatedIcon icon="💖" /> Real results from real clients

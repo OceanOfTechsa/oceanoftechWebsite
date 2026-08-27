@@ -21,58 +21,43 @@ const TermsAndConditionPage = () => {
                     </ol>
                 </nav>
                 <h1 className="text-[3.6rem]  font-bold text-center mb-4 ">Terms & Conditions</h1>
-                <p className="text-center  mb-12 text-[1.25rem] font-bold">Last update on Dec 2023</p>
+                <p className="text-center  mb-12 text-[1.25rem] font-bold">Last update on Dec 2025</p>
 
                 <div className="space-y-8">
 
                     <div>
                         <h2 className="text-2xl font-semibold mb-4 ">Introduction</h2>
-                        <p className=" mb-4">Welcome to Mizzle. These terms and conditions govern your
-                            use of our website. Please read them carefully. By accessing and using our website, you
-                            agree to comply with and be bound by these terms.</p>
-                        <p className=" mb-4">If you do not agree with these terms, please do not use
-                            our website. Our terms and conditions outline the rules and guidelines for using our
-                            website, intellectual property rights, user-generated content, and more.</p>
-                        <p className="">If you have any questions or concerns about these terms, please
-                            contact us at +81 555 333 45. Your use of our website is also governed by our Privacy
-                            Policy,. We may update these terms and conditions at any time, so please review them
-                            periodically for changes. Thank you for visiting Mizzle.</p>
+                        <p className=" mb-4">Welcome to Ocean of Tech SA. These terms and conditions govern your use of our website (oceanoftechsa.com) and any services we provide. Please read them carefully. By accessing or using our website, you agree to comply with and be bound by these terms.</p>
+                        <p className=" mb-4">If you do not agree with these terms, please do not use our website. Our terms and conditions outline the rules for using our website, intellectual property rights, user-generated content, and more.</p>
+                        <p className="">If you have any questions or concerns about these terms, please contact us at the details provided on our contact page. Your use of our website is also governed by our Privacy Policy. We may update these terms and conditions at any time, so please review them periodically for changes. Thank you for visiting Ocean of Tech SA.</p>
                     </div>
-
 
                     <div>
                         <h2 className="text-2xl font-semibold mb-4 ">Acceptance of Terms</h2>
-                        <p className="">By accessing or using this website, you agree to comply with
-                            and be bound by these Terms and Conditions. If you do not agree with these terms, please
-                            do not use this website.</p>
+                        <p className="">By accessing or using this website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with these terms, please do not use this website.</p>
                     </div>
 
                     <div>
                         <h2 className="text-2xl font-semibold mb-4 ">Intellectual Property</h2>
-                        <p className=" mb-4">All content on this website, including text, images,
-                            graphics, and logos, is the property of Mizzle and is protected by intellectual property
-                            laws.</p>
-                        <p className=" mb-4">You may not use, reproduce, or distribute any content from
-                            this website without prior written consent from Mizzle</p>
+                        <p className=" mb-4">All content on this website, including text, images, graphics, logos, blog posts, case studies, and service descriptions, is the property of Ocean of Tech SA and is protected by intellectual property laws.</p>
+                        <p className=" mb-4">You may not use, reproduce, modify, distribute, or display any content from this website without prior written consent from Ocean of Tech SA.</p>
+                    </div>
+
+                    <div>
+                        <h2 className="text-2xl font-semibold mb-4 ">Services Integration and Features</h2>
+                        <p className=" mb-4">Ocean of Tech SA offers digital solutions including web development, hosting, SEO, automation, UX/UI design, and skills development programs.</p>
                         <ul className="list-disc pl-6 space-y-2 ">
-                            <li>Receive instant notifications in Mizzle whenever there&apos;s an update or action in
-                                Slack
-                            </li>
-                            <li>Effortlessly create, assign, and manage tasks in both platforms, ensuring nothing
-                                falls through the cracks.
-                            </li>
-                            <li>Keep all your data consistent and up to date, whether it&apos;s customer information,
-                                project details, or important messages.
-                            </li>
+                            <li>Receive instant notifications and updates related to your projects or services.</li>
+                            <li>Effortlessly manage tasks, projects, and digital assets across platforms.</li>
+                            <li>Keep all your data consistent and up to date, whether it's project details, customer information, or digital content.</li>
                         </ul>
                     </div>
 
                     <div>
                         <h2 className="text-2xl font-semibold mb-4 ">Limitation of Liability</h2>
-                        <p className=" mb-4">Mizzle makes no warranties or representations about the
-                            accuracy or completeness of the content on this website.</p>
-                        <p className="">Mizzle is not liable for any direct, indirect, consequential,
-                            or incidental damages resulting from your use of this website.</p>
+                        <p className="mb-4">Ocean of Tech SA makes no warranties or representations about the accuracy, completeness, or reliability of the content on this website or the services described.</p>
+                        <p className="mb-4">Ocean of Tech SA is not liable for any direct, indirect, consequential, incidental, or special damages resulting from your use of this website or engagement with our services, including but not limited to loss of data, profits, or business opportunities.</p>
+                        <p>Your use of our website and services is at your own risk. We recommend reviewing all service agreements separately for specific terms related to any projects or engagements.</p>
                     </div>
                 </div>
             </div>
