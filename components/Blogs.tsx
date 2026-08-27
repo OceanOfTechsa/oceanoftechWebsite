@@ -20,14 +20,12 @@ import {Badge} from "@/components/ui/badge";
 import {Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle} from "@/components/ui/empty";
 import {FaBookReader} from "react-icons/fa";
 
-
 interface BlogsPageProps {
     Blogs: any[],
     basePath?: string
 }
 
 type viewType = "grid" | "table";
-
 const Blogs = ({Blogs}: BlogsPageProps): JSX.Element => {
 
     const [view, setView] = useState<viewType>(() => {
@@ -107,7 +105,7 @@ const Blogs = ({Blogs}: BlogsPageProps): JSX.Element => {
               {Categories.map((cat: string, index: number) => (
                 <Badge
                   variant={selectedCat === cat ? "default" : "outline"}
-                  className={cn("cursor-pointer rounded-full",selectedCat === cat ? "bg-green-500 border-none text-white" : "bg-transparent")}
+                  className={cn("cursor-pointer rounded-sm pb-0 flex items-center justify-center transition-all duration-500 ease-in-out",selectedCat === cat ? "bg-green-500 border-none text-white" : "bg-transparent hover:bg-green-500/20 hover:border-green-500")}
                   key={index}
                   onClick={() => setSelectedCat(cat)}
                 >

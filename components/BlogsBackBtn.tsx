@@ -11,7 +11,7 @@ const BlogsBackBtn = () => {
       <Tooltip>
         <TooltipTrigger asChild>
           <button
-            className={"flex items-center  mr-2 cursor-pointer"}
+            className={"flex items-center  mr-2 cursor-pointer hover:text-emerald-600"}
             onClick={router.back}
           >
             <ChevronLeft size={18} />

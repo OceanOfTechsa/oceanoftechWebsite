@@ -9,6 +9,7 @@ import { HiBriefcase } from "react-icons/hi2";
 import { type Career, careers } from "@/components/conts";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiUsers } from "react-icons/fi";
+import { X } from "lucide-react";
 
 const noResultsMessages = [
   (term: string) => `No matches found for '${term}'.`,
@@ -116,9 +117,9 @@ const SearchForm = () => {
             transition={{ type: "spring", stiffness: 120, damping: 18 }}
             className="flex flex-col w-full max-w-3xl relative max-h-full"
           >
-            <div className="bg-white dark:bg-[#171717] shadow-md rounded-md w-full">
+            <div className="bg-white dark:bg-[#171717] shadow-md rounded-md overflow-hidden w-full">
               {/* Search Input */}
-              <div className="border-b p-4">
+              <div className="border-b overflow-hidden">
                 <label htmlFor="query" className="sr-only">
                   Search
                 </label>
@@ -142,8 +143,8 @@ const SearchForm = () => {
                     name="query"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    className="w-full py-2 px-4 pl-11 text-sm border-none bg-transparent rounded-lg focus:outline-none dark:text-gray-300"
-                    placeholder="Search careers by title, category, skills, or location..."
+                    className="w-full py-2 px-4 pl-11 text-sm border-none bg-transparent rounded-none focus:outline-none dark:text-gray-300"
+                    placeholder="Search Careers by Title, Category, Skills, or Location..."
                   />
                 </div>
               </div>
@@ -258,7 +259,7 @@ const SearchForm = () => {
               )}
 
               {/* Footer Tip */}
-              <div className="px-5 py-3 text-xs text-gray-500 dark:text-gray-400 border-t flex items-center gap-2">
+              <div className="px-5 py-1 text-xs text-gray-500 dark:text-gray-400 border-t flex items-center gap-2">
                 <FaLightbulb className="text-yellow-500" />
                 <div className="flex justify-between items-center w-full">
                   <div>
@@ -271,11 +272,11 @@ const SearchForm = () => {
                   <div>
                     <Button
                       size="sm"
-                      variant="outline"
+                      variant="ghost"
                       onClick={closeSearchForm}
-                      className="cursor-pointer text-xs p-2"
+                      className="cursor-pointer text-xs p-2 rounded-full hover:bg-transparent"
                     >
-                      X
+                      <X />
                     </Button>
                   </div>
                 </div>
