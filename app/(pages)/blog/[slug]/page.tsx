@@ -10,14 +10,11 @@ import {TableOfContents} from "@/components/TOC";
 import { Badge } from "@/components/ui/badge";
 import Image from 'next/image';
 import BlogsBackBtn from "@/components/BlogsBackBtn";
-import rehypePrettyCode from "rehype-pretty-code";
-
 
 export async function generateStaticParams() {
     const articles = getSortedArticles();
     return articles.map((a) => ({ slug: a.slug }));
 }
-
 
 export async function generateMetadata({params}: { params: Promise<{ slug: string }>;}): Promise<Metadata> {
     const { slug } = await params;
@@ -100,7 +97,7 @@ const Article = async ({params}: { params: Promise<{ slug: string }>; }) => {
                 <Badge
                   variant={"outline"}
                   className={
-                    "border-indigo-500 bg-indigo-500/10 text-indigo-500 rounded-sm"
+                    "border-indigo-500 bg-indigo-500/10 text-indigo-500 rounded-sm pb-0"
                   }
                 >
                   {articleData.category}

@@ -174,7 +174,7 @@ export function TableOfContents({ tags }: TableOfContentsProps) {
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {tags.slice(0, 6).map((tag) => (
-              <Badge key={tag} variant={'outline'} className={'text-xs rounded-full text-[#606261] dark:text-[#c4c5c7]'}>
+              <Badge key={tag} variant={'outline'} className={'text-xs rounded-sm pb-0 text-[#606261] dark:text-[#c4c5c7]'}>
                 {tag}
               </Badge>
             ))}
